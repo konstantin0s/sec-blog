@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {register} from './UserFunctions';
 import { Link} from 'react-router-dom';
 import { Message } from 'semantic-ui-react';
+import './css/register.css'
 
 const initialState = {
     first_name: '',
@@ -167,8 +168,8 @@ class Register extends Component {
                             </button>
                         </form>
 
-                        <p>Already have account? 
-                       <Link to={"/login"}> Login</Link>
+                        <p className="linkTo">Already have account? 
+                       <Link className="linkie" to={"/login"}> Login</Link>
       </p>
                     </div>
                 </div>

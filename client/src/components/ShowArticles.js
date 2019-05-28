@@ -42,7 +42,7 @@ class ShowArticles extends Component {
   <div className="container showArticles">
        <form className="active-pink active-pink-2">
   <FontAwesomeIcon className="faSearch" icon={faSearch} />
-  <input onChange={this.searchHandler} className="form-item" type="text" placeholder="Search" aria-label="Search" />
+  <input onChange={this.searchHandler} className="form-item input" type="text" placeholder="Search" aria-label="Search" />
 </form>
 				
 {this.state.filtered.filter(searchingFor(this.state.term)).map((article) =>    

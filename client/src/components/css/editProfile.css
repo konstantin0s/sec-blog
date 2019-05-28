@@ -1,0 +1,15 @@
+.editProfile {
+  position: relative;
+  top: 100px;
+  width: 60%;
+}
+
+.submit {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ left: 39%;
+  width: 20%;
+}

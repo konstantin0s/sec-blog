@@ -3,24 +3,23 @@ body {
   background-color: #fff;
 } 
 
+
+
  .postz {
   position: relative;
-  top: 288px;
-  right: -100px;
+  top: 112px;
+  right: 5%;
   margin-bottom: 40px;
-  color: white;
+  color: black;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 30px;  
-  font-weight: 400;
+  font-size: 22px;  
 }
-
  .date{
    position: relative;
-  top: 288px;
-  right: -90px;
-  margin-bottom: 40px;
-  color: white;
-  font-size: 30px;
+  top: 93px;
+  right: 3%;
+  color: black;
+  font-size: 22px;
   font-weight: 400;
  }
 
@@ -32,8 +31,8 @@ body {
 
 .pull-right {
   position: absolute;
-  top: 180px;
-  left: 500px;
+  top: 160px;
+  left: 10%;
 }
 
 .author {
@@ -41,8 +40,8 @@ body {
   flex-direction: row; 
   margin-left: 10px; 
   position: relative; 
-  top: 192px;
-   left: 770px;
+  top: 92px;
+   right: 45%;
   text-transform: uppercase;
   color: orange;
   font-weight: 400;
@@ -51,7 +50,9 @@ body {
 
 .media-body h4, a {
   color: black;
+ 
 }
+
 
 .post-heading {
   color: black;
@@ -69,9 +70,14 @@ body {
 
 }
 
-.image-responsive {
+.img-responsive {
   position: absolute;
-  top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 200px;
+  left: 00px;
 }
 
 .body-text {
@@ -82,28 +88,40 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 24px;
   text-transform: capitalize;
-  top:  440px;
-  width: 70%;
-  left: 250px;
-  height: 400px;
+  top:  73%;
+  width: 80%;
+  left: 11%;
+  height: 40%;
   margin-bottom: 150px;
-  /* background-color: white; */
+}
+
+.jumbo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+ 
+}
+
+.showcomments {
+color: black;
 }
 
 .jumbo h1{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   position: absolute;
-  top: 70px;
-  left: 40px;
-  width: 40%;
+  margin-bottom: 30px;
+  top: 30px;
+  right: 35%;
+  width: 80%;
   text-transform: capitalize;
-  color: white;
-  font-size: 40px;
+  color: black;
+  font-size: 34px;
   font-weight: 600;
   transform: translate(30%, -10%);
-  /* border-bottom: 1px solid white; */
 }
 
 .post-edit {
@@ -124,14 +142,20 @@ body {
 }
 
 .bodys h4 {
-
+  text-transform: lowercase;
   position: relative;
-  top: 238px;
-  left: -230px;
-  font-weight: 400;
-  color: white;
-  font-size: 30px;
-  font-weight: 400;
+  top: 92px;
+  right: 44.5%;
+  color: black;
+  font-size: 20px;
+}
+
+.callout h4 {
+  position: relative;
+  color: #fff;
+  left: 0%;
+  top:10px;
+  text-transform: uppercase;
 }
 
 .callout.secondary {
@@ -243,10 +267,10 @@ textarea {
   margin: 0px;
 }
 
-.jumbotron .rounded {
+/* .jumbotron .rounded {
   position: absolute;
   top: 0px;
-}
+} */
 
 ul>li{
   position:relative;

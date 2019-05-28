@@ -4,13 +4,11 @@ import { Link } from 'react-router-dom';
 import './css/OneArticle.css';
 import jwt_decode from 'jwt-decode';
 import Moment from 'moment';
-import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub }  from '@fortawesome/free-brands-svg-icons' 
-import { faFacebook } from '@fortawesome/free-brands-svg-icons' 
-import { faTwitter } from '@fortawesome/free-brands-svg-icons' 
+import { faGithub }  from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'; 
 
-let $this; 
 class OneArticle extends Component {
 
   constructor(props) {
@@ -30,18 +28,18 @@ class OneArticle extends Component {
 
   componentDidMount() {
     const { params } = this.props.match;
-    debugger
+  
     axios.get(`/articles/one/${params.id}`, {withCredentials:true})
       .then(res => {
-        debugger
+   
         let userToken = localStorage.usertoken
         const {_id} = jwt_decode(userToken)
-        debugger;
+      
         this.setState({ article: res.data, userId:_id, first_name:res.data.owner.first_name, articleOwnerId:res.data.owner._id})
            console.log(res.data.owner.first_name);
            console.log(this.state.article);
       }).catch(err => {
-        debugger
+    
         this.setState({errorMessage:err})
         console.log(err)
       })
@@ -53,9 +51,9 @@ class OneArticle extends Component {
         this.setState({owner: response.data.id})
           // this.setState({owner: response.data.id, first_name:response.data.owner.first_name})
           console.log(this.state.owner);
-          debugger
+         
           console.log(response.data.id)
-          debugger
+   
       })
       .catch((error)=> {
           this.setState({error})
@@ -73,19 +71,19 @@ class OneArticle extends Component {
   saveComments = (e)=> {
     e.preventDefault()
     const message = document.getElementById("comment").value;
-    debugger
+  
     axios.post('/articles/savecomment', {id: this.state.article._id, owner: this.state.article.owner, text: message}, {withCredentials:true})
     .then((res) => {
-      debugger
+  
       this.setState({ article: res.data})
         document.getElementById("comment").value = "";
     }).catch(err => {
-      debugger
+   
     })
   }
 
   showCommentBox() {
-    if (this.state.userId != "") {
+    if (this.state.userId !== "") {
       return          <div className="callout secondary">
       <h4 className="leave-comment">Add a Comment</h4>
       <form className="post-edit" ref="commentForm" onSubmit={e => this.saveComments(e)}>
@@ -100,7 +98,7 @@ class OneArticle extends Component {
     if(this.state.article.comments instanceof Array){
         const comments = this.state.article.comments.reverse();
         return comments.map(function(c, i){
-          debugger
+     
           return    <div className="container showComm">
             <div className="col-md-8">
                   <div className="panel panel-default">
@@ -110,8 +108,8 @@ class OneArticle extends Component {
                                   <div className="col-md-11">
                                       <div className="media">
                                         <div className="media-body">
-                                          <a href="#" className="anchor-username"><h4 className="media-heading">Username: {c.owner.first_name}</h4></a> 
-                                          <a href="#" className="anchor-time">51 mins</a>
+                                          <h6>Username:</h6><h3 className="media-heading"> {c.owner.first_name}</h3> 
+                                          <a href="" className="anchor-time">51 mins</a>
                                         </div>
                                       </div>
                                   </div>
@@ -128,8 +126,8 @@ class OneArticle extends Component {
                              <div className="post-footer-option container">
                                   <ul className="list-unstyled">
                                       <li><a href="#"><i className="glyphicon glyphicon-thumbs-up"></i> Like</a></li>
-                                      <li><a href="#"><i className="glyphicon glyphicon-comment"></i> Comment</a></li>
-                                      <li><a href="#"><i className="glyphicon glyphicon-share-alt"></i> Share</a></li>
+                                      <li><a href="#comment"><i className="glyphicon glyphicon-comment"></i> Comment</a></li>
+                                      <li><a target="_blank" href="http://facebook.com"><i className="glyphicon glyphicon-share-alt"></i> Share</a></li>
                                   </ul>
                              </div>
                              <div className="post-footer-comment-wrapper">
@@ -139,13 +137,13 @@ class OneArticle extends Component {
                                  <div className="comment">
                                       <div className="media">
                                         <div className="media-left">
-                                          <a href="#">
+                                          <a href="">
                                             <img className="media-object photo-profile" src="http://0.gravatar.com/avatar/38d618563e55e6082adf4c8f8c13f3e4?s=40&d=mm&r=g" width="32" height="32" alt="..." />
                                           </a>
                                         </div>
                                         <div className="media-body">
-                                          <a href="#" className="anchor-username"><h4 className="media-heading">Media heading</h4></a> 
-                                          <a href="#" className="anchor-time">51 mins</a>
+                                          <a href="" className="anchor-username"><h4 className="media-heading">Media heading</h4></a> 
+                              
                                         </div>
                                       </div>
                                  </div>
@@ -169,7 +167,7 @@ class OneArticle extends Component {
     :
      null
      
-    debugger
+
     return (
 
 
@@ -187,12 +185,14 @@ class OneArticle extends Component {
           <span className="date">  {Moment(this.state.article.date).format('YYYY-MM-DD')}
              </span>
 
-              <h4>Posted by: </h4>
-              <div className="author">{this.state.article.owner? this.state.article.owner.first_name: ""}</div>
+             <h4 className="h4">Posted by: </h4>
+              <div className="author">
+             
+              {this.state.article.owner? this.state.article.owner.first_name: ""}</div>
               </div>
               <p className="body-text">{this.state.article.body}</p>
             {this.showCommentBox()}
-             <div className="row">
+             <div className="row showcomments">
             {this.showComments()}
                </div>
             </div>   

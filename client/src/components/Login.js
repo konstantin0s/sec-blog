@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {login} from './UserFunctions';
 import '../components/css/login.css';
 import { Message } from 'semantic-ui-react';
+import { Link} from 'react-router-dom';
+
 
 const initialState = {
     email: '',
@@ -31,11 +33,11 @@ class Login extends Component {
        let  passwordError = '';
 
        if (!this.state.email.includes('@')) {
-           emailError = 'invalid email';
+           emailError = 'Invalid Email';
        }
 
        if (!this.state.password) {
-        passwordError = 'password cannot be blank';
+        passwordError = 'Invalid Password';
     }
 
 
@@ -51,12 +53,12 @@ class Login extends Component {
         const isValid = this.validate();
         if (isValid) {
             console.log(this.state); 
-            this.props.history.push('/');
+            this.props.history.push('/articles');
             //clear form
            this.setState({initialState});
-        }
+        } 
 
-
+    
         const user = {
             email: this.state.email,
             password: this.state.password
@@ -65,10 +67,19 @@ class Login extends Component {
          
         login(user).then(res => {
             if (res) {
+                if (isValid) {
+                    console.log(this.state); 
+                    this.props.history.push('/articles');
+                    //clear form
+                   this.setState({initialState});
+                }
                  console.log(user);
 
-                this.props.history.push('/articles');
+                // this.props.history.push('/articles');
             }
+            //  else {
+            //     this.props.history.push('/login');
+            // }
         })
         .catch((err)=> {
             this.props.history.push({ pathname: "/login", state: {message: "unauthorized"}})
@@ -81,11 +92,11 @@ class Login extends Component {
             <div className="center">
                 <div className="carding">
                     <div className="col-md-10">
-                        <form noValidate error={error} onSubmit={this.onSubmit}>
+                        <form noValidate error={error ? error : undefined} onSubmit={this.onSubmit}>
                             <h1 className="h3 mb-3 font-weight-normal">Please Log In</h1>
-                            {error && <Message error={error} 
+                            {error && <Message error={error ? error : undefined} 
                              content="That username/password is incorrect. Try again!"  />}
-                            <div className="form-group">
+                            <div className="form-group one">
                                 <label htmlFor="email">
                                     Email Address
                                 </label><br />
@@ -97,8 +108,8 @@ class Login extends Component {
                                     value={this.state.email}
                                     onChange={this.onChange}/>
                             </div> 
-                            <div style={{ fontSize: 12, color: "red"}}>{this.state.emailError}</div><br />
-                            <div className="form-group">
+                            <div className="emailError" style={{ fontSize: 12, color: "red"}}>{this.state.emailError}</div><br />
+                            <div className="form-group two">
                                 <label htmlFor="email">
                                     Password
                                 </label> <br />
@@ -110,11 +121,15 @@ class Login extends Component {
                                     value={this.state.password}
                                     onChange={this.onChange}/>
                             </div>
-                            <div style={{ fontSize: 12, color: "red"}}>{this.state.passwordError}</div>
-                            <button type="submit" className="btn btn-lg btn-primary btn-block">
+                            <div className="passwordError" style={{ fontSize: 12, color: "red"}}>{this.state.passwordError}</div>
+                            <button type="submit" className="btn btn-lg btn-primary btn-block three">
                                 Sign In
                             </button>
                         </form>
+
+                        <p className="linkTo">Don't have an account? 
+                       <Link className="linkie" to={"/register"}> Register</Link>
+      </p>
                     </div>
                 </div>
             </div>

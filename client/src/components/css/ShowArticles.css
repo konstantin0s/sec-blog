@@ -4,10 +4,16 @@
   top: 200px;
 }
 
+.showArticles form{
+position: relative;
+top: -140px;
+}
+
 .faSearch {
   position: relative;
   top: 25px;
-  left: 160px;
+  left: 44%;
+  cursor: pointer;
 }
 
 span {
@@ -36,18 +42,21 @@ span {
   position: absolute;
   font-weight: 200;
   font-size: 20px;
-  top: 280px;
-  margin: 10px 0;
+  top: 255px;
 }
 
 .linkz:link {
   text-decoration: none;
 }
 
-.active-pink {
+.input {
+  background-color: #fff;
+}
+
+/* .active-pink {
   position: relative;
   top: -100px;
-}
+} */
 
 .active-pink2 input{
  background-color: #72A4D2;
@@ -72,6 +81,9 @@ span {
 
 .card-body {
   height: 45%;
+  width: 100%;
+  position: relative;
+  top: -100px;
 }
 
 .text-center {
@@ -85,24 +97,30 @@ span {
   margin-bottom: 100px;
 }
 
-.text-center .artLink {
+.artLink {
   position: relative;
   top: -80px;
   left: 200px;
-  margin-top: -10px;
+  width: 30%;
+  height: 100%;
 }
 
 .card-text {
-  font-size: 23px;
+  position: relative;
+  font-size: 22px;
   margin: 20px 0;
   margin-bottom: 100px;
+  top: 30px;
 }
 
 .card-title {
+  position: relative;
+  top: 80px;
 text-transform: capitalize;
 margin: 20px 0;
 margin-bottom: 140px;
 width: 100%;
+font-weight: 700;
 }
 
 .card-footer span {
@@ -129,5 +147,448 @@ hr {
   top: -95px;
   border-bottom: 1px solid grey;
 } */
+
+
+@media screen and (max-width: 500px) {
+
+  .nav .nav-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 80px;
+  }
+ 
+
+  .nav .logo {
+    position: relative;
+    top: -7px;
+    left: -122px;
+  }
+
+  .nav .user {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 290px;
+    font-size: 14px;
+    top:-77px;
+  }
+
+  .nav .write {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 100px;
+    font-size: 14px;
+    top:-125px;
+  }
+
+  .nav .nav-link {
+    font-size: 13px;
+  }
+
+  .read {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 190px;
+    font-size: 14px;
+    top:-179px;
+  }
+
+  .nav .logout {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 380px;
+    font-size: 14px;
+    width:23px;
+    top:-225px;
+    width: 30px;
+  }
+
+  .showArticles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: -10%;
+  }
+
+  form {
+    width: 100%;
+    left: 10%;
+  }
+
+  hr {
+    position: relative;
+    top: 20px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+  .card-body {
+    position: relative;
+    top: -220px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .artLink {
+    position: relative;
+    top: -240px;
+    left: -20px;
+  }
+
+  .badges {
+    position: relative;
+    top: -40px;
+  }
+
+  .card-footer {
+    position: relative;
+    top: -120px;
+  }
+}
+
+
+@media screen and (min-width: 501px){
+  .nav .nav-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 80px;
+  }
+
+  .read {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 192px;
+    font-size: 14px;
+    top: -198px;
+  }
+
+ .nav .user {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 295px;
+    font-size: 14px;
+    top: -98px;
+  }
+
+ .nav .write {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 110px;
+    font-size: 14px;
+    top: -148px;
+  }
+
+ .nav .logout {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left:390px;
+    font-size: 14px;
+    top: -248px;
+    width: 80px;
+    height: 50px;
+  }
+
+  .logo {
+    position: relative;
+    top: -9px;
+    left: -160px;
+  }
+
+  .showArticles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: -10%;
+  }
+
+  form {
+    width: 100%;
+    left: 10%;
+  }
+
+  hr {
+    position: relative;
+    top: -14px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+  .card-body {
+    position: relative;
+    top: -220px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .artLink {
+    position: relative;
+    top: -280px;
+    left: -20px;
+  }
+
+  .badges {
+    position: relative;
+    top: -80px;
+  }
+
+  .card-footer {
+    position: relative;
+    top: -120px;
+  }
+}
+
+
+@media screen and (min-width: 699px) {
+  .nav .nav-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 80px;
+  }
+
+  .read {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 202px;
+    font-size: 14px;
+    top: -178px;
+  }
+
+  .user {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 464px;
+    font-size: 14px;
+    top: -77px;
+  }
+
+  .write {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 322px;
+    font-size: 14px;
+    top: -129px;
+  }
+
+  .logout {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left:580px;
+    font-size: 14px;
+    top: -228px;
+    width: 80px;
+    height: 50px;
+  }
+
+  .logo {
+    position: relative;
+    top: -9px;
+    left: -220px;
+  }
+
+  .showArticles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: -10%;
+  }
+
+  form {
+    width: 100%;
+    left: 10%;
+  }
+
+  hr {
+    position: relative;
+    top: -14px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+  .card-body {
+    position: relative;
+    top: -220px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .artLink {
+    position: relative;
+    top: -280px;
+    left: -20px;
+  }
+
+  .badges {
+    position: relative;
+    top: -80px;
+  }
+
+  .card-footer {
+    position: relative;
+    top: -120px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .nav .nav-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 80px;
+  }
+ 
+
+  .nav .logo {
+    position: relative;
+    top: -7px;
+    left: -122px;
+  }
+
+  .nav .user {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 450px;
+    font-size: 14px;
+    top:-50px;
+  }
+
+  .nav .write {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 180px;
+    font-size: 14px;
+    top:-50px;
+  }
+
+  .nav .nav-link {
+    font-size: 13px;
+  }
+
+  .read {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: -120px;
+    font-size: 14px;
+    top:-49px;
+  }
+
+  .nav .logout {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 80px;
+    font-size: 14px;
+
+    top:-50px;
+    width: 30px;
+  }
+
+  .logo {
+    position: relative;
+    top: 0px;
+    left: 20px;
+  }
+
+  .showArticles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: -10%;
+  }
+
+  form {
+    width: 100%;
+    left: 10%;
+  }
+
+  hr {
+    position: relative;
+    top: -14px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+  .card-body {
+    position: relative;
+    top: -220px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .artLink {
+    position: relative;
+    top: -280px;
+    left: -20px;
+  }
+
+  .badges {
+    position: relative;
+    top: -80px;
+  }
+
+  .card-footer {
+    position: relative;
+    top: -120px;
+  }
+}
+
+
+
 
 

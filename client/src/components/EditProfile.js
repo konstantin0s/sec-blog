@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import {handleUpload} from './UserFunctions';
+import './css/editProfile.css';
 
 class EditProfile extends Component {
 
@@ -58,7 +58,7 @@ class EditProfile extends Component {
 
   render() {
     return (
-      <div class="container editArticle">
+      <div class="container editProfile">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
@@ -66,7 +66,7 @@ class EditProfile extends Component {
             </h3>
           </div>
           <div class="panel-body">
-            <h4><Link to={`/profile/${this.state.user._id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Your Profile</Link></h4>
+            <h4><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h4>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
                 <label for="title">First Name:</label>
@@ -86,12 +86,21 @@ class EditProfile extends Component {
               </div> */}
 
               {/* <input type="file" onChange={(e) => this.handleFileUpload(e)} />  */}
-              <button type="submit" className="btn btn-lg btn-primary btn-block">
+              <button type="submit" className="btn btn-lg btn-primary btn-block submit">
                               Update
               </button>
             </form>
           </div>
         </div>
+
+        <footer className="blog-footer">
+         <p> 
+         &copy; Copyright 2019 YouHelp
+</p>
+        <p>
+           <a href="#masthead">Back to top</a>
+        </p>
+    </footer>
       </div>
     );
   }

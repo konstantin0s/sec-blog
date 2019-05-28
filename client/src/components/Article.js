@@ -27,7 +27,6 @@ class Article extends Component {
      axios.get(`/users/`, {withCredentials:true})
     .then((response)=> {
         this.setState({users: response.data, userId: response.data[0]._id})
-        debugger
         console.log(response.data)
     })
     .catch((error)=> {
@@ -82,7 +81,7 @@ class Article extends Component {
   render() {
       return (
 
-        <div className="center">
+        <div className="container addArticle">
         <div className="cardz">
             <div className="col-md-10">
             <form noValidate onSubmit={this.onSubmit}>
@@ -104,7 +103,7 @@ class Article extends Component {
                                    Author:
                               </label>
                               <div className="center-on-page">
-               <div className="label">Assign Article To:</div>
+               <div className="label"></div>
                  <div className="select">
                  <select name="slct" className="btn btn-lg btn-primary" id="slct" onChange={this.handleChange}>
                          {this.state.users.map((user)=> 
@@ -120,7 +119,7 @@ class Article extends Component {
                                </label>
                                <textarea
                               type="text"
-                                   className="form-item"
+                                   className="form-item textarea"
                                   name="body"
                                    placeholder="Enter Post"
                                    value={this.state.body}
@@ -142,6 +141,15 @@ class Article extends Component {
                       </form> 
             </div>
         </div>
+
+        <footer className="blog-footer">
+         <p> 
+         &copy; Copyright 2019 YouHelp
+</p>
+        <p>
+           <a href="#masthead">Back to top</a>
+        </p>
+    </footer>
     </div>
       )
   }

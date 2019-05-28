@@ -36,6 +36,7 @@ componentDidMount () {
 
 render()
  {
+	 console.log(this.state);
    return (
     <div className="container profilePage">
     <div className="row profile">
@@ -52,7 +53,7 @@ render()
 					{/* {this.state._id} */}
 					</div>
 					<div className="profile-usertitle-job">
-						Joined at: <h4>{this.state.date}</h4>
+						Joined at: <p>{this.state.date}</p>
 					</div>
 				</div>
 		
@@ -78,9 +79,6 @@ render()
 							<i className="glyphicon glyphicon-ok"></i>
 							{this.state.email} </a>
 						</li>
-						{/* <li>
-							  <Link to={`/editProfile/${this.state._id}`} className="btn btn-success">Edit</Link>&nbsp;
-						</li> */}
 					</ul>
 				</div>
 			
@@ -92,6 +90,17 @@ render()
             </div>
 		</div>
 	</div>
+
+
+	<footer className="blog-footer">
+         <p> 
+         &copy; Copyright 2019 YouHelp
+</p>
+        <p>
+           <a href="#masthead">Back to top</a>
+        </p>
+    </footer>
+
 </div>
 
    )

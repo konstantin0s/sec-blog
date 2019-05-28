@@ -1,0 +1,19 @@
+.linkTo {
+  position: relative;
+  top: 10px;
+  text-decoration: none;
+}
+
+.linkie {
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: 300px) {
+  .center {
+      width: 80%;
+      height: 100%;
+  }
+
+
+}

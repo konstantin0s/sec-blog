@@ -1,23 +1,30 @@
-.col-md-10 {
-  width: 300px;
-}
 
-
- /* .row {
-  width: 80%;
-  left: 100px;
-} */
-
-/* .h3 {
-  position: relative;
-  top: -80px;
-} */
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+.col-md-10 {
+    width: 300px;
+  }
+
+  .emailError {
+    position: relative;
+    top: -10px;
+    padding: 4px;
+    color: red;
+    font-size: 12px;
+
+  }
+  
+  .passwordError {
+      position: relative;
+      top: -40px;
+      padding: 4px;
+      color: red;
+      font-size: 12px;
+  }
+
 .center{
     font-family: 'Raleway', sans-serif;
-    background-color: #1abc9c;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -26,6 +33,35 @@
     align-items: center;
     top: 0;
    left: 0px;
+   background-color: white;
+}
+
+.conta {
+    background-color: white;
+}
+
+.linkTo {
+    position: relative;
+    top: 10px;
+}
+
+.one {
+    position: relative;
+    top: 10px;
+}
+
+.two {
+    position: relative;
+    top: -25px;
+}
+
+.three {
+    position: relative;
+    top: -20px;
+}
+
+.linkie {
+    text-decoration: none;
 }
 
 .carding{
@@ -68,4 +104,13 @@
 }
 .form-submit:hover{
    opacity: 0.6;
+}
+
+@media screen and (min-width: 300px) {
+    .center {
+        width: 80%;
+        height: 100%;
+    }
+
+
 }

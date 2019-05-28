@@ -3,9 +3,8 @@ import { withRouter} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import store from 'store';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPeopleCarry } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPeopleCarry } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -84,12 +83,12 @@ class Navbar extends Component {
        <nav className="navbar navbar-inverse navbar-fixed-top">
           <div className="container">
           <div className="navbar-header">
-         <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+         {/* <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           
-           <span className="icon-bar"></span>
-           <span className="icon-bar"></span>
-           <span className="icon-bar"></span>
-         </button>
+           <span className="icon-bar">x</span>
+           <span className="icon-bar">y</span>
+           <span className="icon-bar">z</span>
+         </button> */}
        </div>
        <div id="navbar" className="collapse navbar-collapse">
          <ul className="nav navbar-nav">
