@@ -46,7 +46,7 @@ class OneArticle extends Component {
 
       axios.get(`/users/one/:id`, {withCredentials:true})  
       .then((response)=> {
-        let userToken = localStorage.usertoken;
+        // let userToken = localStorage.usertoken;
         // const {first_name} = jwt_decode(userToken);
         this.setState({owner: response.data.id})
           // this.setState({owner: response.data.id, first_name:response.data.owner.first_name})
@@ -109,12 +109,12 @@ class OneArticle extends Component {
                                       <div className="media">
                                         <div className="media-body">
                                           <h6>Username:</h6><h3 className="media-heading"> {c.owner.first_name}</h3> 
-                                          <a href="" className="anchor-time">51 mins</a>
+                                          <button className="anchor-time">51 mins</button>
                                         </div>
                                       </div>
                                   </div>
                                    <div className="col-md-1">
-                                       <a href="#"><i className="glyphicon glyphicon-chevron-down"></i></a>
+                                       <button><i className="glyphicon glyphicon-chevron-down"></i></button>
                                    </div>
                               </div>             
                          </section>
@@ -125,9 +125,9 @@ class OneArticle extends Component {
                              <hr />
                              <div className="post-footer-option container">
                                   <ul className="list-unstyled">
-                                      <li><a href="#"><i className="glyphicon glyphicon-thumbs-up"></i> Like</a></li>
+                                      <li><button><i className="glyphicon glyphicon-thumbs-up"></i> Like</button></li>
                                       <li><a href="#comment"><i className="glyphicon glyphicon-comment"></i> Comment</a></li>
-                                      <li><a target="_blank" href="http://facebook.com"><i className="glyphicon glyphicon-share-alt"></i> Share</a></li>
+                                      <li><a target="_blank" rel="noopener noreferrer" href="http://facebook.com"><i className="glyphicon glyphicon-share-alt"></i> Share</a></li>
                                   </ul>
                              </div>
                              <div className="post-footer-comment-wrapper">
@@ -137,12 +137,12 @@ class OneArticle extends Component {
                                  <div className="comment">
                                       <div className="media">
                                         <div className="media-left">
-                                          <a href="">
+                                          <button>
                                             <img className="media-object photo-profile" src="http://0.gravatar.com/avatar/38d618563e55e6082adf4c8f8c13f3e4?s=40&d=mm&r=g" width="32" height="32" alt="..." />
-                                          </a>
+                                          </button>
                                         </div>
                                         <div className="media-body">
-                                          <a href="" className="anchor-username"><h4 className="media-heading">Media heading</h4></a> 
+                                          <button className="anchor-username"><h4 className="media-heading">Media heading</h4></button> 
                               
                                         </div>
                                       </div>
@@ -202,26 +202,26 @@ class OneArticle extends Component {
         <div className="col-lg-8 col-md-10 mx-auto">
           <ul className="list-inline text-center">
             <li className="list-inline-item">
-              <a href="#">
+              <button>
                 <span className="fa-stack fa-lg">
               <FontAwesomeIcon className="faTwitter" icon={faTwitter} />
                 </span>
-              </a>
+              </button>
             </li>
             <li className="list-inline-item">
-              <a href="#">
+              <button>
                 <span className="fa-stack fa-lg">
                   <i className="fas fa-circle fa-stack-2x"></i>
                     <FontAwesomeIcon className="faFacebook" icon={faFacebook} />
                 </span>
-              </a>
+              </button>
             </li>
             <li className="list-inline-item">
-              <a href="#">
+              <button>
                 <span className="fa-stack fa-lg">
                    <FontAwesomeIcon className="faGithub" icon={faGithub} />
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
           <p className="copyright text-muted">Copyright &copy; YouHelp 2019</p>

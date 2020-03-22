@@ -55,7 +55,8 @@ users.get('/', (req, res) => {
     });
     
     users.param('id', (req, res, next, id) => {
-      return User.findById(id, (err, user) => {
+      const userid = req.params.id;
+      return User.findById(userid, (err, user) => {
         if(err) {
           return res.sendStatus(404);
         } else if(user) {
@@ -74,7 +75,9 @@ users.get('/', (req, res) => {
 
 //Edit single USer
 users.put('/:id', function(req, res, next) {
-  User.findByIdAndUpdate(req.params.id, req.body, function (err, user) {
+  const userid = req.params.id;
+  const body = req.body;
+  User.findByIdAndUpdate(userid, body, function (err, user) {
     if (err) return next(err);
     res.json(user);
   });
@@ -82,7 +85,8 @@ users.put('/:id', function(req, res, next) {
 
     
 users.get('/:id', function(req, res, next) {
-  User.findById(req.params.id)
+  const userid = req.params.id;
+  User.findById(userid)
     .then((user)=>{
       res.json(user)
     })
@@ -92,7 +96,8 @@ users.get('/:id', function(req, res, next) {
 });
 
 users.get('/:id', function(req, res, next) {
-  User.findById(req.params.id)
+  const userid = req.params.id;
+  User.findById(userid)
     .then((user)=>{
       res.json(user)
 

@@ -10,6 +10,7 @@ export const register = newUser => {
        
   }, {withCredentials: true})
   .then(res => {
+    res.redirect('/users/login')
     console.log('Registered!, now what? I am from UserFunctions');
   })
   .catch(err => {
@@ -23,8 +24,10 @@ export const login = user => {
     password: user.password
   },  {withCredentials: true})
   .then(res => {
-    localStorage.setItem('usertoken', res.data)
-    console.log(res.data);
+   let tokenix = JSON.stringify(res.data);
+    localStorage.setItem('usertoken', tokenix)
+    // console.log(tokenix);
+    // console.log(res.data);
     // localStorage.setItem('refreshToken', res.data)
     return res.data
   })

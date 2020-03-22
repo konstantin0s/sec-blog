@@ -66,7 +66,7 @@ class EditProfile extends Component {
             </h3>
           </div>
           <div class="panel-body">
-            <h4><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h4>
+            <h4><span class="glyphicon glyphicon-eye-open"></span></h4>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
                 <label for="title">First Name:</label>

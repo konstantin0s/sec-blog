@@ -5,18 +5,25 @@ import { Message } from 'semantic-ui-react';
 import { Link} from 'react-router-dom';
 
 
-const initialState = {
-    email: '',
-    password: '',
-    emailError: '',
-    passwordError: '',
-    error: false,
-}
+// const initialState = {
+//     email: '',
+//     password: '',
+//     emailError: '',
+//     passwordError: '',
+//     error: false,
+// }
 
 class Login extends Component {
     constructor(props) {
         super(props)
-        this.state = initialState;
+        this.state = {
+            email: '',
+            password: '',
+            emailError: '',
+            passwordError: '',
+            error: false,
+        }
+    
 
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
@@ -55,7 +62,13 @@ class Login extends Component {
             console.log(this.state); 
             this.props.history.push('/articles');
             //clear form
-           this.setState({initialState});
+           this.setState({
+            email: '',
+            password: '',
+            emailError: '',
+            passwordError: '',
+            error: false,
+           });
         } 
 
     
@@ -71,7 +84,13 @@ class Login extends Component {
                     console.log(this.state); 
                     this.props.history.push('/articles');
                     //clear form
-                   this.setState({initialState});
+                   this.setState({
+                    email: '',
+                    password: '',
+                    emailError: '',
+                    passwordError: '',
+                    error: false,
+                   });
                 }
                  console.log(user);
 

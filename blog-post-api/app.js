@@ -32,10 +32,10 @@ app.use(cors({
 mongoose 
   .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
   .then(x => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
   })
   .catch(err => {
-    console.error('Error connecting to mongo', err)
+    console.error('Error connecting to mongo', err);
   });
 
   app.use(session({  //setup sessions always here 
@@ -55,7 +55,6 @@ mongoose
   app.use('/users', Users);
 
   app.use((req, res, next) => {
-    debugger
     if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
       next(); // ==> go to the next route ---
     } else {                          //    |
@@ -63,24 +62,15 @@ mongoose
     }                                 //    |
   }); 
 
-  // const protect = (req, res, next)=> {
-  //   debugger
-  //   if(req.session.currentUser) {
-  //     next()
-  //   } else {
-  //     res.status(403).json({message: "Unauthorized"})
-  //   }
-  // }
-  
 
 
   // const Articles = require('./routes/Articles');
   app.use('/articles', require('./routes/Articles'));
   app.use('/', require('./routes/file-upload-routes'));
 
-app.listen(3001, ()=> {
-  console.log("listening")
-});
+  app.listen(process.env.PORT || 3001, function() {
+    console.log("Server started on port 3001 :)");
+  });
 
   //close mongodb
   process.on('SIGINT', function() {

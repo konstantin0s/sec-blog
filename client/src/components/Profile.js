@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import jwt_decode from 'jwt-decode';
 import { Link } from 'react-router-dom';
 import './css/Profile.css';
-import axios from 'axios';
 
 
 class Profile extends Component {
@@ -70,9 +69,10 @@ render()
 							Overview </a>
 						</li>
 						<li>
-							<a href="#">
+							<button>
 							<i className="glyphicon glyphicon-user"></i>
-							Account Settings  <Link to={`/editProfile/${this.state._id}`} className="btn btn-danger">Edit</Link>&nbsp;  </a>
+							Account Settings  <Link to={`/editProfile/${this.state._id}`} className="btn btn-danger">Edit</Link>&nbsp; 
+							 </button>
 						</li>
 						<li>
 							<a href="/" target="_blank">
