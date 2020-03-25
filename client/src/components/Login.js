@@ -14,6 +14,8 @@ import { Link} from 'react-router-dom';
 // }
 
 class Login extends Component {
+    _isMounted = false;
+
     constructor(props) {
         super(props)
         this.state = {
@@ -28,6 +30,15 @@ class Login extends Component {
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
+
+componentDidMount() {
+    this._isMounted = true;
+}
+
+componentWillUnmount() {
+    this._isMounted = false;
+  }
+
 
     onChange(e) {
         this.setState({

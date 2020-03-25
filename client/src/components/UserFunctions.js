@@ -10,13 +10,13 @@ export const register = newUser => {
        
   }, {withCredentials: true})
   .then(res => {
-    res.redirect('/users/login')
+    res.redirect('/users/login');
     console.log('Registered!, now what? I am from UserFunctions');
   })
   .catch(err => {
-    console.log(err)
-  })
-}
+    console.log(err);
+  });
+};
 
 export const login = user => {
   return axios.post('/users/login', {
@@ -29,10 +29,10 @@ export const login = user => {
     // console.log(tokenix);
     // console.log(res.data);
     // localStorage.setItem('refreshToken', res.data)
-    return res.data
+    return res.data;
   })
   .catch(err => {
-    console.log(err)
+    console.log(err);
   })
 }
 
@@ -46,19 +46,19 @@ export const articles = newArticle => {
   }, {withCredentials: true})
   .then(res => {
     console.log('Article added!');
-  })
-}
+  });
+};
 
 
 export const handleUpload = theFile => {
 
-    console.log('file in service: ', theFile)
+    console.log('file in service: ', theFile);
   return  axios.post('/upload', theFile,  {withCredentials: true})
       .then(res => res.data)
       .catch(err => {
-        console.log(err)
-      })
-}
+        console.log(err);
+      });
+};
 
 export const logOut = () => (e) => {
   e.preventDefault();

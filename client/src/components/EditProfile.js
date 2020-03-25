@@ -23,6 +23,8 @@ class EditProfile extends Component {
   onChange = (e) => {
     const state = this.state.user
     state[e.target.name] = e.target.value;
+    console.log(state[e.target.name] );
+    console.log(this.state.user);
     this.setState({user:state});
   }
 
@@ -58,31 +60,36 @@ class EditProfile extends Component {
 
   render() {
     return (
-      <div class="container editProfile">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
+      <div className="container editProfile">
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">
               EDIT PROFILE
             </h3>
           </div>
-          <div class="panel-body">
-            <h4><span class="glyphicon glyphicon-eye-open"></span></h4>
+          <div className="panel-body">
+            <h4><span className="glyphicon glyphicon-eye-open"></span></h4>
             <form onSubmit={this.onSubmit}>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="title">First Name:</label>
-                <input type="text" class="form-control" name="first_name" value={this.state.user.first_name} onChange={this.onChange} placeholder="First Name" />
+                <input type="text" className="form-control" name="first_name"
+                 value={this.state.user.first_name} onChange={this.onChange}
+                  placeholder="First Name" />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="author">Last Name:</label>
-                <input type="text" class="form-control" name="last_name" value={this.state.user.last_name} onChange={this.onChange} placeholder="Last Name" />
+                <input type="text" className="form-control"
+                 name="last_name" value={this.state.user.last_name}
+                  onChange={this.onChange} placeholder="Last Name" />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="description">Email:</label>
-                <input type="text" class="form-control" name="email" value={this.state.user.email} onChange={this.onChange} placeholder="Email" />
+                <input type="text" className="form-control" name="email"
+                 value={this.state.user.email} onChange={this.onChange} placeholder="Email" />
               </div>
-              {/* <div class="form-group">
+              {/* <div className="form-group">
                 <label for="description">Password:</label>
-                <input type="text" class="form-control" name="password" value={this.state.user.password} onChange={this.onChange} placeholder="Password" />
+                <input type="text" className="form-control" name="password" value={this.state.user.password} onChange={this.onChange} placeholder="Password" />
               </div> */}
 
               {/* <input type="file" onChange={(e) => this.handleFileUpload(e)} />  */}
