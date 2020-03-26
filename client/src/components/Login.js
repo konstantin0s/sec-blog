@@ -24,11 +24,12 @@ class Login extends Component {
             emailError: '',
             passwordError: '',
             error: false,
-        }
+        };
     
 
-        this.onChange = this.onChange.bind(this)
-        this.onSubmit = this.onSubmit.bind(this)
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.validate = this.validate.bind(this);
     }
 
 componentDidMount() {
@@ -46,7 +47,7 @@ componentWillUnmount() {
         })
     }
 
-    validate = () => {
+    validate() {
        let  emailError =  '';
        let  passwordError = '';
 
@@ -86,7 +87,8 @@ componentWillUnmount() {
         const user = {
             email: this.state.email,
             password: this.state.password
-        }
+        };
+
         this.setState({ error: false });
          
         login(user).then(res => {
@@ -112,8 +114,8 @@ componentWillUnmount() {
             // }
         })
         .catch((err)=> {
-            this.props.history.push({ pathname: "/login", state: {message: "unauthorized"}})
-        })
+            this.props.history.push({ pathname: "/login", state: {message: "unauthorized"}});
+        });
     }
 
     render() {

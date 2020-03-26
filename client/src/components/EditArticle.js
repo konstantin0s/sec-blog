@@ -19,15 +19,17 @@ class EditArticle extends Component {
         this.setState({ article: res.data });
         console.log(this.state.article);
       });
+      this.onChange = this.onChange.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onChange = (e) => {
-    const state = this.state.article
+  onChange(e) {
+    const state = this.state.article;
     state[e.target.name] = e.target.value;
     this.setState({article:state});
   }
 
-  handleFileUpload = e => {
+  handleFileUpload(e) {
     console.log("The file to be uploaded is: ", e.target.files[0]);
 
     const uploadData = new FormData();
@@ -46,14 +48,14 @@ class EditArticle extends Component {
       });
 }
 
-  onSubmit = (e) => {
+  onSubmit(e) {
     e.preventDefault();
 
     const { title, body, author, imageUrl } = this.state.article;
 
     axios.put('/articles/one/'+this.props.match.params.id, { title, body, author, imageUrl })
       .then((result) => {
-        this.props.history.push("/show/"+this.props.match.params.id)
+        this.props.history.push("/show/"+this.props.match.params.id);
       });
   }
 

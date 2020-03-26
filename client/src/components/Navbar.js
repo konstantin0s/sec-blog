@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import { withRouter} from 'react-router-dom';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import store from 'store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPeopleCarry } from '@fortawesome/free-solid-svg-icons';
+import './css/navbar.css';
 
 
 
@@ -31,46 +32,45 @@ class Navbar extends Component {
        localStorage.removeItem('usertoken');
        store.remove('loggedIn');
        console.log('you have been logged out. boo!');
-       this.props.history.push('/')
+       this.props.history.push('/');
       //  store.set('loggedIn', false);
      }
 
      
      render() {
+
       const loginRegLink = (
        <ul className="navbar-nav mr-auto navlinks">
-          <li className="nav-item">
-            <Link to="/login" className="nav-link logIn">
-              Login
-            </Link>
+          <li className="nav-item link logIn">
+            <Link to="/login" className="nav-link"> Login</Link>
             </li>
-            <li className="nav-item">
-            <Link to="/register" className="nav-link regIster">
+            <li className="nav-item link regIster">
+            <Link to="/register" className="nav-link">
               Register
             </Link>
           </li>
         </ul>
-      )
+      );
   
       const userLink = (
        <ul className="nav navbar-nav navlinks">
-         <li className="nav-item">
-           <Link to="/profile" className="nav-link user">
+         <li className="nav-item link user">
+           <Link to="/profile" className="nav-link">
             Profile
            </Link>
            </li>
-           <li className="nav-item">
-           <Link to="/article" className="nav-link write">
+           <li className="nav-item link write">
+           <Link to="/article" className="nav-link">
              Write
            </Link>
            </li>
-           <li className="nav-item">
-           <Link to="/articles" className="nav-link read">
+           <li className="nav-item link read">
+           <Link to="/articles" className="nav-link">
              Read
            </Link>
            </li>
-           <li className="nav-item">
-           <button onClick={this.logOut.bind(this)} className="nav-link logout">
+           <li className="nav-item link logout">
+           <button onClick={this.logOut.bind(this)} className="nav-link">
          Logout
          </button> 
        
@@ -93,9 +93,11 @@ class Navbar extends Component {
        <div id="navbar" className="collapse navbar-collapse">
          <ul className="nav navbar-nav">
          
-         <Link to="/" className="nav-link active logo">
-          <FontAwesomeIcon icon={faPeopleCarry} />YouHelP  
+       <li className="nav-link link logo">
+       <Link to="/" className="nav-link">
+          <FontAwesomeIcon icon={faPeopleCarry} />YouHelP
               </Link>
+              </li>
          </ul>
        </div>
        {localStorage.usertoken ? userLink : loginRegLink}

@@ -6,93 +6,178 @@
   position: relative;
   width: 100%;
   top: -120px;
+  height: 100vh;
 }
 
-.site-heading span{
-  color: white;
-  font-size: 24px;
+.cover-title {
+  position: relative;
+  top: 100px;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  top: 50px;
+  justify-content: center;
+  text-align: center;
+  padding: 3em 0em;
+  left: 3em;
 }
 
-.px-0 h1 {
-  color: black;
-  font-weight: 700;
-  top: 80px;
-
-}
-
-.px-0 {
-  position: relative;
+.site-heading {
+  position: absolute;
+  top: 100px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
+  align-content: center;
   align-items: center;
-  border-bottom: 1px solid grey;
+  align-self: center;
+  text-align: center;
+}
+
+.site-heading .link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 8em;
+  top: 1em;
+}
+
+.site-heading .link a {
+  color: #333;
+  position: relative;
+  align-self: center;
+  top: 4px;
+  opacity: 1;
+  font-weight: 900;
+}
+
+.site-heading span {
+  opacity: 1;
+  color: #333;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.px-0 h2 {
+  color: black;
+  font-weight: 700;
+  top: 20px;
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
 }
 
 .containerX {
   position: relative;
   top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width: 100%;
+  grid-gap: 10px;
+  margin-left: 1em;
+}
+
+.containerX img {
+  position: relative;
+  align-self: center;
+  border-radius: 5px;
+  width: 60%;
+  height: 150px;
+}
+
+.containerX .px-0 {
+  border: 1px solid #333;
+  width: 90%;
+  position: relative;
+  top: 2em;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+.containerX .lead {
+  top: 0px;
+  position: relative;
+  font-size: 0.8em;
+  background: blue;
+  width: 30%;
+  margin-top: 0.7em;
+  align-self: center;
+}
+
+.containerX .lead a {
+  align-self: center;
+  position: relative;
+  font-size: 0.8em;
+  top: 0px;
+}
+
+.containerX .card-text {
+  margin: 0.8em 0.5em;
+}
+
+.headerImg .blog-footer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
   align-items: center;
-  width: 100%
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  bottom: 0px;
+  height: 10%;
+  background: rgb(88, 79, 79);
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
 }
 
 
-.px-0 .my-3, .mb-0{
+/* 
+.px-0 .my-3,
+.mb-0 {
   color: black;
-    top: 80px;
-   position: relative;
+  top: 80px;
+  position: relative;
 }
-
 
 .px-0 img {
- top: -50px;
+  top: -50px;
 }
 
 .px-0 hr {
-  /* float: left; */
-  left: -220px;
-  position: relative;
-  top: 70px;
+  /* float: left; 
+left: -220px;
+position: relative;
+top: 70px;
 }
 
 .card-img-right {
   position: relative;
-   height: 350px;
-   width: 70%;
-   left: 0%;
-   top: 66px;
+  height: 350px;
+  width: 70%;
+  left: 0%;
+  top: 66px;
 }
 
 .continue {
-   top: 140px;
-   position: relative;
-   float: right;
-   right: 430px;
-}
-
- img {
+  top: 140px;
   position: relative;
-  left: 25%;
+  float: right;
+  right: 430px;
 }
 
 .card-body hr {
-  position:relative;
-  top: -100px;
-
-}
-
-.navlinks {
   position: relative;
-  top: 0px;
+  top: -100px;
 }
-
 
 .card-body .linkz {
   position: relative;
@@ -100,13 +185,13 @@
 }
 
 .displayh1 {
- position: relative;
- top: 102px;
- color: black;
- font-weight: 600;
+  position: relative;
+  top: 102px;
+  color: black;
+  font-weight: 600;
 }
 
-.card-body > div {
+.card-body>div {
   position: relative;
   top: 40px;
 }
@@ -134,16 +219,14 @@
   width: 100%;
 }
 
-
-
 .align-items-start .jaja {
   position: relative;
   top: -25px;
-  color: black
+  color: black;
 }
 
 .blog-footer {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -152,7 +235,6 @@
   height: 30%;
   width: 100%;
   text-decoration: none;
-
 }
 
 .card-second {
@@ -162,7 +244,7 @@
   align-items: center;
   flex-direction: column;
   top: 20px;
-  position: relative; 
+  position: relative;
   height: 30%;
   width: 100%;
 }
@@ -181,7 +263,7 @@ a {
 
 .card-sub {
   position: relative;
-  display:flex;
+  display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
@@ -205,16 +287,16 @@ a {
 }
 
 .card .sec {
-   position: relative;
-   top: -64px;
-}
-
-.card-sub > div {
   position: relative;
-  top:80px;
+  top: -64px;
 }
 
+.card-sub>div {
+  position: relative;
+  top: 80px;
+}
 
+*/
 @media screen and (max-width: 600px) {
   .containerX {
     background-color: aliceblue;
@@ -222,10 +304,11 @@ a {
 
   .headerImg {
     width: 100%;
-
   }
 
-  .subheading h1, h3, .displayh1 {
+  .subheading h1,
+  h3,
+  .displayh1 {
     font-size: 14px;
     position: relative;
     right: -5%;
@@ -265,10 +348,10 @@ a {
   }
 
   .px-0 p {
- position: absolute;
- left: 0%;
- top: 51px;
- font-size: 13px;
+    position: absolute;
+    left: 0%;
+    top: 51px;
+    font-size: 13px;
   }
 
   .px-0 a {
@@ -282,11 +365,11 @@ a {
   .px-0 img {
     position: relative;
     top: 20px;
- left: 0%;
-  width: 90%;
-height: 250px;
-margin-bottom: 40px;
-margin-top: 10px;
+    left: 0%;
+    width: 90%;
+    height: 250px;
+    margin-bottom: 40px;
+    margin-top: 10px;
   }
 
   #collapse .logo {
@@ -322,13 +405,12 @@ margin-top: 10px;
     font-size: 14px;
   }
 
-   .card-second .botto {
+  .card-second .botto {
     position: relative;
     font-size: 14px;
     width: 90%;
     top: 5px;
   }
-
 
   .card .sec {
     position: relative;
@@ -348,19 +430,18 @@ margin-top: 10px;
   .logIn {
     position: relative;
     left: 44%;
-    top:-44px;
+    top: -44px;
     font-size: 15px;
   }
 
   .regIster {
     position: relative;
     left: 25%;
-    top:10px;
-    top:-44px;
+    top: 10px;
+    top: -44px;
     font-size: 15px;
   }
 }
-
 
 @media screen and (max-width: 749px) {
   .containerX {
@@ -369,10 +450,11 @@ margin-top: 10px;
 
   .headerImg {
     width: 100%;
-
   }
 
-  .subheading h1, h3, .displayh1 {
+  .subheading h1,
+  h3,
+  .displayh1 {
     font-size: 14px;
     position: relative;
     right: -5%;
@@ -412,10 +494,10 @@ margin-top: 10px;
   }
 
   .px-0 p {
- position: absolute;
- left: 0%;
- top: 51px;
- font-size: 13px;
+    position: absolute;
+    left: 0%;
+    top: 51px;
+    font-size: 13px;
   }
 
   .px-0 a {
@@ -429,17 +511,17 @@ margin-top: 10px;
   .px-0 img {
     position: relative;
     top: 20px;
- left: 0%;
-  width: 90%;
-height: 250px;
-margin-bottom: 40px;
-margin-top: 10px;
+    left: 0%;
+    width: 90%;
+    height: 250px;
+    margin-bottom: 40px;
+    margin-top: 10px;
   }
 
   #collapse .logo {
     position: relative;
     top: 10px;
-    left: 20px;
+    left: 0px;
   }
 
   .card-body .jaja {
@@ -469,13 +551,12 @@ margin-top: 10px;
     font-size: 14px;
   }
 
-   .card-second .botto {
+  .card-second .botto {
     position: relative;
     font-size: 14px;
     width: 90%;
     top: 5px;
   }
-
 
   .card .sec {
     position: relative;
@@ -492,52 +573,40 @@ margin-top: 10px;
     font-size: 15px;
   }
 
-  .logIn {
-   position: relative;
-    left: 34%;
-    top:-59px;
-    font-size: 15px;
-  }
 
-  .regIster {
-   position: relative;
-    left: 25%;
-    top:-59px;
-    font-size: 15px;
-  }
 }
 
-
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 750px) and (max-width: 950px) {
   .containerX {
     background-color: aliceblue;
   }
 
   .headerImg {
     width: 100%;
-
   }
+
   .px-0 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .px-0 p {
- position: absolute;
- left: 0%;
- top: 51px;
- font-size: 13px;
-  } 
+    position: absolute;
+    left: 0%;
+    top: 51px;
+    font-size: 13px;
+  }
 
   .px-0 img {
     position: relative;
     top: 20px;
- left: 0%;
-  width: 90%;
-height: 250px;
-margin-bottom: 40px;
-margin-top: 10px;
+    left: 0%;
+    width: 90%;
+    height: 250px;
+    margin-bottom: 40px;
+    margin-top: 10px;
   }
 
   .card-body .time {
@@ -561,19 +630,18 @@ margin-top: 10px;
     font-size: 14px;
   }
 
-   .card-second .botto {
+  .card-second .botto {
     position: relative;
     font-size: 14px;
     width: 90%;
     top: 5px;
   }
 
-  .navbar .logo {
+  /* .navbar .logo {
     position: relative;
     top: -10px;
     left: -220px;
-  }
-
+  } */
 
   .card .sec {
     position: relative;
@@ -590,95 +658,78 @@ margin-top: 10px;
     font-size: 15px;
   }
 
+  /* 
   .logIn {
     display: flex;
     flex-direction: row;
     left: 280px;
-    top:-39px;
-padding: 2px;
+    top: -39px;
+    padding: 2px;
   }
 
   .regIster {
     display: flex;
     flex-direction: row;
     left: 220px;
-    top:-39px;
+    top: -39px;
     padding: 2px;
-  }
+  } */
 }
 
-@media screen and (max-width: 400px) {
 
-  .regIster {
-    display: flex;
-    flex-direction: row;
-    left: 10px;
-    font-size: 10px;
-    top:-58px;
-  }
-
- .logIn {
-   display: flex;
-   flex-direction: row;
-   left: 100px;
-   top:-58px;
-   font-size: 10px;
- }
-}
-
-@media screen and (min-width: 700px) {
-
+@media screen and (min-width: 700px) and (max-width: 950px) {
   .px-0 img {
     position: relative;
     top: -20px;
- left: 0%;
-  width: 80%;
-height: 250px;
-margin-bottom: 40px;
-margin-top: 10px;
+    left: 0%;
+    width: 80%;
+    height: 250px;
+    margin-bottom: 40px;
+    margin-top: 10px;
   }
 
-   h3  {
+  h3 {
     font-size: 33px;
     position: relative;
     right: 459px;
   }
+
   .site-heading h1 {
     font-size: 33px;
     position: relative;
     right: 459px;
   }
 
-
+  /* 
   .logIn {
     display: flex;
     flex-direction: row;
     left: 260px;
-    top:-41px;
-  }
+    position: absolute;
+    top: 0;
+  } */
 
   #navbar .logo {
-    position: relative;
-    top: 0px;
+    position: absolute;
+    top: 0;
     left: 100px;
   }
-  
 
-  .regIster {
+  /* .regIster {
     display: flex;
     flex-direction: row;
     left: 190px;
-    top:-41px;
+    top: -41px;
     padding: 2px;
-  }
+    position: absolute;
+  } */
 
   .displayh1 {
     position: relative;
-    top: 210px;
-    margin-bottom: 20px;
+    top: 0;
   }
 
- .px-0 .lead {
+  .px-0 .lead {
     position: relative;
     top: 10px;
     font-size: 22px;
@@ -712,18 +763,3 @@ margin-top: 10px;
     left: 0%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

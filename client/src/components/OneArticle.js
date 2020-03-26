@@ -23,7 +23,7 @@ class OneArticle extends Component {
     
     like: false,
     likes: 0
-    }
+    };
   }
 
   componentDidMount() {
@@ -32,31 +32,31 @@ class OneArticle extends Component {
     axios.get(`/articles/one/${params.id}`, {withCredentials:true})
       .then(res => {
    
-        let userToken = localStorage.usertoken
-        const {_id} = jwt_decode(userToken)
+        let userToken = localStorage.usertoken;
+        const {_id} = jwt_decode(userToken);
       
-        this.setState({ article: res.data, userId:_id, first_name:res.data.owner.first_name, articleOwnerId:res.data.owner._id})
+        this.setState({ article: res.data, userId:_id, first_name:res.data.owner.first_name, articleOwnerId:res.data.owner._id});
            console.log(res.data.owner.first_name);
            console.log(this.state.article);
       }).catch(err => {
     
-        this.setState({errorMessage:err})
-        console.log(err)
+        this.setState({errorMessage:err});
+        console.log(err);
       })
 
       axios.get(`/users/one/:id`, {withCredentials:true})  
       .then((response)=> {
         // let userToken = localStorage.usertoken;
         // const {first_name} = jwt_decode(userToken);
-        this.setState({owner: response.data.id})
+        this.setState({owner: response.data.id});
           // this.setState({owner: response.data.id, first_name:response.data.owner.first_name})
           console.log(this.state.owner);
          
-          console.log(response.data.id)
+          console.log(response.data.id);
    
       })
       .catch((error)=> {
-          this.setState({error})
+          this.setState({error});
       })
   }
 
@@ -64,22 +64,25 @@ class OneArticle extends Component {
     console.log(id);
     axios.delete('/articles/'+id, {withCredentials:true})
       .then((result) => {
-        this.props.history.push("/profile")
+        this.props.history.push("/profile");
       });
   }
 
-  saveComments = (e)=> {
-    e.preventDefault()
-    const message = document.getElementById("comment").value;
+  saveComments = e => {
+    e.preventDefault();
+    const comm =  document.getElementById('comment');
+    const message = comm.value;
   
-    axios.post('/articles/savecomment', {id: this.state.article._id, owner: this.state.article.owner, text: message}, {withCredentials:true})
+  const { id } = this.state.article._id;
+  const { owner } = this.state.article.owner;
+    axios.post('/articles/savecomment', {id: id, owner: owner, text: message}, {withCredentials: true })
     .then((res) => {
   
       this.setState({ article: res.data})
         document.getElementById("comment").value = "";
     }).catch(err => {
-   
-    })
+   console.log(err);
+    });
   }
 
   showCommentBox() {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {register} from './UserFunctions';
 import { Link} from 'react-router-dom';
 import { Message } from 'semantic-ui-react';
-import './css/register.css'
+import './css/register.css';
 
 const initialState = {
     first_name: '',
@@ -14,19 +14,20 @@ const initialState = {
 
 class Register extends Component {
     constructor() {
-        super()
+        super();
         this.state = initialState;
-        this.onChange = this.onChange.bind(this)
-        this.onSubmit = this.onSubmit.bind(this)
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.validate = this.validate.bind(this);
     }
 
     onChange(e) {
         this.setState({
             [e.target.name]: e.target.value
-        })
+        });
     }
 
-    validate = () => {
+    validate() {
         let isError = false;
         const errors = {};
        let firstnameError = '';
@@ -96,7 +97,7 @@ class Register extends Component {
             }
         })
         .catch((err)=> {
-            this.props.history.push({ pathname: "/register", state: {message: "unauthorized"}})
+            this.props.history.push({ pathname: "/register", state: {message: "unauthorized"}});
         })
     }
 

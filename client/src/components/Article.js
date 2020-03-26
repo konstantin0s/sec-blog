@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Article extends Component {
   constructor() {
-      super()
+      super();
       this.state = {
           users: [],
           title: '',
@@ -18,19 +18,21 @@ class Article extends Component {
           imageUrl: '',
           userId: '',
           error: null
-      }
-      this.onChange = this.onChange.bind(this)
-      this.onSubmit = this.onSubmit.bind(this)
+      };
+
+      this.onChange = this.onChange.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
+      this.handleFileUpload = this.handleFileUpload.bind(this);
   }
 
   componentDidMount(){
      axios.get(`/users/`, {withCredentials:true})
     .then((response)=> {
-        this.setState({users: response.data, userId: response.data[0]._id})
-        console.log(response.data)
+        this.setState({users: response.data, userId: response.data[0]._id});
+        console.log(response.data);
     })
     .catch((error)=> {
-        this.setState({error})
+        this.setState({error});
     })
 }
 
@@ -41,7 +43,7 @@ class Article extends Component {
   }
 
   // this method handles just the file upload
-  handleFileUpload = e => {
+  handleFileUpload(e) {
     console.log("The file to be uploaded is: ", e.target.files[0]);
 
     const uploadData = new FormData();
@@ -61,7 +63,7 @@ class Article extends Component {
 }
 
   onSubmit(e) {
-      e.preventDefault()
+      e.preventDefault();
 
       const article = {
         title: this.state.title,
@@ -74,7 +76,7 @@ class Article extends Component {
       console.log(article);
 
       articles(article).then(res => {
-           this.props.history.push('/articles')
+           this.props.history.push('/articles');
       })
   }
 

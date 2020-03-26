@@ -18,17 +18,20 @@ class EditProfile extends Component {
         this.setState({ user: res.data.user });
         console.log(this.state.user);
       });
+
+      this.onSubmit = this.onSubmit.bind(this);
+      this.onChange = this.onChange.bind(this);
   }
 
-  onChange = (e) => {
-    const state = this.state.user
+  onChange(e) {
+    const state = this.state.user;
     state[e.target.name] = e.target.value;
     console.log(state[e.target.name] );
     console.log(this.state.user);
     this.setState({user:state});
   }
 
-  handleFileUpload = e => {
+  handleFileUpload(e) {
     console.log("The file to be uploaded is: ", e.target.files[0]);
 
     const uploadData = new FormData();
@@ -47,14 +50,14 @@ class EditProfile extends Component {
       });
 }
 
-  onSubmit = (e) => {
+  onSubmit(e) {
     e.preventDefault();
 
     const { first_name, last_name, email, password } = this.state.user;
 
     axios.put('/users/'+this.props.match.params.id, { first_name, last_name, email, password })
       .then((result) => {
-        this.props.history.push("/profile/"+this.props.match.params.id)
+        this.props.history.push("/profile/"+this.props.match.params.id);
       });
   }
 
