@@ -121,9 +121,24 @@ componentWillUnmount() {
     render() {
         const { error } = this.state;
         return (
-            <div className="center">
+           <div>
+
+                <div className="center">
+
+                <div className="left">
+                    {/* left scree background color */}
+                    
+                </div>
+                <div className="right">
+                    
+                        {/* left scree background color */}
+                </div>
+                
                 <div className="carding">
-                    <div className="col-md-10">
+            
+                </div>
+
+                <div className="col-md-10">
                         <form noValidate error={error ? error : undefined} onSubmit={this.onSubmit}>
                             <h1 className="h3 mb-3 font-weight-normal">Please Log In</h1>
                             {error && <Message error={error ? error : undefined} 
@@ -163,8 +178,9 @@ componentWillUnmount() {
                        <Link className="linkie" to={"/register"}> Register</Link>
       </p>
                     </div>
-                </div>
+
             </div>
+           </div>
         )
     }
 }

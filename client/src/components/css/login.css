@@ -1,39 +1,106 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-.col-md-10 {
-    width: 300px;
-  }
+.left {
+    background-color: #084577;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: 100vh;
+}
 
-  .emailError {
+.right {
+    background-color: #880f64;
+    right: 0;
+    width: 50%;
+    height: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: 100vh;
+}
+
+
+.carding {
+    width: 460px;
+    background: rgb(248, 239, 239);
+    border: 4px solid rgb(248, 239, 239);
+    top: 2em;
+    border-radius: 50%;
+    z-index: 202;
+    height: 460px;
+    opacity: 0.5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    left: 13.5em;
+}
+
+.col-md-10 {
+    width: 400px;
+    top: 1em;
+    opacity: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 6em;
+    z-index: 205;
+    top: 2em;
+    right: 17.1em;
+}
+
+.col-md-10 form {
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.emailError {
     position: relative;
     top: -10px;
     padding: 4px;
     color: red;
     font-size: 12px;
 
-  }
-  
-  .passwordError {
-      position: relative;
-      top: -40px;
-      padding: 4px;
-      color: red;
-      font-size: 12px;
-  }
+}
 
-.center{
+.passwordError {
+    position: relative;
+    top: -40px;
+    padding: 4px;
+    color: red;
+    font-size: 12px;
+}
+
+.center {
     font-family: 'Raleway', sans-serif;
     position: absolute;
     height: 100%;
     width: 100%;
-    display: flex;
+    z-index: 199;
+    /* display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-self: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0px;
     top: 0;
-   left: 0px;
-   background-color: white;
+    left: 0px;
+    background-color: white;
 }
 
 .conta {
@@ -42,7 +109,7 @@
 
 .linkTo {
     position: relative;
-    top: 10px;
+    top: -13px;
 }
 
 .one {
@@ -57,31 +124,22 @@
 
 .three {
     position: relative;
-    top: -20px;
+    top: -30px;
 }
 
 .linkie {
+    position: relative;
+    top: 0px;
     text-decoration: none;
 }
 
-.carding{
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 0.8rem;
-}
-
-.carding > form{
-    display: flex;
-    flex-direction: column;
-}
-
-.carding h1{
+.carding h1 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-.form-item{
+.form-item {
     font-family: 'Raleway', sans-serif;
     border-radius: 5px;
     padding: 5px;
@@ -92,7 +150,7 @@
     border: 1px solid grey;
 }
 
-.form-submit{
+.form-submit {
     font-family: 'Raleway', sans-serif;
     height: 35px;
     color: #fff;
@@ -102,11 +160,12 @@
     transition: 0.3s opacity ease;
     cursor: pointer;
 }
-.form-submit:hover{
-   opacity: 0.6;
+
+.form-submit:hover {
+    opacity: 0.6;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 300px) and (max-width: 700px) {
     .center {
         width: 80%;
         height: 100%;
