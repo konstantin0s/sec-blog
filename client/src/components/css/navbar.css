@@ -36,18 +36,27 @@ li {
     margin-bottom: 3rem;
     transition: var(--ease);
     position: relative;
-    left: 90%;
+    left: 80%;
     margin-left: 100px;
-    width: 170px;
+    width: 150px;
     top: 0px;
     height: 2em;
     text-align: center;
+    -webkit-align-self: center;
     align-self: center;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-justify-content: center;
     justify-content: center;
-    /* background: red; */
 }
+
+.logix {
+    position: relative;
+    left: 30%;
+}
+
 
 .link:hover,
 .logo:hover {
@@ -86,6 +95,16 @@ li {
 .regIster {
     top: 0px;
     color: white;
+}
+
+.logIn {
+    position: relative;
+    left: 600px;
+}
+
+.regIster {
+    position: relative;
+    left: 700px;
 }
 
 .write {

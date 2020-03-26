@@ -40,7 +40,7 @@ class Navbar extends Component {
      render() {
 
       const loginRegLink = (
-       <ul className="navbar-nav mr-auto navlinks">
+       <ul className="navbar-nav mr-auto navlinks logix">
           <li className="nav-item link logIn">
             <Link to="/login" className="nav-link"> Login</Link>
             </li>
@@ -70,7 +70,7 @@ class Navbar extends Component {
            </Link>
            </li>
            <li className="nav-item link logout">
-           <button onClick={this.logOut.bind(this)} className="nav-link">
+           <button onClick={this.logOut.bind(this)}>
          Logout
          </button> 
        

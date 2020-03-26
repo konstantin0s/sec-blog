@@ -34,12 +34,13 @@
   text-align: center;
 }
 
-.site-heading .link {
+.site-heading li {
   display: flex;
   flex-direction: column;
   justify-content: center;
   left: 8em;
   top: 1em;
+  padding: 0.5em;
 }
 
 .site-heading .link a {
@@ -140,164 +141,8 @@
 }
 
 
-/* 
-.px-0 .my-3,
-.mb-0 {
-  color: black;
-  top: 80px;
-  position: relative;
-}
 
-.px-0 img {
-  top: -50px;
-}
-
-.px-0 hr {
-  /* float: left; 
-left: -220px;
-position: relative;
-top: 70px;
-}
-
-.card-img-right {
-  position: relative;
-  height: 350px;
-  width: 70%;
-  left: 0%;
-  top: 66px;
-}
-
-.continue {
-  top: 140px;
-  position: relative;
-  float: right;
-  right: 430px;
-}
-
-.card-body hr {
-  position: relative;
-  top: -100px;
-}
-
-.card-body .linkz {
-  position: relative;
-  top: 100px;
-}
-
-.displayh1 {
-  position: relative;
-  top: 102px;
-  color: black;
-  font-weight: 600;
-}
-
-.card-body>div {
-  position: relative;
-  top: 40px;
-}
-
-.card-body .botto {
-  position: relative;
-  left: 100px;
-}
-
-.row .mb-2 {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-}
-
-.align-items-start {
-  top: 34px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-}
-
-.align-items-start .jaja {
-  position: relative;
-  top: -25px;
-  color: black;
-}
-
-.blog-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  bottom: 0;
-  height: 30%;
-  width: 100%;
-  text-decoration: none;
-}
-
-.card-second {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  top: 20px;
-  position: relative;
-  height: 30%;
-  width: 100%;
-}
-
-.card-second a {
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.card-second h3 {
-  font-weight: 600;
-}
-
-.card-sub {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.blog-footer a {
-  text-decoration: none;
-}
-
-.linkz {
-  position: absolute;
-  font-weight: 200;
-  font-size: 20px;
-  top: 280px;
-  margin: 10px 0;
-}
-
-.linkz:link {
-  text-decoration: none;
-}
-
-.card .sec {
-  position: relative;
-  top: -64px;
-}
-
-.card-sub>div {
-  position: relative;
-  top: 80px;
-}
-
-*/
-@media screen and (max-width: 600px) {
+*/ @media screen and (max-width: 600px) {
   .containerX {
     background-color: aliceblue;
   }
