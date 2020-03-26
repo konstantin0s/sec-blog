@@ -1,3 +1,69 @@
+.left {
+  background-color: #084577;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  height: 100vh;
+}
+
+.h3 {
+  margin-bottom: 1em;
+}
+
+.right {
+  background-color: #880f64;
+  right: 0;
+  width: 50%;
+  height: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  height: 100vh;
+}
+
+.form-group {
+  margin-bottom: 0.3em;
+}
+
+
+.form-item {
+  font-family: 'Raleway', sans-serif;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid grey;
+}
+
+
+.carding {
+  left: 14.7em;
+  opacity: 0.3;
+}
+
+.col-md-10 {
+  width: 400px;
+  top: 1em;
+  opacity: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 6em;
+  z-index: 205;
+  top: 2em;
+  right: 16em;
+}
+
+
 .linkTo {
   position: relative;
   top: 10px;
@@ -11,8 +77,8 @@
 
 @media screen and (min-width: 300px) {
   .center {
-      width: 80%;
-      height: 100%;
+    width: 80%;
+    height: 100%;
   }
 
 

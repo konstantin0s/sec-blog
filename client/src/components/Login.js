@@ -144,9 +144,7 @@ componentWillUnmount() {
                             {error && <Message error={error ? error : undefined} 
                              content="That username/password is incorrect. Try again!"  />}
                             <div className="form-group one">
-                                <label htmlFor="email">
-                                    Email Address
-                                </label><br />
+                               
                                 <input
                                     type="email"
                                     className="form-item"
@@ -157,9 +155,7 @@ componentWillUnmount() {
                             </div> 
                             <div className="emailError" style={{ fontSize: 12, color: "red"}}>{this.state.emailError}</div><br />
                             <div className="form-group two">
-                                <label htmlFor="email">
-                                    Password
-                                </label> <br />
+                          
                                 <input
                                     type="password"
                                     className="form-item"

@@ -34,7 +34,7 @@
     border-radius: 50%;
     z-index: 202;
     height: 460px;
-    opacity: 0.5;
+    opacity: 0.3;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -139,14 +139,15 @@
     margin-bottom: 10px;
 }
 
+.form-group {
+    margin-bottom: 0.3em;
+}
+
+
 .form-item {
     font-family: 'Raleway', sans-serif;
     border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 2rem;
-    height: 30px;
     width: 100%;
-    /* width: 16rem; */
     border: 1px solid grey;
 }
 

@@ -48,12 +48,12 @@ class Register extends Component {
  
         if (!this.state.email.includes('@')) {
             isError = true;
-            emailError = 'invalid email';
+            emailError = 'Invalid email';
         }
  
         if (!this.state.password) {
             isError = true;
-         passwordError = 'password cannot be blank';
+         passwordError = 'Password cannot be blank';
      }
           if (isError) {
               this.setState({
@@ -106,64 +106,72 @@ class Register extends Component {
         return (
 
     <div className="center">
+        <div className="left">
+                    {/* left scree background color */}
+                    
+                </div>
+                <div className="right">
+                    
+                        {/* left scree background color */}
+                </div>
+
                 <div className="carding">
-                    <div className="col-md-10">
+ 
+                </div>
+
+                <div className="col-md-10">
                     <form noValidate onSubmit={this.onSubmit}>
-                           <h1 className="h3 mb-3 font-weight-normal">Please Sign In</h1>
+                           <h1 className="h3 mb-5 font-weight-normal">Please Sign In</h1>
                             {error && <Message error={error} 
                              content="That username/password is incorrect. Try again!"  />}
                             <div className="form-group">
-                                <label htmlFor="first_name">
-                                    First Name
-                                </label>
+                            
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-item"
                                     name="first_name"
                                     placeholder="First Name"
                                     value={this.state.first_name}
                                     onChange={this.onChange}/>
                             </div>
                             <div style={{ fontSize: 12, color: "red"}}>{this.state.firstnameError}</div>
+                        
                             <div className="form-group">
-                                <label htmlFor="last_name">
-                                    Last Name
-                                </label>
+                              
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-item"
                                     name="last_name"
                                     placeholder="Last Name"
                                     value={this.state.last_name}
                                     onChange={this.onChange}/>
                             </div>
                             <div style={{ fontSize: 12, color: "red"}}>{this.state.lastnameError}</div>
+                         
                             <div className="form-group">
-                                <label htmlFor="email">
-                                    Email
-                                </label>
+                              
                                 <input
                                     type="email"
-                                    className="form-control"
+                                    className="form-item"
                                     name="email"
                                     placeholder="Enter Email"
                                     value={this.state.email}
                                     onChange={this.onChange}/>
                             </div>
                             <div style={{ fontSize: 12, color: "red"}}>{this.state.emailError}</div>
+                    
                             <div className="form-group">
-                                <label htmlFor="password">
-                                    Password
-                                </label>
+                            
                                 <input
                                     type="password"
-                                    className="form-control"
+                                    className="form-item"
                                     name="password"
                                     placeholder="Enter Password"
                                     value={this.state.password}
                                     onChange={this.onChange}/>
                             </div>
                             <div style={{ fontSize: 12, color: "red"}}>{this.state.passwordError}</div>
+                          
                             <button type="submit" className="btn btn-lg btn-primary btn-block">
                                 Register
                             </button>
@@ -173,7 +181,7 @@ class Register extends Component {
                        <Link className="linkie" to={"/login"}> Login</Link>
       </p>
                     </div>
-                </div>
+
             </div>
 
         )
