@@ -11,7 +11,8 @@ const User = require('../models/User');
 
 users.use(cors({
   credentials: true,
-  origin: ['http://zumzablog.herokuapp.com/']
+  origin: ['http://zumzablog.herokuapp.com/'],
+  
   // origin: ['http://localhost:3001']
 }));
 

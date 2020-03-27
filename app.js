@@ -60,6 +60,7 @@ mongoose
   app.use('/users', Users);
 
   // app.use((req, res, next) => {
+  //   res.header('Access-Control-Allow-Origin', '*');
   //   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
   //     next(); // ==> go to the next route ---
   //   } else {                          //    |
