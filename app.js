@@ -70,15 +70,18 @@ mongoose
   app.use('/', require('./routes/file-upload-routes'));
 
   // Right before your app.listen(), add this:
-if (process.env.NODE_ENV === 'production') {
-  
-  app.use(express.static('client/build'));
-
-// Handles any requests that don't match the ones above
-app.get('*', (req,res) =>{
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+//production mode
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+  //
+  app.get('*', (req, res) => {
+    res.sendfile(path.join(__dirname = 'client/build/index.html'));
+  })
 }
+//build mode
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/public/index.html'));
+})
 
   app.listen(process.env.PORT || 3001, function() {
     console.log("Server started on port 3001 :)");
