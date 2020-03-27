@@ -20,10 +20,11 @@ app.use(express.static(path.join(__dirname, 'public/build')));
 // ... other app.use middleware 
 
 app.use(express.json());
+
 app.use(cors({
   credentials: true,
   // origin: ['http://localhost:3001']
-  origin: ['http://zumzablog.herokuapp.com/']
+  origin: ['http://zumzablog.herokuapp.com']
 }));
 // app.use(
 //   bodyParser.urlencoded({
