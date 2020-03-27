@@ -71,11 +71,13 @@ mongoose
 
   // Right before your app.listen(), add this:
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
   
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
+  app.use(express.static('client/build'));
+
+// Handles any requests that don't match the ones above
+app.get('*', (req,res) =>{
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 }
 
   app.listen(process.env.PORT || 3001, function() {
