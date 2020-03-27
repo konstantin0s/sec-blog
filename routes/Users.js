@@ -11,10 +11,19 @@ const User = require('../models/User');
 
 users.use(cors({
   credentials: true,
-  origin: ['http://zumzablog.herokuapp.com']
-  
-  // origin: ['http://localhost:3001']
+  origin: function(origin, callback){
+    // allow requests with no origin 
+    // (like mobile apps or curl requests)
+    if(!origin) return callback(null, true);
+    if(allowedOrigins.indexOf(origin) === -1){
+      var msg = 'The CORS policy for this site does not ' +
+                'allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  }
 }));
+
 
 // const protect = (req, res, next)=> {
 //   debugger

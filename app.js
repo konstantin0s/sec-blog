@@ -21,11 +21,29 @@ app.use(express.static(path.join(__dirname, 'public/build')));
 
 app.use(express.json());
 
+var allowedOrigins = ['http://localhost:3001',
+'http://zumzablog.herokuapp.com'];
+
 app.use(cors({
   credentials: true,
-  // origin: ['http://localhost:3001']
-  origin: ['http://zumzablog.herokuapp.com']
+  origin: function(origin, callback){
+    // allow requests with no origin 
+    // (like mobile apps or curl requests)
+    if(!origin) return callback(null, true);
+    if(allowedOrigins.indexOf(origin) === -1){
+      var msg = 'The CORS policy for this site does not ' +
+                'allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  }
 }));
+
+// app.use(cors({
+//   credentials: true,
+//   // origin: ['http://localhost:3001']
+//   origin: ['http://zumzablog.herokuapp.com']
+// }));
 // app.use(
 //   bodyParser.urlencoded({
 //     extended: false
