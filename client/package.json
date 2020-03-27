@@ -21,7 +21,7 @@
     "uuid": "^3.3.2"
   },
   "resolutions": {
-    "react-router": "4.3.1"
+    "react-router-dom": "4.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
