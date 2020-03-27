@@ -13,7 +13,7 @@ class EditProfile extends Component {
   }
 
   componentDidMount() {
-    axios.get('/users/'+this.props.match.params.id)
+    axios.get(`${REACT_APP_API_URL}/users/`+this.props.match.params.id)
       .then(res => {
         this.setState({ user: res.data.user });
         console.log(this.state.user);
@@ -55,7 +55,7 @@ class EditProfile extends Component {
 
     const { first_name, last_name, email, password } = this.state.user;
 
-    axios.put('/users/'+this.props.match.params.id, { first_name, last_name, email, password })
+    axios.put(`${REACT_APP_API_URL}/users/`+this.props.match.params.id, { first_name, last_name, email, password })
       .then((result) => {
         this.props.history.push("/profile/"+this.props.match.params.id);
       });
@@ -105,7 +105,7 @@ class EditProfile extends Component {
 
         <footer className="blog-footer">
          <p> 
-         &copy; Copyright 2019 YouHelp
+         &copy; Copyright 2020 YouHelp
 </p>
         <p>
            <a href="#masthead">Back to top</a>

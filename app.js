@@ -22,7 +22,8 @@ app.use(express.static(path.join(__dirname, 'public/build')));
 app.use(express.json());
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3001']
+  // origin: ['http://localhost:3001']
+  origin: ['http://zumzablog.herokuapp.com/']
 }));
 // app.use(
 //   bodyParser.urlencoded({
@@ -44,8 +45,7 @@ mongoose
   app.use(session({  //setup sessions always here 
     secret: "secret",
     key: 'sid',
-    cookie: { 
-      domain: '.' + process.env.APP_DOMAIN,
+    cookie: {
       maxAge: 60000 },
     resave: true,
     saveUninitialized: true,

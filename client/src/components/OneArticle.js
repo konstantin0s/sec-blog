@@ -29,7 +29,7 @@ class OneArticle extends Component {
   componentDidMount() {
     const { params } = this.props.match;
   
-    axios.get(`/articles/one/${params.id}`, {withCredentials:true})
+    axios.get(`${REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials:true})
       .then(res => {
    
         let userToken = localStorage.usertoken;
@@ -44,7 +44,7 @@ class OneArticle extends Component {
         console.log(err);
       })
 
-      axios.get(`/users/one/:id`, {withCredentials:true})  
+      axios.get(`${REACT_APP_API_URL}/users/one/:id`, {withCredentials:true})  
       .then((response)=> {
         // let userToken = localStorage.usertoken;
         // const {first_name} = jwt_decode(userToken);
@@ -62,7 +62,7 @@ class OneArticle extends Component {
 
   delete(id){
     console.log(id);
-    axios.delete('/articles/'+id, {withCredentials:true})
+    axios.delete(`${REACT_APP_API_URL}/articles/`+id, {withCredentials:true})
       .then((result) => {
         this.props.history.push("/profile");
       });
@@ -75,7 +75,7 @@ class OneArticle extends Component {
   
   const { id } = this.state.article._id;
   const { owner } = this.state.article.owner;
-    axios.post('/articles/savecomment', {id: id, owner: owner, text: message}, {withCredentials: true })
+    axios.post(`/articles/savecomment`, {id: id, owner: owner, text: message}, {withCredentials: true })
     .then((res) => {
   
       this.setState({ article: res.data})

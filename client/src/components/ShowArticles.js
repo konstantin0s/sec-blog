@@ -27,7 +27,7 @@ class ShowArticles extends Component {
   }
 
   componentDidMount() {
-    axios.get('/articles', {withCredentials:true})
+    axios.get(`${REACT_APP_API_URL}/articles`, {withCredentials:true})
       .then(res => {
         this.setState({ filtered: res.data });
         console.log(this.state.filtered);
