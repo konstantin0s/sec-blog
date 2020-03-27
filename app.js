@@ -15,6 +15,8 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/build')));
+// ... other app.use middleware 
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.use(express.json());
 app.use(cors({
@@ -67,6 +69,11 @@ mongoose
   // const Articles = require('./routes/Articles');
   app.use('/articles', require('./routes/Articles'));
   app.use('/', require('./routes/file-upload-routes'));
+
+  // Right before your app.listen(), add this:
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
   app.listen(process.env.PORT || 3001, function() {
     console.log("Server started on port 3001 :)");
