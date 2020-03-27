@@ -1,6 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const cors = require('cors');
 require("dotenv").config();
+
+var allowedOrigins = ['https://zumbazomblog.herokuapp.com/'];
+
+router.use(cors({
+  credentials: true,
+  origin: allowedOrigins
+}));
+
 
 //bring in models
 const Article = require('../models/Article');

@@ -6,12 +6,11 @@ const bcrypt = require('bcrypt');
 const cookieParser = require('cookie-parser');
 users.use(cookieParser());
 require("dotenv").config();
-
 const User = require('../models/User');
 
-var allowedOrigins = ['http://zumzablog.herokuapp.com'];
 
 
+var allowedOrigins = ['https://zumbazomblog.herokuapp.com/'];
 users.use(cors({
   credentials: true,
   origin: allowedOrigins

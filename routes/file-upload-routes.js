@@ -1,5 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const router  = express.Router();
+
+
+var allowedOrigins = ['https://zumbazomblog.herokuapp.com/'];
+router.use(cors({
+    credentials: true,
+    origin: allowedOrigins
+  }));
+  
 
 // include CLOUDINARY:
 const uploader = require('../configs/cloudinary-setup');

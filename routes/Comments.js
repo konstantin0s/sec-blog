@@ -1,7 +1,17 @@
 const express = require('express');
 const router  = express.Router();
+const cors = require('cors');
 const Comment = require("../models/Comment")
-const Article = require("../models/Article")
+const Article = require("../models/Article");
+
+
+
+var allowedOrigins = ['https://zumbazomblog.herokuapp.com/'];
+router.use(cors({
+    credentials: true,
+    origin: allowedOrigins
+  }));
+  
 
 router.post('/comments', (req, res, next)=>{
   

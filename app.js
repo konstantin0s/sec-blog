@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public/build')));
 
 app.use(express.json());
 
-var allowedOrigins = ['http://zumzablog.herokuapp.com'];
+var allowedOrigins = ['https://zumbazomblog.herokuapp.com/'];
 
 app.use(cors({
   credentials: true,
@@ -98,7 +98,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin", "https://zumbazomblog.herokuapp.com/");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });

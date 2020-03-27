@@ -18,7 +18,7 @@ class Navbar extends Component {
   }
 
   componentDidMount() {
-    axios.get(`${process.env.REACT_APP_CORS_URL}${process.env.REACT_APP_API_URL}/users/`+this.props.match.params.id)
+    axios.get(`${process.env.REACT_APP_API_URL}/users/`+this.props.match.params.id)
       .then(res => {
         this.setState({ user: res.data.user });
         console.log(this.state.user);
