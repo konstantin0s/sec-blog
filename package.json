@@ -9,7 +9,7 @@
     "client": "npm start --prefix client",
     "client-install": "npm install --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "SKIP_PREFLIGHT_CHECK=true npm install --prefix client && npm run build --prefix client"
   },
   "author": "Constantin Tofan",
   "license": "ISC",
