@@ -12,7 +12,7 @@
     "moment": "^2.24.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-router-dom": "^4.4.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.8",
     "react-transition-group": "^2.6.1",
     "reactstrap": "^7.1.0",
@@ -21,7 +21,7 @@
     "uuid": "^3.3.2"
   },
   "resolutions": {
-    "react-router-dom": "4.3.1"
+    "react-router": "4.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
