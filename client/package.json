@@ -20,6 +20,9 @@
     "store": "^2.0.12",
     "uuid": "^3.3.2"
   },
+  "resolutions": {
+    "react-router": "4.3.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
