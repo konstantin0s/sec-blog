@@ -46,6 +46,7 @@ export const articles = newArticle => {
   }, {withCredentials: true})
   .then(res => {
     console.log('Article added!');
+    console.log('Article added!');
   });
 };
 
