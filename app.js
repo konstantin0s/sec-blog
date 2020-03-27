@@ -59,13 +59,13 @@ mongoose
   const Users = require('./routes/Users');
   app.use('/users', Users);
 
-  app.use((req, res, next) => {
-    if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
-      next(); // ==> go to the next route ---
-    } else {                          //    |
-      res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
-    }                                 //    |
-  }); 
+  // app.use((req, res, next) => {
+  //   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
+  //     next(); // ==> go to the next route ---
+  //   } else {                          //    |
+  //     res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
+  //   }                                 //    |
+  // }); 
 
 
 
