@@ -9,6 +9,10 @@ require("dotenv").config();
 
 const User = require('../models/User');
 
+var allowedOrigins = ['http://localhost:3001',
+'http://zumzablog.herokuapp.com'];
+
+
 users.use(cors({
   credentials: true,
   origin: function(origin, callback){
@@ -35,7 +39,7 @@ users.use(cors({
 // }
 
 // process.env.SECRET_KEY = 'secret';
-users.get('/one/:id', (req, res, next) => {
+users.get('/one/:id', cors(allowedOrigins), (req, res, next) => {
   //console.log(req.params.id); // this is print our id parameter
 
   // lets do this
@@ -51,14 +55,14 @@ users.get('/one/:id', (req, res, next) => {
       })
 })
 
-users.get('/', (req, res) => {
+users.get('/', cors(allowedOrigins), (req, res) => {
   User.find()
   .sort({ date: -1 })
   .then(users => res.json(users));
     });
 
 
-    users.get('/', (req, res, next) => {
+    users.get('/', cors(allowedOrigins), (req, res, next) => {
       return User.find()
         .sort({ createdAt: 'descending' })
         .then((users) => res.json({ users: users.map(user => user.toJSON()) }))
@@ -77,7 +81,7 @@ users.get('/', (req, res) => {
       }).catch(next);
     });
     
-    users.get('/:id', (req, res, next) => {
+    users.get('/:id', cors(allowedOrigins), (req, res, next) => {
       return res.json({
         user: req.user.toJSON(),
       });
@@ -85,7 +89,7 @@ users.get('/', (req, res) => {
 
 
 //Edit single USer
-users.put('/:id', function(req, res, next) {
+users.put('/:id', cors(allowedOrigins), function(req, res, next) {
   const userid = req.params.id;
   const body = req.body;
   User.findByIdAndUpdate(userid, body, function (err, user) {
@@ -95,7 +99,7 @@ users.put('/:id', function(req, res, next) {
 });
 
     
-users.get('/:id', function(req, res, next) {
+users.get('/:id', cors(allowedOrigins), function(req, res, next) {
   const userid = req.params.id;
   User.findById(userid)
     .then((user)=>{
@@ -106,7 +110,7 @@ users.get('/:id', function(req, res, next) {
     })
 });
 
-users.get('/:id', function(req, res, next) {
+users.get('/:id', cors(allowedOrigins), function(req, res, next) {
   const userid = req.params.id;
   User.findById(userid)
     .then((user)=>{
@@ -135,7 +139,7 @@ users.get('/:id', function(req, res, next) {
 
 
 
-users.post('/register', (req, res) => {
+users.post('/register', cors(allowedOrigins), (req, res) => {
   const today = new Date();
   const userData = {
          first_name: req.body.first_name,
@@ -169,7 +173,7 @@ users.post('/register', (req, res) => {
   })
 })
  
-users.post('/login', (req, res) => {
+users.post('/login', cors(allowedOrigins), (req, res) => {
 
   User.findOne({
     email: req.body.email
@@ -207,7 +211,7 @@ users.post('/login', (req, res) => {
   })
 })
 
-users.get('/profile', (req, res) => {
+users.get('/profile', cors(allowedOrigins), (req, res) => {
   const decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
 
   User.findOne({
@@ -226,7 +230,7 @@ users.get('/profile', (req, res) => {
 })
 
 
-users.post("/:id", (req,res)=> {
+users.post("/:id", cors(allowedOrigins), (req,res)=> {
 
   User.findById(req.params.id)
     .populate("articles")
@@ -238,7 +242,7 @@ users.post("/:id", (req,res)=> {
     })
 })
 
-users.post("/logout", (req, res)=> {
+users.post("/logout", cors(allowedOrigins), (req, res)=> {
 
   req.session.destroy()
   res.send(200).json({message: "session destroyed"})

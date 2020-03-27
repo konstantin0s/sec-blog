@@ -78,17 +78,17 @@ mongoose
   const Users = require('./routes/Users');
   app.use('/users', Users);
 
-  app.use((req, res, next) => {
+  // app.use((req, res, next) => {
 
-    if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-    next(); // ==> go to the next route ---
-    } else {                          //    |
-      res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
-    }                                 //    |
-  }); 
+  //   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
+  //   res.header("Access-Control-Allow-Origin", "*");
+  //   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+  //   next(); // ==> go to the next route ---
+  //   } else {                          //    |
+  //     res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
+  //   }                                 //    |
+  // }); 
 
 
 
