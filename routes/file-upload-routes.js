@@ -3,12 +3,19 @@ const cors = require('cors');
 const router  = express.Router();
 
 
-var allowedOrigins = ['https://zumbazomblog.herokuapp.com/'];
-router.use(cors({
-    credentials: true,
-    origin: allowedOrigins
-  }));
-  
+
+var whitelist = ['http://locahost:3001', 'https://zumbazomblog.herokuapp.com/']
+var corsOptionsDelegate = function (req, callback) {
+  var corsOptions;
+  if (whitelist.indexOf(req.header('Origin')) !== -1) {
+    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
+  } else {
+    corsOptions = { origin: false } // disable CORS for this request
+  }
+  callback(null, corsOptions) // callback expects two parameters: error and options
+}
+
+router.options('*', cors(corsOptionsDelegate))
 
 // include CLOUDINARY:
 const uploader = require('../configs/cloudinary-setup');
