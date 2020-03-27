@@ -94,7 +94,7 @@ render()
 
 	<footer className="blog-footer">
          <p> 
-         &copy; Copyright 2019 YouHelp
+         &copy; Copyright 2020 YouHelp
 </p>
         <p>
            <a href="#masthead">Back to top</a>

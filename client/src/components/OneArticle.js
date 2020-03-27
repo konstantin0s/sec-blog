@@ -29,7 +29,7 @@ class OneArticle extends Component {
   componentDidMount() {
     const { params } = this.props.match;
   
-    axios.get(`${REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials:true})
+    axios.get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials:true})
       .then(res => {
    
         let userToken = localStorage.usertoken;
@@ -44,7 +44,7 @@ class OneArticle extends Component {
         console.log(err);
       })
 
-      axios.get(`${REACT_APP_API_URL}/users/one/:id`, {withCredentials:true})  
+      axios.get(`${process.env.REACT_APP_API_URL}/users/one/:id`, {withCredentials:true})  
       .then((response)=> {
         // let userToken = localStorage.usertoken;
         // const {first_name} = jwt_decode(userToken);
@@ -62,7 +62,7 @@ class OneArticle extends Component {
 
   delete(id){
     console.log(id);
-    axios.delete(`${REACT_APP_API_URL}/articles/`+id, {withCredentials:true})
+    axios.delete(`${process.env.REACT_APP_API_URL}/articles/`+id, {withCredentials:true})
       .then((result) => {
         this.props.history.push("/profile");
       });
@@ -227,7 +227,7 @@ class OneArticle extends Component {
               </button>
             </li>
           </ul>
-          <p className="copyright text-muted">Copyright &copy; YouHelp 2019</p>
+          <p className="copyright text-muted">Copyright &copy; YouHelp 2020</p>
         </div>
       </div>
     </div>
