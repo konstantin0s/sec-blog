@@ -11,6 +11,8 @@ const multer = require('multer');
 require("dotenv").config();
 
 
+
+
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -42,7 +44,9 @@ mongoose
   app.use(session({  //setup sessions always here 
     secret: "secret",
     key: 'sid',
-    cookie: { maxAge: 60000 },
+    cookie: { 
+      domain: '.' + process.env.APP_DOMAIN,
+      maxAge: 60000 },
     resave: true,
     saveUninitialized: true,
     store: new MongoStore({
