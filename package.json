@@ -7,9 +7,8 @@
     "start": "node app.js",
     "server": "nodemon app.js",
     "client": "npm start --prefix client",
-    "client-react": "npm install",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "\"npm run client-react\" && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Constantin Tofan",
   "license": "ISC",
@@ -37,5 +36,5 @@
   },
   "engines": {
     "node": "8.9.2"
-  }
+}
 }
