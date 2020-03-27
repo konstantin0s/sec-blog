@@ -76,7 +76,7 @@ mongoose
 
 
   const Users = require('./routes/Users');
-  app.use('/users', Users);
+  app.use('/users',  Users);
 
   // app.use((req, res, next) => {
 
@@ -93,8 +93,8 @@ mongoose
 
 
   // const Articles = require('./routes/Articles');
-  app.use('/articles', require('./routes/Articles'));
-  app.use('/', require('./routes/file-upload-routes'));
+  app.use('/articles', cors(allowedOrigins), require('./routes/Articles'));
+  app.use('/', cors(allowedOrigins), require('./routes/file-upload-routes'));
 
   // Right before your app.listen(), add this:
 //production mode
