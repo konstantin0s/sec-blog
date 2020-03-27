@@ -21,26 +21,15 @@ app.use(express.static(path.join(__dirname, 'public/build')));
 
 app.use(express.json());
 
-var allowedOrigins = ['http://localhost:3001',
-'http://zumzablog.herokuapp.com'];
+var allowedOrigins = ['http://zumzablog.herokuapp.com'];
 
 app.use(cors({
   credentials: true,
-  origin: function(origin, callback){
-    // allow requests with no origin 
-    // (like mobile apps or curl requests)
-    if(!origin) return callback(null, true);
-    if(allowedOrigins.indexOf(origin) === -1){
-      var msg = 'The CORS policy for this site does not ' +
-                'allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  }
+  origin: allowedOrigins
 }));
 
 // app.use(cors({
-//   credentials: true,
+//   credentials: true, 
 //   // origin: ['http://localhost:3001']
 //   origin: ['http://zumzablog.herokuapp.com']
 // }));
@@ -93,8 +82,8 @@ mongoose
 
 
   // const Articles = require('./routes/Articles');
-  app.use('/articles', cors(allowedOrigins), require('./routes/Articles'));
-  app.use('/', cors(allowedOrigins), require('./routes/file-upload-routes'));
+  app.use('/articles', require('./routes/Articles'));
+  app.use('/', require('./routes/file-upload-routes'));
 
   // Right before your app.listen(), add this:
 //production mode
@@ -105,6 +94,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.setHeader('Access-Control-Allow-Origin', '*');
   });
 }
 
