@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 import './css/ShowArticles.css';
 import Moment from "moment";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -47,7 +48,7 @@ class ShowArticles extends Component {
   render() {
     const { filtered, term } = this.state;
     return ( 
-  <div className="container showArticles">
+  <div className="container showArticles" id="masthead">
 
 <div className="form-containex">
 <form className="active-pink active-pink-2">
@@ -84,6 +85,8 @@ class ShowArticles extends Component {
 </div>
 
 )}  
+
+<Footer />
 
 </div>
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './css/landing.css';
 import {Link} from 'react-router-dom';
-import rocket from './rocket.png';
+import Footer from './Footer';
 
 class Landing extends Component {
   render() {
@@ -72,8 +72,8 @@ class Landing extends Component {
 
       </div>
 
-        
-         <footer className="blog-footer">
+        <Footer />
+         {/* <footer className="blog-footer">
          <p>
            <a className="toTop" href="#masthead">
        <img src={rocket} alt="Rocket" />
@@ -82,7 +82,7 @@ class Landing extends Component {
          <p> 
          YouHelp &copy; Copyright 2020
        </p>
-    </footer>
+    </footer> */}
 
 </div>
                

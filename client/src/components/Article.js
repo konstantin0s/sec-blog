@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {articles} from './UserFunctions';
 import {handleUpload} from './UserFunctions';
-import axios from 'axios';
+import Footer from './Footer';
 import '../components/css/Article.css';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
 
 
 class Article extends Component {
@@ -83,15 +84,12 @@ class Article extends Component {
   render() {
       return (
 
-        <div className="container addArticle">
+        <div id="masthead" className="addArticle">
         <div className="cardz">
-            <div className="col-md-10">
+            <div className="col-md-12">
             <form noValidate onSubmit={this.onSubmit}>
                        <h1 className="h3 mb-3 font-weight-normal">Add Article:</h1>
                           <div className="form-group">
-                               <label htmlFor="title" className="title">
-                                   Title:
-                          </label>
                                <input
                                    type="text"
                                    className="form-item"
@@ -116,14 +114,12 @@ class Article extends Component {
            </div>
                       </div>
                       <div className="form-group">
-                               <label htmlFor="body" className="desc">
-                                   Description:
-                               </label>
+
                                <textarea
                               type="text"
                                    className="form-item textarea"
                                   name="body"
-                                   placeholder="Enter Post"
+                                   placeholder="Type Your Post.."
                                    value={this.state.body}
                                onChange={this.onChange}/>
                            </div>
@@ -144,14 +140,7 @@ class Article extends Component {
             </div>
         </div>
 
-        <footer className="blog-footer">
-         <p> 
-         &copy; Copyright 2019 YouHelp
-</p>
-        <p>
-           <a href="#masthead">Back to top</a>
-        </p>
-    </footer>
+        <Footer />
     </div>
       )
   }

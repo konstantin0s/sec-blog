@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .whoops-404 {
   display: none;
 }
@@ -118,78 +122,6 @@
   margin: 0.8em 0.5em;
 }
 
-.headerImg .blog-footer {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  position: relative;
-  bottom: 0px;
-  height: 10%;
-  background: rgb(88, 79, 79);
-  width: 100%;
-  margin-top: 50px;
-  margin-bottom: 0px;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
-  font-size: 1.2em;
-}
-
-@keyframes shake {
-
-  10%,
-  90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-.toTop {
-  position: absolute;
-  right: 30px;
-  cursor: pointer;
-  top: -45px;
-  z-index: 200;
-  scroll-behavior: smooth;
-}
-
-.toTop img {
-  position: relative;
-  top: -51px;
-  height: 6em;
-}
-
-.toTop img:hover {
-  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
 
 @media screen and (prefers-reduced-motion: reduce) {
   html {

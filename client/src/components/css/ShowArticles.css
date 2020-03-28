@@ -111,10 +111,6 @@
   cursor: pointer;
 }
 
-span {
-  position: relative;
-  top: -50px;
-}
 
 .blTitle {
   position: relative;
@@ -137,7 +133,9 @@ span {
   position: absolute;
   font-weight: 200;
   font-size: 20px;
-  top: 255px;
+  z-index: 240;
+  top: 292px;
+  cursor: pointer;
 }
 
 .linkz:link {
@@ -213,12 +211,9 @@ span {
   margin-bottom: 100px;
 }
 
-.artLink {
-  position: relative;
-  top: -160px;
-  left: 0px;
-  width: 30%;
-  height: 100%;
+artLink {
+  position: absolute;
+  top: 34px;
 }
 
 .card-text {
@@ -375,9 +370,8 @@ hr {
   }
 
   .artLink {
-    position: relative;
-    top: -240px;
-    left: -20px;
+    position: absolute;
+    top: 34px;
   }
 
   .label {
@@ -481,10 +475,9 @@ hr {
     margin-bottom: 20px;
   }
 
-  .artLink {
-    position: relative;
-    top: -280px;
-    left: -20px;
+  artLink {
+    position: absolute;
+    top: 34px;
   }
 
   .badges {
@@ -588,10 +581,9 @@ hr {
     margin-bottom: 20px;
   }
 
-  .artLink {
-    position: relative;
-    top: -280px;
-    left: -20px;
+  artLink {
+    position: absolute;
+    top: 34px;
   }
 
   .badges {
@@ -705,10 +697,9 @@ hr {
     margin-bottom: 20px;
   }
 
-  .artLink {
-    position: relative;
-    top: -280px;
-    left: -20px;
+  artLink {
+    position: absolute;
+    top: 34px;
   }
 
   .badges {
