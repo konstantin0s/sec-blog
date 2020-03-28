@@ -20,7 +20,6 @@ class OneArticle extends Component {
     owner: "",
     id: "",
     first_name: "",
-    
     like: false,
     likes: 0
     };
@@ -29,13 +28,13 @@ class OneArticle extends Component {
   componentDidMount() {
     const { params } = this.props.match;
   
-    axios.get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials:true})
+    axios.get(`/articles/one/${params.id}`, {withCredentials:true})
       .then(res => {
    
         let userToken = localStorage.usertoken;
         const {_id} = jwt_decode(userToken);
       
-        this.setState({ article: res.data, userId:_id, first_name:res.data.owner.first_name, articleOwnerId:res.data.owner._id});
+        this.setState({ article: res.data, userId:_id, first_name :res.data.owner.first_name, articleOwnerId: res.data.owner._id });
            console.log(res.data.owner.first_name);
            console.log(this.state.article);
       }).catch(err => {
@@ -44,7 +43,7 @@ class OneArticle extends Component {
         console.log(err);
       })
 
-      axios.get(`${process.env.REACT_APP_API_URL}/users/one/:id`, {withCredentials:true})  
+      axios.get(`/users/one/:id`, {withCredentials:true})  
       .then((response)=> {
         // let userToken = localStorage.usertoken;
         // const {first_name} = jwt_decode(userToken);
@@ -62,7 +61,7 @@ class OneArticle extends Component {
 
   delete(id){
     console.log(id);
-    axios.delete(`${process.env.REACT_APP_API_URL}/articles/`+id, {withCredentials:true})
+    axios.delete(`/articles/`+id, {withCredentials:true})
       .then((result) => {
         this.props.history.push("/profile");
       });

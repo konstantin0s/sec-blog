@@ -7,39 +7,11 @@ const session    = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const cookieParser = require('cookie-parser');
 const passport      = require('passport');
+const bodyParser = require('body-parser');
 const multer = require('multer');
 require("dotenv").config();
 
 
-
-// app.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "https://zumbazomblog.herokuapp.com/");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
-
-
-app.use(express.json());
-
-// var allowedOrigins = ['https://zumbazomblog.herokuapp.com/'];
-
-// app.use(cors({
-//   credentials: true,
-//   origin: allowedOrigins
-// }));
-
-app.options('*', cors(corsOptionsDelegate))
-
-var whitelist = ['http://locahost:3001', 'https://zumbazomblog.herokuapp.com/']
-var corsOptionsDelegate = function (req, callback) {
-  var corsOptions;
-  if (whitelist.indexOf(req.header('Origin')) !== -1) {
-    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
-  } else {
-    corsOptions = { origin: false } // disable CORS for this request
-  }
-  callback(null, corsOptions) // callback expects two parameters: error and options
-}
 
 
 app.set('view engine', 'hbs');
@@ -48,16 +20,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/build')));
 // ... other app.use middleware 
 
-// app.use(cors({
-//   credentials: true, 
-//   // origin: ['http://localhost:3001']
-//   origin: ['http://zumzablog.herokuapp.com']
-// }));
-// app.use(
-//   bodyParser.urlencoded({
-//     extended: false
-//   })
-//   )
+app.use(express.json());
+app.use(cors({
+  credentials: true,
+  origin: ['http://localhost:3001']
+}));
+
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+  )
   app.use(cookieParser());
 
 
@@ -73,7 +46,7 @@ mongoose
   app.use(session({  //setup sessions always here 
     secret: "secret",
     key: 'sid',
-    cookie: {
+    cookie: { 
       maxAge: 60000 },
     resave: true,
     saveUninitialized: true,
@@ -85,19 +58,15 @@ mongoose
 
 
   const Users = require('./routes/Users');
-  app.use('/users',  Users);
+  app.use('/users', Users);
 
-  // app.use((req, res, next) => {
-
-  //   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
-  //   res.header("Access-Control-Allow-Origin", "*");
-  //   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-
-  //   next(); // ==> go to the next route ---
-  //   } else {                          //    |
-  //     res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
-  //   }                                 //    |
-  // }); 
+  app.use((req, res, next) => {
+    if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
+      next(); // ==> go to the next route ---
+    } else {                          //    |
+      res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
+    }                                 //    |
+  }); 
 
 
 
@@ -116,6 +85,7 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
+
 
   app.listen(process.env.PORT || 3001, function() {
     console.log("Server started on port 3001 :)");

@@ -6,12 +6,6 @@ import Moment from "moment";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-function searchingFor(term) {
-  return function(x) {
-    return x.title.includes(term) || !term;
-  }
-}
-
 class ShowArticles extends Component {
   constructor(props) {
     super(props);
@@ -21,13 +15,26 @@ class ShowArticles extends Component {
     this.searchHandler = this.searchHandler.bind(this);
   }
 
+  searchingFor = term => {
+    return (x) =>  {
+      return x.title.includes(term) || !term;
+    }
+  }
+
+  jsUcfirst = str => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+  
+
 
   searchHandler(event) {
-    this.setState({term: event.target.value})
+    this.setState({term: 
+    this.jsUcfirst(event.target.value)})
   }
 
   componentDidMount() {
-    axios.get(`${process.env.REACT_APP_API_URL}/articles`, {withCredentials:true})
+    axios.get(`/articles`, {withCredentials:true})
       .then(res => {
         this.setState({ filtered: res.data });
         console.log(this.state.filtered);
@@ -38,6 +45,7 @@ class ShowArticles extends Component {
 
 
   render() {
+    const { filtered, term } = this.state;
     return ( 
   <div className="container showArticles">
        <form className="active-pink active-pink-2">
@@ -45,7 +53,7 @@ class ShowArticles extends Component {
   <input onChange={this.searchHandler} className="form-item input" type="text" placeholder="Search" aria-label="Search" />
 </form>
 				
-{this.state.filtered.filter(searchingFor(this.state.term)).map((article) =>    
+{filtered.filter(this.searchingFor(term)).map((article) =>    
 
  
 

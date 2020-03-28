@@ -1,6 +1,5 @@
 const express = require('express');
 const users = express.Router();
-const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const cookieParser = require('cookie-parser');
@@ -9,26 +8,6 @@ require("dotenv").config();
 const User = require('../models/User');
 
 
-
-// var allowedOrigins = ['https://zumbazomblog.herokuapp.com/'];
-// users.use(cors({
-//   credentials: true,
-//   origin: allowedOrigins
-// }));
-
-
-var whitelist = ['http://locahost:3001', 'https://zumbazomblog.herokuapp.com/']
-var corsOptionsDelegate = function (req, callback) {
-  var corsOptions;
-  if (whitelist.indexOf(req.header('Origin')) !== -1) {
-    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
-  } else {
-    corsOptions = { origin: false } // disable CORS for this request
-  }
-  callback(null, corsOptions) // callback expects two parameters: error and options
-}
-
-users.options('*', cors(corsOptionsDelegate))
 
 // const protect = (req, res, next)=> {
 //   debugger
@@ -39,11 +18,6 @@ users.options('*', cors(corsOptionsDelegate))
 //   }
 // }
 
-// users.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
 
 // process.env.SECRET_KEY = 'secret';
 users.get('/one/:id', (req, res, next) => {
@@ -72,7 +46,8 @@ users.get('/', (req, res) => {
     users.get('/', (req, res, next) => {
       return User.find()
         .sort({ createdAt: 'descending' })
-        .then((users) => res.json({ users: users.map(user => user.toJSON()) }))
+        .then((users) => res.json({ users: users.map(user => user.toJSON())
+         }) )
         .catch(next);
     });
     
@@ -186,7 +161,8 @@ users.post('/login', (req, res) => {
     email: req.body.email
   })
   .then(user => {
-      
+      console.log('user', user);
+        console.log('session', req.session.currentUser);
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         req.session.currentUser = user; // check this if you cannot go to profile page!
@@ -198,7 +174,7 @@ users.post('/login', (req, res) => {
          }
     
          let token = jwt.sign(payload, process.env.SECRET_KEY, {
-           expiresIn: 1440
+           expiresIn: 6000
          })
        
          res.send(token)
@@ -213,7 +189,8 @@ users.post('/login', (req, res) => {
   })
   .catch(err => {
   
-    res.status(500).json(err)
+    res.status(500).json(err);
+    console.log('damn login eerror', err);
 
   })
 })
