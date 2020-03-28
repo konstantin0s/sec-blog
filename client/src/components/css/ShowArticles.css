@@ -93,15 +93,12 @@
   top: 200px;
 }
 
-.showArticles form {
-  position: relative;
-  top: -140px;
-}
-
 .faSearch {
-  position: relative;
-  top: 25px;
-  left: 44%;
+  position: absolute;
+  top: 238px;
+  left: 94%;
+  font-size: 1.8em;
+  z-index: 12;
   cursor: pointer;
 }
 
@@ -138,35 +135,53 @@ span {
   text-decoration: none;
 }
 
-.input {
-  background-color: #fff;
+.form-containex {
+  height: 300px;
+  position: absolute;
+  top: -220px;
+  z-index: 0;
+  left: 0;
+  width: 100vw;
+  background: url('https://images.pexels.com/photos/3888585/pexels-photo-3888585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-/* .active-pink {
+.showArticles .active-pink {
+  background: #fff;
+  height: 3em;
+  padding: 2em 1.5em;
   position: relative;
-  top: -100px;
-} */
+  border-radius: 3px;
+  z-index: 10;
+  top: -120px;
+}
 
-.active-pink2 input {
-  background-color: #72A4D2;
+.active-pink2 .input {
+  background-color: #FFF;
 }
 
 .active-pink-2 input[type=text]:focus:not([readonly]) {
-  border-bottom: 1px solid #f48fb1;
-  box-shadow: 0 1px 0 0 #f48fb1;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 1px 0 0 #FFF;
 }
 
 .active-pink input[type=text] {
-  border-bottom: 1px solid #f48fb1;
-  box-shadow: 0 1px 0 0 #f48fb1;
+  position: relative;
+  top: 200px;
+  left: -2px;
+  height: 3em;
+  background: #FFF;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 1px 0 0 #FFF;
+  border: none;
 }
 
-.active-pink input[type=text] {
-  padding: 5px;
-  border: 2px solid #ccc;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  box-shadow: white;
+
+.active-pink input[type=text]:focus {
+  border: none !important;
 }
 
 .card-body {
@@ -298,6 +313,10 @@ hr {
     width: 23px;
     top: -225px;
     width: 30px;
+  }
+
+  .container {
+    min-width: 100%;
   }
 
 

@@ -48,10 +48,16 @@ class ShowArticles extends Component {
     const { filtered, term } = this.state;
     return ( 
   <div className="container showArticles">
-       <form className="active-pink active-pink-2">
-  <FontAwesomeIcon className="faSearch" icon={faSearch} />
-  <input onChange={this.searchHandler} className="form-item input" type="text" placeholder="Search" aria-label="Search" />
+
+<div className="form-containex">
+<form className="active-pink active-pink-2">
+<div className="form-group">
+<FontAwesomeIcon className="faSearch" icon={faSearch} />
+  <input onChange={this.searchHandler} className="form-item input" type="text"
+   placeholder="Search" aria-label="Search" />
+</div>
 </form>
+</div>
 				
 {filtered.filter(this.searchingFor(term)).map((article) =>    
 

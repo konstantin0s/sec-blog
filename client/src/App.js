@@ -30,7 +30,7 @@ class App extends Component {
 
                     {/* <Navbar userInSession={this.state.loggedInUser} /> */}
                     <Route exact path="/" component={Landing}/>
-                    <div className="conta">
+                   
                     <Switch>
                     <Route exact path="/login" render={(props)=> <Login {...props} />} />
                      <Route exact path="/register" render={(props)=> <Register {...props} />} />
@@ -44,7 +44,7 @@ class App extends Component {
                         <Route path="*" component={Whoops404} />
                         
                     </Switch>
-                    </div>
+                 
                 </div>
             </Router>
         );
