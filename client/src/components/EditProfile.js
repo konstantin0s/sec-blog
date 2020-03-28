@@ -26,8 +26,7 @@ class EditProfile extends Component {
   onChange(e) {
     const state = this.state.user;
     state[e.target.name] = e.target.value;
-    console.log(state[e.target.name] );
-    console.log(this.state.user);
+    console.log(state);
     this.setState({user:state});
   }
 
@@ -74,19 +73,19 @@ class EditProfile extends Component {
             <h4><span className="glyphicon glyphicon-eye-open"></span></h4>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <label for="title">First Name:</label>
+                <label htmlFor="title">First Name:</label>
                 <input type="text" className="form-control" name="first_name"
                  value={this.state.user.first_name} onChange={this.onChange}
                   placeholder="First Name" />
               </div>
               <div className="form-group">
-                <label for="author">Last Name:</label>
+                <label htmlFor="author">Last Name:</label>
                 <input type="text" className="form-control"
                  name="last_name" value={this.state.user.last_name}
                   onChange={this.onChange} placeholder="Last Name" />
               </div>
               <div className="form-group">
-                <label for="description">Email:</label>
+                <label htmlFor="description">Email:</label>
                 <input type="text" className="form-control" name="email"
                  value={this.state.user.email} onChange={this.onChange} placeholder="Email" />
               </div>

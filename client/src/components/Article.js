@@ -86,7 +86,7 @@ class Article extends Component {
 
         <div id="masthead" className="addArticle">
         <div className="cardz">
-            <div className="col-md-12">
+            <div className="col-lg-12-x">
             <form noValidate onSubmit={this.onSubmit}>
                        <h1 className="h3 mb-3 font-weight-normal">Add Article:</h1>
                           <div className="form-group">

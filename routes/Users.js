@@ -170,7 +170,9 @@ users.post('/login', (req, res) => {
            _id: user._id,
            first_name: user.first_name,
            last_name: user.last_name,
-           email: user.email
+           email: user.email,
+           comments: user.comments,
+           date: user.date.toLocaleDateString()
          }
     
          let token = jwt.sign(payload, process.env.SECRET_KEY, {
@@ -203,7 +205,8 @@ users.get('/profile', (req, res) => {
   })
   .then(user => {
     if (user) {
-      res.json(user)
+      res.json(user);
+      console.log(user);
     } else {
       res.send('User does not exist')
     }

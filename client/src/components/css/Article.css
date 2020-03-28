@@ -23,7 +23,7 @@ body {
   top: -20px;
 }
 
-.col-md-12 {
+.col-lg-12-x {
   width: 65%;
   height: 800px;
   border-radius: 50%;
@@ -37,7 +37,7 @@ body {
 }
 
 
-.col-md-12 form {
+.col-lg-12-x form {
   position: relative;
   top: -82px;
   width: 50%;

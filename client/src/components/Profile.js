@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import jwt_decode from 'jwt-decode';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 import './css/Profile.css';
 
 
@@ -11,11 +12,12 @@ class Profile extends Component {
     this.state = {
       first_name: '',
       last_name: '',
-      email: '',
-			 imageUrl: '',
-			date: '',
-			id:'',
-			errorMessage: ''
+	  email: '',
+	  comments: [],
+	imageUrl: '',
+	date: '',
+	id:'',
+	errorMessage: ''
     }
   }
  
@@ -23,6 +25,7 @@ componentDidMount () {
   const token = localStorage.usertoken;
 	console.log(localStorage);
 	const decoded = jwt_decode(token);
+	console.log(decoded);
   this.setState({
     first_name: decoded.first_name,
     last_name: decoded.last_name,
@@ -30,6 +33,7 @@ componentDidMount () {
 		imageUrl: decoded.imageUrl,
 		date: decoded.date,
 		_id: decoded._id,
+		comments: decoded.comments
   })
 }
 
@@ -37,13 +41,13 @@ render()
  {
 	 console.log(this.state);
    return (
-    <div className="container profilePage">
+    <div id="masthead" className="container profilePage">
     <div className="row profile">
 		<div className="col-md-3">
 			<div className="profile-sidebar">
 		
 				<div className="profile-userpic">
-				 <img src="https://as2.ftcdn.net/jpg/00/64/35/15/500_F_64351531_G3zcX9axRaq9QJiTRESkxJenZJHTADyG.jpg" className="img-responsive" alt="" /> 
+				 <img src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="img-responsive" alt="" /> 
 				</div>
 		
 				<div className="profile-usertitle">
@@ -69,10 +73,10 @@ render()
 							Overview </a>
 						</li>
 						<li>
-							<button>
+						
 							<i className="glyphicon glyphicon-user"></i>
 							Account Settings  <Link to={`/editProfile/${this.state._id}`} className="btn btn-danger">Edit</Link>&nbsp; 
-							 </button>
+						
 						</li>
 						<li>
 							<a href="/" target="_blank">
@@ -84,22 +88,22 @@ render()
 			
 			</div>
 		</div>
-		<div className="col-md-9">
+		<div className="image-back">
             <div className="profile-content">
-			   Some user related content goes here...
+	
+            </div>
+		</div>
+
+		<div className="other-details">
+            <div className="profile-content">
+	List of comments: 
+	{this.state.comments ? this.state.comments : 'No comments yet.'} 
             </div>
 		</div>
 	</div>
 
 
-	<footer className="blog-footer">
-         <p> 
-         &copy; Copyright 2020 YouHelp
-</p>
-        <p>
-           <a href="#masthead">Back to top</a>
-        </p>
-    </footer>
+<Footer />
 
 </div>
 
