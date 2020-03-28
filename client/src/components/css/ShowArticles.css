@@ -93,6 +93,15 @@
   top: 200px;
 }
 
+.image-article {
+  position: absolute;
+  float: left;
+  left: 0em;
+  width: 200px;
+  top: 13.5em;
+  height: 200px;
+}
+
 .faSearch {
   position: absolute;
   top: 238px;
@@ -141,7 +150,7 @@ span {
   top: -220px;
   z-index: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   background: url('https://images.pexels.com/photos/3888585/pexels-photo-3888585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -195,27 +204,31 @@ span {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 40px 0;
   height: 400px;
-  width: 75%;
+  width: 90%;
+  padding: 1em;
+  border: 1px solid #333;
   top: -100px;
   position: relative;
-  transform: translate(17%, 40%);
+  transform: translate(5%, 50%);
   margin-bottom: 100px;
 }
 
 .artLink {
   position: relative;
-  top: -80px;
-  left: 200px;
+  top: -160px;
+  left: 0px;
   width: 30%;
   height: 100%;
 }
 
 .card-text {
   position: relative;
-  font-size: 22px;
-  margin: 20px 0;
-  margin-bottom: 100px;
-  top: 30px;
+  font-size: 1.5em;
+  float: right;
+  width: 75%;
+  margin: 0em 1em;
+  margin-bottom: 20px;
+  top: -4px;
 }
 
 .card-title {
@@ -230,15 +243,21 @@ span {
 
 .card-footer span {
   position: relative;
-  top: -135px;
+  top: -147px;
+  left: 200px;
   font-size: 18px;
+  float: right;
   font-family: italic;
 }
 
 .badges {
   position: relative;
-  top: 100px;
   margin: 50px 0;
+  display: flex;
+  width: 100%;
+  top: -100px;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 hr {
@@ -316,7 +335,8 @@ hr {
   }
 
   .container {
-    min-width: 100%;
+    min-width: 100% !important;
+    width: 100% !important;
   }
 
 
@@ -360,10 +380,10 @@ hr {
     left: -20px;
   }
 
-  .badges {
-    position: relative;
-    top: -40px;
+  .label {
+    padding: 0.5em 1em;
   }
+
 
   .card-footer {
     position: relative;

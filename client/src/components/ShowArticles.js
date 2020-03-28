@@ -65,6 +65,7 @@ class ShowArticles extends Component {
 
 <div className="card text-center" key={article._id}>
   <div className="card-body">
+    <img className="image-article" src={article.imageUrl} />
     <h2 className="card-title">{article.title}</h2>
     <p className="card-text">You ought to be ashamed of yourself for asking such a simple question,' added the Gryphon; and then they both sat silent and looked at poor Alice, who felt ready to sink into the earth. At last the Gryphon said to the Mock Turtle, 'Drive on, old fellow! Don't be all day about it!' and he went on in these words:
     'Yes, we went to school in the sea, though you mayn't believe it—'
@@ -79,7 +80,7 @@ class ShowArticles extends Component {
   <div className="badges">
   <span className="label label-default">alice</span> <span className="label label-primary">story</span> <span className="label label-success">blog</span> <span className="label label-info">personal</span> <span className="label label-warning">Warning</span>
    <span className="label label-danger">Danger</span>
-  </div><hr />
+  </div>
 </div>
 
 )}  
