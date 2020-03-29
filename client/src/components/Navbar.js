@@ -18,11 +18,16 @@ class Navbar extends Component {
   }
 
   componentDidMount() {
-    axios.get(`/users/`+this.props.match.params.id)
-      .then(res => {
-        this.setState({ user: res.data.user });
-        console.log(this.state.user);
-      });
+
+if (typeof this.props.match.params.id === 'undefined') {
+///skip the error 
+} else {
+  axios.get(`/users/`+this.props.match.params.id)
+  .then(res => {
+    this.setState({ user: res.data.user });
+    console.log(this.state.user);
+  });
+}
   }
 
 

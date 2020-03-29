@@ -5,14 +5,6 @@ import { Message } from 'semantic-ui-react';
 import { Link} from 'react-router-dom';
 
 
-// const initialState = {
-//     email: '',
-//     password: '',
-//     emailError: '',
-//     passwordError: '',
-//     error: false,
-// }
-
 class Login extends Component {
     _isMounted = false;
 
@@ -42,9 +34,11 @@ componentWillUnmount() {
 
 
     onChange(e) {
+      if (this._isMounted) {
         this.setState({
             [e.target.name]: e.target.value
         })
+      }
     }
 
     validate() {
@@ -61,7 +55,9 @@ componentWillUnmount() {
 
 
        if (emailError || passwordError) {
+        if (this._isMounted) {
            this.setState({ emailError, passwordError });
+        }
            return false;
        }
        return true;
@@ -74,6 +70,7 @@ componentWillUnmount() {
             console.log(this.state); 
             this.props.history.push('/articles');
             //clear form
+            if (this._isMounted) {
            this.setState({
             email: '',
             password: '',
@@ -81,6 +78,7 @@ componentWillUnmount() {
             passwordError: '',
             error: false,
            });
+        }
         } 
 
     
@@ -97,6 +95,7 @@ componentWillUnmount() {
                     console.log(this.state); 
                     this.props.history.push('/articles');
                     //clear form
+                    if (this._isMounted) {
                    this.setState({
                     email: '',
                     password: '',
@@ -104,6 +103,7 @@ componentWillUnmount() {
                     passwordError: '',
                     error: false,
                    });
+                }
                 }
                  console.log(user);
 

@@ -19,108 +19,6 @@ const User = require('../models/User');
 // }
 
 
-// process.env.SECRET_KEY = 'secret';
-users.get('/one/:id', (req, res, next) => {
-  //console.log(req.params.id); // this is print our id parameter
-
-  // lets do this
-  const userid = req.params.id;
-  User.findById(userid, { password: 0 }).then((err, user)=> {  // this is because we should remove password in data showing
-          if (err)
-              res.send(err)
-          else if (!user)
-              res.send(404)
-          else
-              res.send(user)
-          next()            
-      })
-})
-
-users.get('/', (req, res) => {
-  User.find()
-  .sort({ date: -1 })
-  .then(users => res.json(users));
-    });
-
-
-    users.get('/', (req, res, next) => {
-      return User.find()
-        .sort({ createdAt: 'descending' })
-        .then((users) => res.json({ users: users.map(user => user.toJSON())
-         }) )
-        .catch(next);
-    });
-    
-    users.param('id', (req, res, next, id) => {
-      const userid = req.params.id;
-      return User.findById(userid, (err, user) => {
-        if(err) {
-          return res.sendStatus(404);
-        } else if(user) {
-          req.user = user;
-          return next();
-        }
-      }).catch(next);
-    });
-    
-    users.get('/:id', (req, res, next) => {
-      return res.json({
-        user: req.user.toJSON(),
-      });
-    });
-
-
-//Edit single USer
-users.put('/:id', function(req, res, next) {
-  const userid = req.params.id;
-  const body = req.body;
-  User.findByIdAndUpdate(userid, body, function (err, user) {
-    if (err) return next(err);
-    res.json(user);
-  });
-});
-
-    
-users.get('/:id', function(req, res, next) {
-  const userid = req.params.id;
-  User.findById(userid)
-    .then((user)=>{
-      res.json(user)
-    })
-    .catch((error)=> {
-      res.json(error)
-    })
-});
-
-users.get('/:id', function(req, res, next) {
-  const userid = req.params.id;
-  User.findById(userid)
-    .then((user)=>{
-      res.json(user)
-
-    })
-    .catch((error)=> {
-      res.json(error)
-    })
-});
-
-// users.get('/one/:id', function(req, res, next) {
-//   User.findById(req.params.id)
-//     .then((user)=>{
-//       debugger
-//       res.json(user)
-//       debugger
-//     })
-//     .catch((error)=> {
-//       res.json(error)
-//     })
-// });
-
-
-
-
-
-
 users.post('/register', (req, res) => {
   const today = new Date();
   const userData = {
@@ -196,6 +94,109 @@ users.post('/login', (req, res) => {
 
   })
 })
+
+
+// process.env.SECRET_KEY = 'secret';
+users.get('/one/:id', (req, res, next) => {
+  //console.log(req.params.id); // this is print our id parameter
+
+  // lets do this
+  const userid = req.params.id;
+  User.findById(userid, { password: 0 }).then((err, user)=> {  // this is because we should remove password in data showing
+          if (err)
+              res.send(err)
+          else if (!user)
+              res.send(404)
+          else
+              res.send(user)
+          next()            
+      })
+})
+
+users.get('/', (req, res) => {
+  User.find()
+  .sort({ date: -1 })
+  .then(users => res.json(users));
+  console.log('users router', users);
+    });
+
+
+    users.get('/', (req, res, next) => {
+      return User.find()
+        .sort({ createdAt: 'descending' })
+        .then((users) => res.json({ users: users.map(user => user.toJSON())
+         }))
+         .then(   console.log('users router', user.toJSON()))
+        .catch(next);
+    });
+    
+
+    users.param('id', (req, res, next, id) => {
+      const userid = req.params.id;
+      return User.findById(userid, (err, user) => {
+        if(err) {
+          return res.sendStatus(404);
+        } else if(user) {
+          req.user = user;
+          return next();
+        }
+      }).catch(next);
+    });
+    
+    users.get('/:id', (req, res, next) => {
+      return res.json({
+        user: req.user.toJSON(),
+      });
+    });
+
+
+//Edit single USer
+users.put('/:id', function(req, res, next) {
+  const userid = req.params.id;
+  const body = req.body;
+  User.findByIdAndUpdate(userid, body, function (err, user) {
+    if (err) return next(err);
+    res.json(user);
+  });
+});
+
+    
+users.get('/:id', function(req, res, next) {
+  const userid = req.params.id;
+  User.findById(userid)
+    .then((user)=>{
+      res.json(user)
+    })
+    .catch((error)=> {
+      res.json(error)
+    })
+});
+
+users.get('/:id', function(req, res, next) {
+  const userid = req.params.id;
+  User.findById(userid)
+    .then((user)=>{
+      res.json(user)
+
+    })
+    .catch((error)=> {
+      res.json(error)
+    })
+});
+
+// users.get('/one/:id', function(req, res, next) {
+//   User.findById(req.params.id)
+//     .then((user)=>{
+//       debugger
+//       res.json(user)
+//       debugger
+//     })
+//     .catch((error)=> {
+//       res.json(error)
+//     })
+// });
+
+
 
 users.get('/profile', (req, res) => {
   const decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)

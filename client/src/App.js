@@ -19,6 +19,16 @@ import {Whoops404} from './components/Whoops404';
 
 
 class App extends Component {
+    _isMounted = false;
+
+    componentDidMount() {
+        this._isMounted = true;
+    }
+    
+    componentWillUnmount() {
+        this._isMounted = false;
+      }
+    
 
 
     render() {

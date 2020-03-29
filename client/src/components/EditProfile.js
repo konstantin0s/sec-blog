@@ -10,6 +10,9 @@ class EditProfile extends Component {
     this.state = {
       user: {}
     };
+
+    this.onSubmit = this.onSubmit.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   componentDidMount() {
@@ -17,10 +20,8 @@ class EditProfile extends Component {
       .then(res => {
         this.setState({ user: res.data.user });
         console.log(this.state.user);
-      });
-
-      this.onSubmit = this.onSubmit.bind(this);
-      this.onChange = this.onChange.bind(this);
+      })
+      .catch(err => console.log(err));
   }
 
   onChange(e) {
@@ -56,8 +57,10 @@ class EditProfile extends Component {
 
     axios.put(`/users/`+this.props.match.params.id, { first_name, last_name, email, password })
       .then((result) => {
+        console.log('result', result);
         this.props.history.push("/profile/"+this.props.match.params.id);
-      });
+      })
+      .catch(err => console.log(err));
   }
 
   render() {

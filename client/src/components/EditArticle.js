@@ -11,6 +11,9 @@ class EditArticle extends Component {
     this.state = {
       article: {}
     };
+
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -18,9 +21,8 @@ class EditArticle extends Component {
       .then(res => {
         this.setState({ article: res.data });
         console.log(this.state.article);
-      });
-      this.onChange = this.onChange.bind(this);
-      this.onSubmit = this.onSubmit.bind(this);
+      })
+      .catch(err => console.log(err));
   }
 
   onChange(e) {
