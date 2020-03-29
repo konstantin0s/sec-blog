@@ -1,56 +1,82 @@
 body {
   font-family: 'Courier New', Courier, monospace;
   background-color: #fff;
-} 
+}
 
+.button-container {
+  position: absolute;
+  top: 30px;
+  left: 80%;
+  float: right;
+  z-index: 300;
+}
 
-
- .postz {
+.postz {
   position: relative;
   top: 112px;
   right: 5%;
   margin-bottom: 40px;
   color: black;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 22px;  
-}
- .date{
-   position: relative;
-  top: 93px;
-  right: 3%;
-  color: black;
   font-size: 22px;
-  font-weight: 400;
- }
+}
 
- .pull-right hr {
+.pull-right hr {
   position: relative;
   top: 10px;
   left: 0px;
- }
+}
+
+.label {
+  padding: 0.5em 1em;
+}
 
 .pull-right {
+  align-items: center;
   position: absolute;
-  top: 160px;
-  left: 10%;
+  top: 886px;
+  flex-direction: row;
+  text-align: center;
+  display: flex;
+  left: 40%;
+  justify-content: center;
 }
 
 .author {
- display: flex;
-  flex-direction: row; 
-  margin-left: 10px; 
-  position: relative; 
-  top: 92px;
-   right: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top: 18.5px;
+  right: 40%;
   text-transform: uppercase;
-  color: orange;
+  color: rgb(43, 54, 68);
+  width: 30%;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 20px;
 }
 
-.media-body h4, a {
+/*author name */
+.bodys h4 {
+  text-transform: uppercase;
+  position: absolute;
+  top: 12px;
+  text-align: center;
+  right: 61%;
+  color: rgb(43, 54, 68);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.moment-on .clock {
+  left: 69px;
+  position: relative;
+}
+
+.media-body h4,
+a {
   color: black;
- 
+
 }
 
 
@@ -59,14 +85,14 @@ body {
 }
 
 
-.oneArticle  {
- display: flex;
-  flex-direction: column; 
+.oneArticle {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   position: absolute;
-  top: 500px;
-  left: 800px;
+  top: 0px;
+  /* left: 800px; */
 
 }
 
@@ -76,9 +102,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 200px;
-  left: 00px;
+  top: 0px;
+  left: 0px;
+
 }
+
+.bodys {
+  background-color: yellow;
+  position: absolute;
+  width: 100%;
+  top: 500px;
+  height: 100vh;
+}
+
 
 .body-text {
   position: absolute;
@@ -88,8 +124,9 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 24px;
   text-transform: capitalize;
-  top:  73%;
+  top: 43%;
   width: 80%;
+  color: rgb(43, 54, 68);
   left: 11%;
   height: 40%;
   margin-bottom: 150px;
@@ -100,28 +137,63 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  position: relative;
+  align-items: center;
+  align-self: center;
   width: 100%;
- 
+  left: 100px;
+
 }
 
 .showcomments {
-color: black;
+  color: black;
 }
 
-.jumbo h1{
+/* title of the article */
+.jumbo h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
   position: absolute;
   margin-bottom: 30px;
-  top: 30px;
-  right: 35%;
+  top: 48px;
   width: 80%;
   text-transform: capitalize;
-  color: black;
-  font-size: 34px;
+  color: rgb(43, 54, 68);
+  font-size: 50px;
   font-weight: 600;
   transform: translate(30%, -10%);
+}
+
+.moment-on {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  top: 126px;
+  left: -8em;
+  margin-top: 1em;
+  color: rgb(43, 54, 68);
+}
+
+.date {
+  position: relative;
+  /* top: 93px; */
+  right: -8%;
+  color: rgb(43, 54, 68);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+
+.faEnvelope {
+  position: relative;
+  font-size: 22px;
+  margin-left: 5px;
+  font-weight: 400;
+  color: rgb(43, 54, 68);
 }
 
 .post-edit {
@@ -141,56 +213,49 @@ color: black;
   top: 60px;
 }
 
-.bodys h4 {
-  text-transform: lowercase;
-  position: relative;
-  top: 92px;
-  right: 44.5%;
-  color: black;
-  font-size: 20px;
-}
 
 .callout h4 {
   position: relative;
   color: #fff;
   left: 0%;
-  top:10px;
+  top: 10px;
   text-transform: uppercase;
 }
 
 .callout.secondary {
   position: relative;
-  top: 1100px;
+  top: 465px;
   margin-top: 120px;
-  margin-bottom: 80px;
-  background: #222;
+  background: rgb(43, 54, 68);
   color: white;
-  width: 50%;
+  width: 84%;
   height: 250px;
   padding: 5px;
-  transform: translate(50%, 40%);
+  left: 6em;
 }
 
 .comment-list {
   list-style: none;
-  margin: 0 0 50px 0; 
-} 
+  margin: 0 0 50px 0;
+}
 
-.comment-list > li {
-    margin: 0 0 20px 0;
-    background: #333;
-    padding: 20px;
-  }
+.comment-list>li {
+  margin: 0 0 20px 0;
+  background: #333;
+  padding: 20px;
+}
 
 .comment-user {
   display: flex;
   align-items: center;
   margin: 0 0 10px 0;
 }
+
 .comment-user-avatar-wrap {
   width: 40px;
   margin-right: 10px;
 }
+
 .comment-username {
   margin-right: 5px;
   color: white;
@@ -198,9 +263,11 @@ color: black;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 .on {
   margin-right: 5px;
 }
+
 .comment-text {
   background: white;
   color: #222;
@@ -211,36 +278,36 @@ color: black;
   margin: 0;
 }
 
-textarea { 
+textarea {
   color: #222;
   width: 80%;
   height: 100px;
 }
 
 
-.post-footer-option li{
-  float:left;
-  margin-right:50px;
-  padding-bottom:15px;
+.post-footer-option li {
+  float: left;
+  margin-right: 50px;
+  padding-bottom: 15px;
 }
 
-.post-footer-option li a{
-  color:#AFB4BD;
-  font-weight:500;
-  font-size:1.3rem;
+.post-footer-option li a {
+  color: #AFB4BD;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
-.photo-profile{
-  border:1px solid #DDD;    
+.photo-profile {
+  border: 1px solid #DDD;
 }
 
-.anchor-username h4{
-  font-weight:bold;    
+.anchor-username h4 {
+  font-weight: bold;
 }
 
-.anchor-time{
-  color:#ADB2BB;
-  font-size:1.2rem;
+.anchor-time {
+  color: #ADB2BB;
+  font-size: 1.2rem;
 }
 
 .post-footer hr {
@@ -248,8 +315,8 @@ textarea {
   top: -74px;
 }
 
-.post-footer-comment-wrapper{
-  background-color:#F6F7F8;
+.post-footer-comment-wrapper {
+  background-color: #F6F7F8;
 }
 
 .showComm {
@@ -263,27 +330,37 @@ textarea {
 .jumbotron {
   position: absolute;
   width: 100%;
-  top:50px;
+  top: 50px;
   margin: 0px;
 }
 
-/* .jumbotron .rounded {
-  position: absolute;
-  top: 0px;
-} */
+.row {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 5.5em;
+  position: relative;
+}
 
-ul>li{
-  position:relative;
-   }  
+ul>li {
+  position: relative;
+}
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
- top: 1300px;
-  position: relative; 
+  top: 1344px;
+  position: relative;
   bottom: 0;
+  width: 100%;
+  margin-top: 10em;
   height: 30%;
-  left: 20px;
+  left: 0px;
+  ;
+}
+
+ul footer {
+  width: 100%;
 }

@@ -44,13 +44,18 @@ mongoose
     console.error('Error connecting to mongo', err);
   });
 
+  const { NODE_ENV = 'development' } = process.env;
+  const IN_PROD = NODE_ENV === 'production'; 
+
   app.use(session({  //setup sessions always here 
     secret: "secret",
     key: 'sid',
     cookie: { 
       maxAge: 60000 },
-    resave: true,
-    saveUninitialized: true,
+    resave: false,
+    sameSite: true,
+    secure: IN_PROD,
+    saveUninitialized: false,
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
       ttl: 24 * 60 * 60 // 1 day
@@ -62,6 +67,7 @@ mongoose
   app.use('/users', Users);
 
   app.use((req, res, next) => {
+    // res.locals.session = req.session;
     if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
       next(); // ==> go to the next route ---
     } else {                          //    |

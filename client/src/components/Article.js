@@ -125,7 +125,7 @@ class Article extends Component {
                            </div>
 
 
-             <label class="custom-file-upload">
+             <label className="custom-file-upload">
              Image <FontAwesomeIcon icon={faUpload} />
              <input type="file" className="btn btn-warning addPic" onChange={(e) => this.handleFileUpload(e)} /> 
                   </label>

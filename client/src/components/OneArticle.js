@@ -8,6 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub }  from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'; 
+import { faClock } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Footer from './Footer';
 
 class OneArticle extends Component {
 
@@ -67,27 +70,44 @@ class OneArticle extends Component {
       });
   }
 
-  saveComments = e => {
-    e.preventDefault();
-    const comm =  document.getElementById('comment');
-    const message = comm.value;
-  
-  const { id } = this.state.article._id;
-  const { owner } = this.state.article.owner;
-    axios.post(`/articles/savecomment`, {id: id, owner: owner, text: message}, {withCredentials: true })
+  saveComments = (e)=> {
+    e.preventDefault()
+    const message = document.getElementById("comment").value;
+    // debugger
+    // axios.post(`${REACT_APP_URL}/articles/savecomment`, {id: this.state.article._id, owner: this.state.article.owner, text: message}, {withCredentials:true})
+    axios.post(`/articles/savecomment`, {id: this.state.article._id, owner: this.state.article.owner, text: message}, {withCredentials:true})
     .then((res) => {
-  
+      // debugger
       this.setState({ article: res.data})
         document.getElementById("comment").value = "";
     }).catch(err => {
-   console.log(err);
-    });
+      // debugger
+    })
   }
+
+  // saveComments = e => {
+  //   e.preventDefault();
+  //   const message = document.getElementById("comment").value;
+  // console.log(comment);
+  
+  // const { id } = this.state.article._id;
+  // const { owner } = this.state.article.owner;
+
+  //   axios.post(`/articles/savecomment`, {id: id, owner: owner, text: message}, {withCredentials: true })
+  //   .then((res) => {
+  // console.log(res);
+  //     this.setState({ article: res.data})
+  //       document.getElementById("comment").value = "";
+  //       console.log(this.state.article);
+  //   }).catch(err => {
+  //  console.log(err);
+  //   });
+  // }
 
   showCommentBox() {
     if (this.state.userId !== "") {
       return          <div className="callout secondary">
-      <h4 className="leave-comment">Add a Comment</h4>
+      <h4 id="commentF" className="leave-comment">Add a Comment</h4>
       <form className="post-edit" ref="commentForm" onSubmit={e => this.saveComments(e)}>
         <textarea id="comment" className="form-comtrol" placeholder="Share your thoughts" required/> <br />
         <button id="submit" type="submit" className="btn btn-primary btn btn-outline comment-btn action-btn expand-right">Post Comment</button>
@@ -101,7 +121,7 @@ class OneArticle extends Component {
         const comments = this.state.article.comments.reverse();
         return comments.map(function(c, i){
      
-          return    <div className="container showComm">
+          return    <div key={i} className="container showComm">
             <div className="col-md-8">
                   <div className="panel panel-default">
                       <div className="panel-body">
@@ -162,10 +182,14 @@ class OneArticle extends Component {
   render() {
     console.log(this.state)
 
-    let buttons = (this.state.userId && this.state.userId === this.state.articleOwnerId) ? <button><div>
-            <Link to={`/edit/${this.state.article._id}`} class="btn btn-success">Edit</Link>&nbsp;
-            <button onClick={this.delete.bind(this, this.state.article._id)} class="btn btn-danger">Delete</button>
-        </div></button> 
+    let buttons = (this.state.userId && this.state.userId === this.state.articleOwnerId) ? 
+    <div className="button-container"> 
+      
+      
+            <Link to={`/edit/${this.state.article._id}`} className="btn btn-success">Edit</Link>&nbsp;
+            <button onClick={this.delete.bind(this, this.state.article._id)} className="btn btn-danger">Delete</button>
+        
+      </div>
     :
      null
      
@@ -174,20 +198,31 @@ class OneArticle extends Component {
 
 
                
-      <div className="jumbotron">
-      <div className="oneArticle">
+      <div className="jumbotron container">
+
+      <div id="masthead" className="oneArticle">
        {buttons}  
       </div>    
-     
+      <div class="fadeAway"></div>
               <img className="rounded float-left img-responsive" alt="Article" src={this.state.article.imageUrl} />
                <div className="bodys">
                <div className="jumbo"> <h1>{this.state.article.title}</h1>
-           
-              <span className="postz">  On </span>
-          <span className="date">  {Moment(this.state.article.date).format('YYYY-MM-DD')}
-             </span>
+        <div className="moment-on">
 
-             <h4 className="h4">Posted by: </h4>
+      
+        <FontAwesomeIcon className="fa-2x" icon={faEnvelope} /> 
+          <a className="faEnvelope" href="#commentF"> 
+          Leave a comment
+           </a>
+      
+        <span className="postz">  </span>
+        <FontAwesomeIcon className="fa-2x clock" icon={faClock} /> 
+          <span className="date">    
+           {Moment(this.state.article.date).format('YYYY-MM-DD')}
+             </span>
+        </div>
+
+             <h4 className="h4">BY </h4>
               <div className="author">
              
               {this.state.article.owner? this.state.article.owner.first_name: ""}</div>
@@ -199,19 +234,19 @@ class OneArticle extends Component {
                </div>
             </div>   
             <footer>
-    <div className="container footer">
+    <div className="footer">
       <div className="row">
-        <div className="col-lg-8 col-md-10 mx-auto">
-          <ul className="list-inline text-center">
+    
+          <ul className="list-inline">
             <li className="list-inline-item">
-              <button>
+              <button className="btn btn-success">
                 <span className="fa-stack fa-lg">
               <FontAwesomeIcon className="faTwitter" icon={faTwitter} />
                 </span>
               </button>
             </li>
             <li className="list-inline-item">
-              <button>
+              <button  className="btn btn-success">
                 <span className="fa-stack fa-lg">
                   <i className="fas fa-circle fa-stack-2x"></i>
                     <FontAwesomeIcon className="faFacebook" icon={faFacebook} />
@@ -219,17 +254,17 @@ class OneArticle extends Component {
               </button>
             </li>
             <li className="list-inline-item">
-              <button>
+              <button  className="btn btn-success">
                 <span className="fa-stack fa-lg">
                    <FontAwesomeIcon className="faGithub" icon={faGithub} />
                 </span>
               </button>
             </li>
           </ul>
-          <p className="copyright text-muted">Copyright &copy; YouHelp 2020</p>
+          <Footer />
         </div>
       </div>
-    </div>
+
   </footer>
 
   <div className="pull-right"><span className="label label-default">alice</span> <span className="label label-primary">story</span> <span className="label label-success">blog</span> <span className="label label-info">personal</span> <span className="label label-warning">Warning</span>

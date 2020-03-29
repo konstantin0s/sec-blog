@@ -15,6 +15,7 @@ router.post('/comments', (req, res, next)=>{
         Article.findByIdAndUpdate(req.body.articleId, { $push:{ comments: response._id } })
         .then(theResponse => {
             res.json(theResponse);
+            console.log(theResponse)
         })
         .catch(err => {
         res.json(err);

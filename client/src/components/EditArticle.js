@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // import { Link } from 'react-router-dom';
 import {handleUpload} from './UserFunctions';
+import { faUpload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './css/editArticle.css';
 
 class EditArticle extends Component {
 
@@ -17,10 +20,13 @@ class EditArticle extends Component {
   }
 
   componentDidMount() {
-    axios.get(`/articles/one/`+this.props.match.params.id, {withCredentials:true})
+    const { params } = this.props.match;
+
+    axios.get(`/articles/one/${params.id}`, {withCredentials:true})
       .then(res => {
         this.setState({ article: res.data });
         console.log(this.state.article);
+        console.log(this.state.article.owner.first_name);
       })
       .catch(err => console.log(err));
   }
@@ -62,6 +68,9 @@ class EditArticle extends Component {
   }
 
   render() {
+    const { title, body } = this.state.article;
+
+  
     return (
       <div className="container editArticle">
         <div className="panel panel-default">
@@ -73,20 +82,22 @@ class EditArticle extends Component {
           <div className="panel-body">
             {/* <h4><Link to={`/show/${this.state.article._id}`}><span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Your Blog</Link></h4> */}
             <form onSubmit={this.onSubmit}>
+      
               <div className="form-group">
                 <label htmlFor="title">Title:</label>
-                <input type="text" className="form-control" name="title" value={this.state.article.title} onChange={this.onChange} placeholder="Title" />
+                <input type="text" className="form-control" name="title" value={title} onChange={this.onChange} placeholder="Title" />
               </div>
-              {/* <div className="form-group">
-                <label for="author">Author:</label>
-                <input type="text" className="form-control" name="author" value={this.state.article.author} onChange={this.onChange} placeholder="Author" />
-              </div> */}
+    
               <div className="form-group">
-                <label for="description">Description:</label>
-                <textarea type="text" className="form-control" name="body" value={this.state.article.body} onChange={this.onChange} placeholder="Description" />
+                <label htmlFor="description">Description:</label>
+                <textarea type="text" className="form-control" name="body" value={body} onChange={this.onChange} placeholder="Description" />
               </div>
 
-              <input type="file" onChange={(e) => this.handleFileUpload(e)} /> 
+              <label className="custom-file-upload">
+             Image <FontAwesomeIcon icon={faUpload} />
+             <input type="file" className="btn btn-warning addPic" onChange={(e) => this.handleFileUpload(e)} /> 
+                  </label>
+
               <button type="submit" className="btn btn-lg btn-primary btn-block">
                               Post
               </button>

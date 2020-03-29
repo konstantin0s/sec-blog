@@ -60,10 +60,12 @@ users.post('/login', (req, res) => {
   })
   .then(user => {
       console.log('user', user);
+      console.log('session.local', req.session)
         console.log('session', req.session.currentUser);
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         req.session.currentUser = user; // check this if you cannot go to profile page!
+        console.log('session user', user)
         const payload = {
            _id: user._id,
            first_name: user.first_name,
