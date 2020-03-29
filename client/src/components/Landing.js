@@ -11,7 +11,7 @@ class Landing extends Component {
     <header id="masthead" className="masthead lanImage">
     <div className="overlay"></div>
     <div className="container">
-      <div className="row">
+      <div className="rowlex">
         <div className="col-lg-12 col-md-12 mx-auto">
           <div className="site-heading">
             <span className="subheading">

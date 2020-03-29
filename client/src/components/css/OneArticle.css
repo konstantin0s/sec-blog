@@ -73,6 +73,37 @@ body {
   position: relative;
 }
 
+.media-left {
+  position: absolute;
+  top: -7px;
+}
+
+.media-left button {
+  left: -7em;
+  position: relative;
+}
+
+.media-body {
+  display: flex;
+  vertical-align: top;
+  width: 29vw;
+  font-size: 1.2em;
+  left: -7em;
+  height: auto;
+  /* background: yellow; */
+  justify-content: space-around;
+  flex-direction: row;
+  top: -450px;
+  z-index: 300;
+  position: absolute;
+}
+
+.media-heading {
+  z-index: 200;
+  top: -26px;
+  margin-bottom: 5px;
+}
+
 .media-body h4,
 a {
   color: black;
@@ -82,6 +113,10 @@ a {
 
 .post-heading {
   color: black;
+  text-align: center;
+  left: -3em;
+  position: relative;
+  align-self: center;
 }
 
 
@@ -108,7 +143,6 @@ a {
 }
 
 .bodys {
-  background-color: yellow;
   position: absolute;
   width: 100%;
   top: 500px;
@@ -222,6 +256,22 @@ a {
   text-transform: uppercase;
 }
 
+.panel-default {
+  width: 100% !important;
+}
+
+.panel-body {
+  padding: 15px;
+  background: aliceblue;
+  display: flex;
+  width: 80%;
+  position: relative;
+  left: 8em;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
 .callout.secondary {
   position: relative;
   top: 465px;
@@ -284,6 +334,11 @@ textarea {
   height: 100px;
 }
 
+.post-body p {
+  align-self: center;
+  border: 1px solid #333;
+  width: 100%;
+}
 
 .post-footer-option li {
   float: left;
@@ -310,9 +365,16 @@ textarea {
   font-size: 1.2rem;
 }
 
+.post-footer {
+  text-align: center;
+  align-self: center;
+  width: 100%
+}
+
 .post-footer hr {
   position: relative;
-  top: -74px;
+  top: -62px;
+  left: -3em;
 }
 
 .post-footer-comment-wrapper {
@@ -321,10 +383,14 @@ textarea {
 
 .showComm {
   position: relative;
-  top: 1080px;
-  left: -320px;
-  height: 70%;
-  transform: translate(45%, 32%);
+  top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  justify-content: center;
+  height: 100%;
+  left: 10em;
 }
 
 .jumbotron {
@@ -334,10 +400,18 @@ textarea {
   margin: 0px;
 }
 
+.jumbotron p {
+  font-size: 18px;
+  display: inline;
+  font-weight: 200;
+}
+
 .row {
   width: 100%;
   margin: 0;
+  z-index: -2;
   padding: 0;
+  top: 402px;
   margin-top: 5.5em;
   position: relative;
 }

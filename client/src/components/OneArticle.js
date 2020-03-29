@@ -121,7 +121,7 @@ class OneArticle extends Component {
         const comments = this.state.article.comments.reverse();
         return comments.map(function(c, i){
      
-          return    <div key={i} className="container showComm">
+          return    <div key={i} className="showComm">
             <div className="col-md-8">
                   <div className="panel panel-default">
                       <div className="panel-body">
@@ -130,14 +130,12 @@ class OneArticle extends Component {
                                   <div className="col-md-11">
                                       <div className="media">
                                         <div className="media-body">
-                                          <h6>Username:</h6><h3 className="media-heading"> {c.owner.first_name}</h3> 
+                                          <h3 className="media-heading"> {c.owner.first_name}</h3> 
                                           <button className="anchor-time">51 mins</button>
                                         </div>
                                       </div>
                                   </div>
-                                   <div className="col-md-1">
-                                       <button><i className="glyphicon glyphicon-chevron-down"></i></button>
-                                   </div>
+                          
                               </div>             
                          </section>
                          <section className="post-body">
@@ -145,7 +143,7 @@ class OneArticle extends Component {
                          </section>
                          <section className="post-footer">
                              <hr />
-                             <div className="post-footer-option container">
+                             <div className="post-footer-option">
                                   <ul className="list-unstyled">
                                       <li><button><i className="glyphicon glyphicon-thumbs-up"></i> Like</button></li>
                                       <li><a href="#comment"><i className="glyphicon glyphicon-comment"></i> Comment</a></li>
@@ -163,10 +161,7 @@ class OneArticle extends Component {
                                             <img className="media-object photo-profile" src="http://0.gravatar.com/avatar/38d618563e55e6082adf4c8f8c13f3e4?s=40&d=mm&r=g" width="32" height="32" alt="..." />
                                           </button>
                                         </div>
-                                        <div className="media-body">
-                                          <button className="anchor-username"><h4 className="media-heading">Media heading</h4></button> 
-                              
-                                        </div>
+                                      
                                       </div>
                                  </div>
                              </div>
@@ -203,7 +198,7 @@ class OneArticle extends Component {
       <div id="masthead" className="oneArticle">
        {buttons}  
       </div>    
-      <div class="fadeAway"></div>
+      <div className="fadeAway"></div>
               <img className="rounded float-left img-responsive" alt="Article" src={this.state.article.imageUrl} />
                <div className="bodys">
                <div className="jumbo"> <h1>{this.state.article.title}</h1>
@@ -233,6 +228,7 @@ class OneArticle extends Component {
             {this.showComments()}
                </div>
             </div>   
+            
             <footer>
     <div className="footer">
       <div className="row">
