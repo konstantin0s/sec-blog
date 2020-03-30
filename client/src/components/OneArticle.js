@@ -73,9 +73,10 @@ class OneArticle extends Component {
   saveComments = (e)=> {
     e.preventDefault()
     const message = document.getElementById("comment").value;
+    const timenow = new Date();
     // debugger
     // axios.post(`${REACT_APP_URL}/articles/savecomment`, {id: this.state.article._id, owner: this.state.article.owner, text: message}, {withCredentials:true})
-    axios.post(`/articles/savecomment`, {id: this.state.article._id, owner: this.state.article.owner, text: message}, {withCredentials:true})
+    axios.post(`/articles/savecomment`, {id: this.state.article._id, owner: this.state.article.owner, text: message, date: timenow}, {withCredentials:true})
     .then((res) => {
       // debugger
       this.setState({ article: res.data})
@@ -112,6 +113,8 @@ class OneArticle extends Component {
         <textarea id="comment" className="form-comtrol" placeholder="Share your thoughts" required/> <br />
         <button id="submit" type="submit" className="btn btn-primary btn btn-outline comment-btn action-btn expand-right">Post Comment</button>
       </form>
+
+      <h5>{this.state.article.comments.length} Comments</h5>
     </div>
     }
   }
@@ -120,7 +123,7 @@ class OneArticle extends Component {
     if(this.state.article.comments instanceof Array){
         const comments = this.state.article.comments.reverse();
         return comments.map(function(c, i){
-     
+     console.log(c);
           return    <div key={i} className="showComm">
             <div className="col-md-8">
                   <div className="panel panel-default">
@@ -130,8 +133,8 @@ class OneArticle extends Component {
                                   <div className="col-md-11">
                                       <div className="media">
                                         <div className="media-body">
-                                          <h3 className="media-heading"> {c.owner.first_name}</h3> 
-                                          <button className="anchor-time">51 mins</button>
+                                          <h3 className="media-heading"> {c.owner.first_name}</h3>
+                                          <h5 className="anchor-time"> {c.date} </h5>
                                         </div>
                                       </div>
                                   </div>
@@ -142,7 +145,7 @@ class OneArticle extends Component {
                              <p> {c.text} </p>
                          </section>
                          <section className="post-footer">
-                             <hr />
+                         
                              <div className="post-footer-option">
                                   <ul className="list-unstyled">
                                       <li><button><i className="glyphicon glyphicon-thumbs-up"></i> Like</button></li>
@@ -193,7 +196,7 @@ class OneArticle extends Component {
 
 
                
-      <div className="jumbotron container">
+      <div className="jumbotron">
 
       <div id="masthead" className="oneArticle">
        {buttons}  
@@ -226,9 +229,7 @@ class OneArticle extends Component {
             {this.showCommentBox()}
              <div className="row showcomments">
             {this.showComments()}
-               </div>
-            </div>   
-            
+
             <footer>
     <div className="footer">
       <div className="row">
@@ -262,6 +263,11 @@ class OneArticle extends Component {
       </div>
 
   </footer>
+
+               </div>
+            </div>   
+            
+    
 
   <div className="pull-right"><span className="label label-default">alice</span> <span className="label label-primary">story</span> <span className="label label-success">blog</span> <span className="label label-info">personal</span> <span className="label label-warning">Warning</span>
                 <span className="label label-danger">Danger</span>

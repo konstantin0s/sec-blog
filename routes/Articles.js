@@ -134,14 +134,17 @@ router.post('/', (req, res) => {
 router.post('/savecomment', (req, res, next) => {
 
   const request = req.body;
+  console.log('request of comment', request);
   // const {_id} = req.session.currentUser;
   const id = request.id;	
+  const time = request.date;
+  console.log('request of id in comm', id);
 
   Article.findByIdAndUpdate(id)
   .exec((err, article) => {
   
     if (err) res.status(500).json(err)
-    article.comment({owner: req.session.currentUser, text: request.text})
+    article.comment({owner: req.session.currentUser, text: request.text, date: request.date})
     .then((savedcomment)=>{
       Article.findById(id)
       .populate("owner")

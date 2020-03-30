@@ -75,7 +75,8 @@ body {
 
 .media-left {
   position: absolute;
-  top: -7px;
+  left: 14em;
+  top: 36px;
 }
 
 .media-left button {
@@ -86,12 +87,9 @@ body {
 .media-body {
   display: flex;
   vertical-align: top;
-  width: 29vw;
+  width: 100%;
   font-size: 1.2em;
-  left: -7em;
-  height: auto;
-  /* background: yellow; */
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: row;
   top: -450px;
   z-index: 300;
@@ -102,6 +100,16 @@ body {
   z-index: 200;
   top: -26px;
   margin-bottom: 5px;
+  font-size: 1.3em;
+}
+
+.secondary h5 {
+  float: right;
+  position: absolute;
+  top: 25em;
+  right: 10em;
+  margin-right: 1em;
+  color: black;
 }
 
 .media-body h4,
@@ -116,6 +124,8 @@ a {
   text-align: center;
   left: -3em;
   position: relative;
+  width: 100%;
+  z-index: 500;
   align-self: center;
 }
 
@@ -258,17 +268,22 @@ a {
 
 .panel-default {
   width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 2em;
+  position: relative;
 }
 
 .panel-body {
-  padding: 15px;
-  background: aliceblue;
+  padding: 1em;
   display: flex;
-  width: 80%;
+  width: 100%;
   position: relative;
-  left: 8em;
+  left: 0em;
   justify-content: center;
   flex-direction: column;
+  background: rgb(201, 196, 196);
 }
 
 
@@ -334,10 +349,25 @@ textarea {
   height: 100px;
 }
 
-.post-body p {
-  align-self: center;
-  border: 1px solid #333;
+.post-body {
+  border: 2px solid silver;
   width: 100%;
+  height: 100%;
+  position: relative;
+  background: #fff;
+  left: 0em;
+  margin-bottom: 0.5em;
+}
+
+.post-body p {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  left: 0em;
+  top: 0.4em;
+  font-size: 1.2em;
+  background: #fff;
+  padding: 0.5em;
 }
 
 .post-footer-option li {
@@ -347,7 +377,7 @@ textarea {
 }
 
 .post-footer-option li a {
-  color: #AFB4BD;
+  color: rgb(40, 41, 43);
   font-weight: 500;
   font-size: 1.3rem;
 }
@@ -400,11 +430,11 @@ textarea {
   margin: 0px;
 }
 
-.jumbotron p {
+/* .jumbotron p {
   font-size: 18px;
   display: inline;
   font-weight: 200;
-}
+} */
 
 .row {
   width: 100%;
@@ -425,7 +455,7 @@ ul>li {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  top: 1344px;
+  /* top: 1344px; */
   position: relative;
   bottom: 0;
   width: 100%;
