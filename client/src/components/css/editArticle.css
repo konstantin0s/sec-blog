@@ -2,6 +2,12 @@
     position: relative;
     top: 5px;
     margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.custom-file-upload:hover {
+    transform: scale(1.1);
+    color: #b1ae17;
 }
 
 .editArticle .panel-body {
