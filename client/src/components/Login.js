@@ -147,7 +147,7 @@ componentWillUnmount() {
                                
                                 <input
                                     type="email"
-                                    className="form-item"
+                                    className="form-control"
                                     name="email"
                                     placeholder="Enter email"
                                     value={this.state.email}
@@ -158,7 +158,7 @@ componentWillUnmount() {
                           
                                 <input
                                     type="password"
-                                    className="form-item"
+                                    className="form-control"
                                     name="password"
                                     placeholder="Enter password"
                                     value={this.state.password}

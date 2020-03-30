@@ -128,7 +128,7 @@ class Register extends Component {
                             
                                 <input
                                     type="text"
-                                    className="form-item"
+                                    className="form-control"
                                     name="first_name"
                                     placeholder="First Name"
                                     value={this.state.first_name}
@@ -140,7 +140,7 @@ class Register extends Component {
                               
                                 <input
                                     type="text"
-                                    className="form-item"
+                                    className="form-control"
                                     name="last_name"
                                     placeholder="Last Name"
                                     value={this.state.last_name}
@@ -152,7 +152,7 @@ class Register extends Component {
                               
                                 <input
                                     type="email"
-                                    className="form-item"
+                                    className="form-control"
                                     name="email"
                                     placeholder="Enter Email"
                                     value={this.state.email}
@@ -164,7 +164,7 @@ class Register extends Component {
                             
                                 <input
                                     type="password"
-                                    className="form-item"
+                                    className="form-control"
                                     name="password"
                                     placeholder="Enter Password"
                                     value={this.state.password}
