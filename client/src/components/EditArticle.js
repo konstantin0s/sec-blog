@@ -22,7 +22,7 @@ class EditArticle extends Component {
   componentDidMount() {
     const { params } = this.props.match;
 
-    axios.get(`/articles/one/${params.id}`, {withCredentials:true})
+    axios.get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials:true})
       .then(res => {
         this.setState({ article: res.data });
         console.log(this.state.article);
@@ -61,7 +61,7 @@ class EditArticle extends Component {
 
     const { title, body, author, imageUrl } = this.state.article;
 
-    axios.put(`/articles/one/`+this.props.match.params.id, { title, body, author, imageUrl })
+    axios.put(`${process.env.REACT_APP_API_URL}/articles/one/`+this.props.match.params.id, { title, body, author, imageUrl })
       .then((result) => {
         this.props.history.push("/show/"+this.props.match.params.id);
       });

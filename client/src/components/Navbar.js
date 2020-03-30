@@ -22,10 +22,10 @@ class Navbar extends Component {
 if (typeof this.props.match.params.id === 'undefined') {
 ///skip the error 
 } else {
-  axios.get(`/users/`+this.props.match.params.id)
+  axios.get(`${process.env.REACT_APP_API_URL}/users/`+this.props.match.params.id)
   .then(res => {
     this.setState({ user: res.data.user });
-    console.log(this.state.user);
+    // console.log(this.state.user);
   });
 }
   }
@@ -33,7 +33,7 @@ if (typeof this.props.match.params.id === 'undefined') {
 
      logOut(e) {
        e.preventDefault();
-       axios.get(`/`);
+       axios.get(`${process.env.REACT_APP_API_URL}/`);
        localStorage.removeItem('usertoken');
        store.remove('loggedIn');
        console.log('you have been logged out. boo!');

@@ -27,7 +27,7 @@ class Article extends Component {
   }
 
   componentDidMount(){
-     axios.get(`/users/`, {withCredentials:true})
+     axios.get(`${process.env.REACT_APP_API_URL}/users/`, {withCredentials:true})
     .then((response)=> {
         this.setState({users: response.data, userId: response.data[0]._id});
         console.log(response.data);
