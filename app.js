@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public/build')));
 app.use(express.json());
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3001']
+  origin: ['https://zumbazomblog.herokuapp.com']
 })
 );
 
