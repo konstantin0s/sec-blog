@@ -30,7 +30,7 @@ class Article extends Component {
      axios.get(`${process.env.REACT_APP_API_URL}/users/`, {withCredentials:true})
     .then((response)=> {
         this.setState({users: response.data, userId: response.data[0]._id});
-        console.log(response.data);
+        // console.log(response.data);
     })
     .catch((error)=> {
         this.setState({error});

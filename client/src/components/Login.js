@@ -67,7 +67,7 @@ componentWillUnmount() {
         e.preventDefault();
         const isValid = this.validate();
         if (isValid) {
-            console.log(this.state); 
+            // console.log(this.state); 
             this.props.history.push('/articles');
             //clear form
             if (this._isMounted) {
