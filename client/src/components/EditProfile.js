@@ -20,7 +20,7 @@ class EditProfile extends Component {
     axios.get(`${process.env.REACT_APP_API_URL}/users/`+this.props.match.params.id)
       .then(res => {
         this.setState({ user: res.data.user });
-        console.log(this.state.user);
+        // console.log(this.state.user);
       })
       .catch(err => console.log(err));
   }
@@ -28,7 +28,7 @@ class EditProfile extends Component {
   onChange(e) {
     const state = this.state.user;
     state[e.target.name] = e.target.value;
-    console.log(state);
+    // console.log(state);
     this.setState({user:state});
   }
 
@@ -58,7 +58,7 @@ class EditProfile extends Component {
 
     axios.put(`${process.env.REACT_APP_API_URL}/users/`+this.props.match.params.id, { first_name, last_name, email, password })
       .then((result) => {
-        console.log('result', result);
+        // console.log('result', result);
         this.props.history.push("/profile/"+this.props.match.params.id);
       })
       .catch(err => console.log(err));

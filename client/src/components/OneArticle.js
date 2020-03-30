@@ -123,7 +123,7 @@ class OneArticle extends Component {
     if(this.state.article.comments instanceof Array){
         const comments = this.state.article.comments.reverse();
         return comments.map(function(c, i){
-     console.log(c);
+    //  console.log(c);
           return    <div key={i} className="showComm">
             <div className="col-md-8">
                   <div className="panel panel-default">
@@ -180,7 +180,7 @@ class OneArticle extends Component {
 
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
 
     let buttons = (this.state.userId && this.state.userId === this.state.articleOwnerId) ? 
     <div className="button-container"> 

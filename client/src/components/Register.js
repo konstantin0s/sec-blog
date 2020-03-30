@@ -75,7 +75,7 @@ class Register extends Component {
         e.preventDefault();
         const isValid = this.validate();
         if (isValid) {
-            console.log(this.state); 
+            // console.log(this.state); 
             this.props.history.push('/');
             //clear form
            this.setState({initialState});
@@ -92,7 +92,7 @@ class Register extends Component {
          
         register(newUser).then(res => {
             if (res) {
-                 console.log(newUser);
+                //  console.log(newUser);
                 this.props.history.push('/login');
             }
         })
