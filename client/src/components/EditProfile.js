@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {handleUpload} from './UserFunctions';
+import Footer from './Footer';
 import './css/editProfile.css';
 
 class EditProfile extends Component {
@@ -66,7 +67,7 @@ class EditProfile extends Component {
   render() {
     return (
       <div className="container editProfile">
-        <div className="panel panel-default">
+        <div className="just-panel">
           <div className="panel-heading">
             <h3 className="panel-title">
               EDIT PROFILE
@@ -105,14 +106,7 @@ class EditProfile extends Component {
           </div>
         </div>
 
-        <footer className="blog-footer">
-         <p> 
-         &copy; Copyright 2020 YouHelp
-</p>
-        <p>
-           <a href="#masthead">Back to top</a>
-        </p>
-    </footer>
+      <Footer />
       </div>
     );
   }

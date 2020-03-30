@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import Footer from './Footer';
 import {handleUpload} from './UserFunctions';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -72,8 +72,8 @@ class EditArticle extends Component {
 
   
     return (
-      <div className="container editArticle">
-        <div className="panel panel-default">
+      <div className="editArticle">
+        <div className="panel-just">
           <div className="panel-heading">
             <h3 className="panel-title">
               EDIT BLOG
@@ -104,6 +104,7 @@ class EditArticle extends Component {
             </form>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

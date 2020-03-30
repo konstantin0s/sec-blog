@@ -1,7 +1,12 @@
 .editProfile {
   position: relative;
-  top: 100px;
-  width: 60%;
+  height: 100vh;
+  top: -20px;
+  width: 100%;
+  background: url('https://images.pexels.com/photos/2487437/pexels-photo-2487437.png?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .submit {
@@ -10,10 +15,43 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  left: 39%;
   width: 20%;
 }
 
-.panel-default {
-  width: 50%;
+.panel-heading {
+  background: aliceblue;
+}
+
+.just-panel {
+  width: 66%;
+  display: flex;
+  align-self: center;
+  position: relative;
+  justify-content: center;
+  top: 150px;
+  flex-direction: column;
+  left: 13.4em;
+}
+
+
+.editProfile .panel-body form {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.editProfile .panel-body form .form-group {
+  margin-bottom: 1em;
+  width: 86%;
+}
+
+
+.editProfile footer {
+  position: absolute;
+  bottom: -65px;
+  left: 0em;
 }

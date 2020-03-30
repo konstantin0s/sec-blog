@@ -11,8 +11,10 @@ body {
 }
 
 .profilePage {
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  left: 0em;
 }
 
 .image-back {
@@ -26,16 +28,17 @@ body {
   background-size: cover;
 }
 
-.profile {
-  position: relative;
-  top: -30px;
+.profilePage footer {
+  bottom: -240px;
+  position: absolute;
+
 }
 
 .col-md-3 {
   width: 25%;
   z-index: 20;
   position: relative;
-  top: 115px;
+  top: 177px;
   margin-bottom: 120px;
   -webkit-box-shadow: 4px 6px 6px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 4px 6px 6px -1px rgba(0, 0, 0, 0.75);

@@ -85,30 +85,35 @@ class Article extends Component {
       return (
 
         <div id="masthead" className="addArticle">
-        <div className="cardz">
-            <div className="col-lg-12-x">
+          <div className="just-panels">
+          <div className="panel-heading">
+            <h3 className="panel-title">
+              ADD A NEW ARTICLE
+            </h3>
+          </div>
+          <div className="panel-body">
             <form noValidate onSubmit={this.onSubmit}>
-                       <h1 className="h3 mb-3 font-weight-normal">Add Article:</h1>
-                          <div className="form-group">
-                               <input
-                                   type="text"
-                                   className="form-item"
-                               name="title"
-                              placeholder="Title"
-                               value={this.state.title}
-                                   onChange={this.onChange}/>
-                           </div>
-                           <div className="form-group auth">
-                               <label htmlFor="author" className="author">
-                                   Author:
-                              </label>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                        name="title"
+                        placeholder="Title"
+                        value={this.state.title}
+                            onChange={this.onChange}/>
+                    </div>
+                    <div className="form-group auth">
+                        <label htmlFor="author" className="authorx">
+                            Author:
+                        </label>
                               <div className="center-on-page">
                <div className="label"></div>
-                 <div className="select">
-                 <select name="slct" className="btn btn-lg btn-primary" id="slct" onChange={this.handleChange}>
+                 <div className="form-group select">
+                 <select name="slct" className="btn btn-lg btn-primary" id="slct" 
+                 onChange={this.handleChange}>
                          {this.state.users.map((user)=> 
-                                 <option value={user._id}>{user.first_name}</option>
-                             )}
+                        <option value={user._id}>{user.first_name}</option>
+                        )}
                 </select>
              </div>
            </div>
@@ -117,7 +122,7 @@ class Article extends Component {
 
                                <textarea
                               type="text"
-                                   className="form-item textarea"
+                              className="form-control textarea"
                                   name="body"
                                    placeholder="Type Your Post.."
                                    value={this.state.body}
@@ -131,14 +136,13 @@ class Article extends Component {
                   </label>
        
                      
-                         
-
                            <button type="submit" className="btn btn-lg btn-primary btn-block">
                               Post
                            </button>
                       </form> 
             </div>
         </div>
+
 
         <Footer />
     </div>

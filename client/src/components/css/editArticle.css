@@ -3,3 +3,65 @@
     top: 5px;
     margin-bottom: 1em;
 }
+
+.editArticle .panel-body {
+    padding: 1em;
+    display: flex;
+    width: 100%;
+    position: relative;
+    left: 0em;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.editArticle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 46px;
+    background: url('https://images.pexels.com/photos/2244330/pexels-photo-2244330.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.panel-just {
+
+    background: aliceblue;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 17em;
+    left: 17em;
+    position: relative;
+    top: 100px;
+    background: aliceblue;
+    border-radius: 35%;
+}
+
+.editArticle .panel-body form {
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.editArticle .panel-body form .form-group {
+    margin-bottom: 1em;
+    width: 86%;
+}
+
+.editArticle .panel-body form button {
+    width: 35%;
+}
+
+
+.editArticle footer {
+    bottom: -39px;
+    position: absolute;
+}

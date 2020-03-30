@@ -23,9 +23,8 @@ class Profile extends Component {
  
 componentDidMount () {
   const token = localStorage.usertoken;
-	console.log(localStorage);
 	const decoded = jwt_decode(token);
-	console.log(decoded);
+
   this.setState({
     first_name: decoded.first_name,
     last_name: decoded.last_name,
@@ -39,10 +38,10 @@ componentDidMount () {
 
 render()
  {
-	 console.log(this.state);
+	//  console.log(this.state);
    return (
-    <div id="masthead" className="container profilePage">
-    <div className="row profile">
+    <div id="masthead" className="profilePage">
+    <div className="profile">
 		<div className="col-md-3">
 			<div className="profile-sidebar">
 		

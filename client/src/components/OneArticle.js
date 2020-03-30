@@ -38,8 +38,8 @@ class OneArticle extends Component {
         const {_id} = jwt_decode(userToken);
       
         this.setState({ article: res.data, userId:_id, first_name :res.data.owner.first_name, articleOwnerId: res.data.owner._id });
-           console.log(res.data.owner.first_name);
-           console.log(this.state.article);
+          //  console.log(res.data.owner.first_name);
+          //  console.log(this.state.article);
       }).catch(err => {
     
         this.setState({errorMessage:err});
@@ -52,9 +52,9 @@ class OneArticle extends Component {
         // const {first_name} = jwt_decode(userToken);
         this.setState({owner: response.data.id});
           // this.setState({owner: response.data.id, first_name:response.data.owner.first_name})
-          console.log(this.state.owner);
+          // console.log(this.state.owner);
          
-          console.log(response.data.id);
+          // console.log(response.data.id);
    
       })
       .catch((error)=> {
@@ -176,7 +176,9 @@ class OneArticle extends Component {
         })
     }        
 }
-  
+
+
+
   render() {
     console.log(this.state)
 
@@ -273,6 +275,8 @@ class OneArticle extends Component {
                 <span className="label label-danger">Danger</span>
            <hr/>
                </div>
+
+    
 
            </div> 
 
