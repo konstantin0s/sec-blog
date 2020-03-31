@@ -195,7 +195,7 @@
 .contain-form {
   position: absolute;
   margin: auto;
-  top: -500px;
+  top: -100px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -297,7 +297,7 @@
 }
 
 .input:focus~.search {
-  right: -530px;
+  right: -230px;
   background: #151515;
   z-index: 3;
 }
