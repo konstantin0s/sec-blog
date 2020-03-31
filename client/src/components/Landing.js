@@ -8,7 +8,7 @@ class Landing extends Component {
     return (
       <div className="containe headerImg">
  
-    <header id="masthead" className="masthead lanImage">
+    <header className="masthead lanImage">
     <div className="overlay"></div>
     <div className="container">
       <div className="rowlex">

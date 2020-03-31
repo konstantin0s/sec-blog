@@ -200,7 +200,7 @@ class OneArticle extends Component {
                
       <div className="jumbotron">
 
-      <div id="masthead" className="oneArticle">
+      <div className="oneArticle">
        {buttons}  
       </div>    
       <div className="fadeAway"></div>

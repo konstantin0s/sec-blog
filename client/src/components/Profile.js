@@ -40,7 +40,7 @@ render()
  {
 	//  console.log(this.state);
    return (
-    <div id="masthead" className="profilePage">
+    <div  className="profilePage">
     <div className="profile">
 		<div className="col-md-3">
 			<div className="profile-sidebar">

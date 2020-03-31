@@ -85,7 +85,7 @@ if (typeof this.props.match.params.id === 'undefined') {
       
       return (
 
-       <nav className="navbar navbar-inverse navbar-fixed-top">
+       <nav id="masthead" className="navbar navbar-inverse navbar-fixed-top">
           <div className="container">
           <div className="navbar-header">
          {/* <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

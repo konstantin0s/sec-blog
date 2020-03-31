@@ -84,7 +84,7 @@ class Article extends Component {
   render() {
       return (
 
-        <div id="masthead" className="addArticle">
+        <div className="addArticle">
           <div className="just-panels">
           <div className="panel-heading">
             <h3 className="panel-title">

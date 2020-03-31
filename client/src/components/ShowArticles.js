@@ -48,7 +48,7 @@ class ShowArticles extends Component {
   render() {
     const { filtered, term } = this.state;
     return ( 
-  <div className="container showArticles" id="masthead">
+  <div className="container showArticles">
 
 <div className="form-containex">
 
