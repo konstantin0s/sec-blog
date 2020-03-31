@@ -297,7 +297,7 @@
 }
 
 .input:focus~.search {
-  right: -230px;
+  right: -530px;
   background: #151515;
   z-index: 3;
 }

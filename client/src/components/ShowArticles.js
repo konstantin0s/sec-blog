@@ -51,14 +51,15 @@ class ShowArticles extends Component {
   <div className="container showArticles" id="masthead">
 
 <div className="form-containex">
+
       <div className="contain-form">
         
       <form className="active-pink active-pink-2">
-      <FontAwesomeIcon className="faSearch" icon={faSearch} />
+      {/* <FontAwesomeIcon className="faSearch" icon={faSearch} /> */}
         <input onChange={this.searchHandler} className="form-item input" type="text"
         placeholder="Search" aria-label="Search" />
+         <div className="search"></div>
       </form>
-      <div className="search"></div>
     </div>
 </div>
 				
