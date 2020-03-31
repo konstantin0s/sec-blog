@@ -51,7 +51,7 @@ export const articles = newArticle => {
 
 export const handleUpload = theFile => {
 
-    console.log('file in service: ', theFile);
+    // console.log('file in service: ', theFile);
   return  axios.post(`${process.env.REACT_APP_API_URL}/upload`, theFile,  {withCredentials: true})
       .then(res => res.data)
       .catch(err => {
