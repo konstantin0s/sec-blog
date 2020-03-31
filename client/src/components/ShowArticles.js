@@ -51,13 +51,15 @@ class ShowArticles extends Component {
   <div className="container showArticles" id="masthead">
 
 <div className="form-containex">
-<form className="active-pink active-pink-2">
-<div className="form-group">
-<FontAwesomeIcon className="faSearch" icon={faSearch} />
-  <input onChange={this.searchHandler} className="form-item input" type="text"
-   placeholder="Search" aria-label="Search" />
-</div>
-</form>
+      <div className="contain-form">
+        
+      <form className="active-pink active-pink-2">
+      <FontAwesomeIcon className="faSearch" icon={faSearch} />
+        <input onChange={this.searchHandler} className="form-item input" type="text"
+        placeholder="Search" aria-label="Search" />
+      </form>
+      <div className="search"></div>
+    </div>
 </div>
 				
 {filtered.filter(this.searchingFor(term)).map((article) =>    
