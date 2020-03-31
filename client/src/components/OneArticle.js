@@ -63,7 +63,7 @@ class OneArticle extends Component {
   }
 
   delete(id){
-    console.log(id);
+    // console.log(id);
     axios.delete(`${process.env.REACT_APP_API_URL}/articles/`+id, {withCredentials:true})
       .then((result) => {
         this.props.history.push("/profile");

@@ -105,7 +105,7 @@ componentWillUnmount() {
                    });
                 }
                 }
-                 console.log(user);
+                //  console.log(user);
 
                 // this.props.history.push('/articles');
             }

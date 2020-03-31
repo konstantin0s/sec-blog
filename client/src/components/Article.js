@@ -74,7 +74,7 @@ class Article extends Component {
          userId: this.state.userId
       
       }
-      console.log(article);
+      // console.log(article);
 
       articles(article).then(res => {
            this.props.history.push('/articles');
