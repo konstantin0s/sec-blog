@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
+import Loading from './Loading';
 import './css/ShowArticles.css';
 import Moment from "moment";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 class ShowArticles extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filtered: []
+      filtered: [],
+      isLoading: true
     };
     this.searchHandler = this.searchHandler.bind(this);
   }
@@ -37,16 +37,19 @@ class ShowArticles extends Component {
   componentDidMount() {
     axios.get(`${process.env.REACT_APP_API_URL}/articles`, {withCredentials:true})
       .then(res => {
-        this.setState({ filtered: res.data });
+        this.setState({ filtered: res.data,
+          isLoading: false
+         });
         // console.log(this.state.filtered);
       });
+
   }
 
 
 
 
   render() {
-    const { filtered, term } = this.state;
+    const { filtered, term, isLoading } = this.state;
     return ( 
   <div className="container showArticles">
 
@@ -55,15 +58,20 @@ class ShowArticles extends Component {
       <div className="contain-form">
         
       <form className="active-pink active-pink-2">
-      {/* <FontAwesomeIcon className="faSearch" icon={faSearch} /> */}
-        <input onChange={this.searchHandler} className="form-item input" type="text"
+        <input onChange={this.searchHandler} id="searchField"
+         className="form-item input" type="text"
         placeholder="Search" aria-label="Search" />
          <div className="search"></div>
       </form>
     </div>
 </div>
 				
-{filtered.filter(this.searchingFor(term)).map((article) =>    
+
+        
+{          isLoading ? <Loading /> :
+
+
+filtered.filter(this.searchingFor(term)).map((article) =>    
 
  
 
