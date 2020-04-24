@@ -116,7 +116,9 @@ a:hover {
 
 .link-a:hover {
   padding: 1.3em 1.9em;
+  border: 3px var(--primary-color) solid;
   background: var(--secondary-color);
   color: var(--primary-color) !important;
+  font-weight: bold;
   text-decoration: none;
 }
