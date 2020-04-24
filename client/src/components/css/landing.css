@@ -9,8 +9,18 @@ html {
 .headerImg {
   position: relative;
   width: 100%;
-  top: -120px;
+  top: 0px;
   height: 100vh;
+}
+
+/* 
+.MuiPaper-rounded {
+  height: 400px;
+} */
+
+.MuiTypography-subtitle1 {
+  font-size: 1.5em;
+  text-decoration: none;
 }
 
 .cover-title {

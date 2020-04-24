@@ -3,7 +3,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    height: 2em;
+    height: 40px;
+    font-size: 14px;
     top: 0px;
     position: absolute;
 }
@@ -40,7 +41,8 @@ li {
     margin-left: 100px;
     width: 150px;
     top: 0px;
-    height: 2em;
+    height: 40px;
+    font-size: 14px;
     text-align: center;
     -webkit-align-self: center;
     align-self: center;
@@ -52,18 +54,18 @@ li {
     justify-content: center;
 }
 
-.logix {
-    position: relative;
-    left: 30%;
-}
-
-
 .link:hover,
 .logo:hover {
     padding: 1.3em 1.9em;
     background: var(--secondary-color);
     color: var(--secondary-color);
 }
+
+.logix {
+    position: relative;
+    left: 30%;
+}
+
 
 .nav-link:link {
     cursor: pointer;
@@ -144,7 +146,8 @@ li {
         margin-left: 100px;
         width: 200px;
         top: 0px;
-        height: 2em;
+        font-size: 14px;
+        height: 40px;
         text-align: center;
         -webkit-align-self: center;
         align-self: center;
@@ -177,7 +180,8 @@ li {
         margin-left: 100px;
         width: 150px;
         top: 0px;
-        height: 2em;
+        font-size: 14px;
+        height: 40px;
         text-align: center;
         -webkit-align-self: center;
         align-self: center;
@@ -211,7 +215,8 @@ li {
         margin-left: 100px;
         width: 150px;
         top: 0px;
-        height: 2em;
+        font-size: 14px;
+        height: 40px;
         text-align: center;
         -webkit-align-self: center;
         align-self: center;
