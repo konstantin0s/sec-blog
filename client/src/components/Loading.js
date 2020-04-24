@@ -17,7 +17,7 @@ const BouncyDiv = styled.div`
       <div className="test">
     <BouncyDiv>
     <h1 className="text-center">
-       Loading...
+      Counting Sheeps...
        </h1>
     </BouncyDiv>
       </div>
