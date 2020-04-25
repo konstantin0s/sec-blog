@@ -130,12 +130,27 @@
 }
 
 .linkz {
-  position: absolute;
+  position: relative;
   font-weight: 200;
-  font-size: 20px;
+  font-size: 16px;
   z-index: 240;
-  top: 292px;
+  top: 22px;
+  left: 6em;
+  text-align: center;
+  align-self: center;
   cursor: pointer;
+}
+
+p {
+  font-size: 15px;
+}
+
+span {
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .linkz:link {
@@ -348,7 +363,7 @@
   margin-bottom: 100px;
 }
 
-artLink {
+.artLink {
   position: absolute;
   top: 34px;
 }
@@ -398,11 +413,15 @@ hr {
   border-bottom: 1px solid grey;
 }
 
-/* .hrTitle {
+.MuiCardMedia-img {
+  height: 300px;
+}
+
+.Muicard-root {
   position: relative;
-  top: -95px;
-  border-bottom: 1px solid grey;
-} */
+  top: -186px;
+  margin-bottom: 20px;
+}
 
 
 @media screen and (max-width: 500px) {
