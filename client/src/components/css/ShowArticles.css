@@ -145,7 +145,7 @@
   font-size: 15px;
 }
 
-.MuiCardContent-root span {
+.MuiButton-label {
   font-size: 13px;
 }
 
@@ -171,40 +171,6 @@
   background-size: cover;
 }
 
-/* .showArticles .active-pink {
-  background: #fff;
-  height: 3em;
-  padding: 2em 1.5em;
-  position: relative;
-  border-radius: 3px;
-  z-index: 10;
-  top: -120px;
-} */
-
-/* .active-pink2 .input {
-  background-color: #FFF;
-}
-
-.active-pink-2 input[type=text]:focus:not([readonly]) {
-  border-bottom: 1px solid #333;
-  box-shadow: 0 1px 0 0 #FFF;
-}
-
-.active-pink input[type=text] {
-  position: relative;
-  top: 200px;
-  left: -2px;
-  height: 3em;
-  background: #FFF;
-  border-bottom: 1px solid #333;
-  box-shadow: 0 1px 0 0 #FFF;
-  border: none;
-}
-
-
-.active-pink input[type=text]:focus {
-  border: none !important;
-} */
 
 /* seach bar style */
 .contain-form {
@@ -419,7 +385,7 @@ hr {
 
 .MuiPaper-root {
   position: relative;
-  top: -186px;
+  top: -88px;
   margin-bottom: 20px;
 }
 
