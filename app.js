@@ -21,11 +21,11 @@ app.use(express.static(path.join(__dirname, 'public/build')));
 // ... other app.use middleware 
 
 app.use(express.json());
-// app.use(cors({
-//   credentials: true,
-//   origin: ['https://zumbazomblog.herokuapp.com']
-// })
-// );
+app.use(cors({
+  credentials: true,
+  origin: ['https://zumbazomblog.herokuapp.com']
+})
+);
 
 app.use(
   bodyParser.urlencoded({
