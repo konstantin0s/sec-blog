@@ -141,15 +141,15 @@
   cursor: pointer;
 }
 
-p {
+.MuiCardContent-root p {
   font-size: 15px;
 }
 
-span {
+.MuiCardContent-root span {
   font-size: 13px;
 }
 
-h2 {
+.MuiCardContent-root h2 {
   font-size: 20px;
 }
 
@@ -417,7 +417,7 @@ hr {
   height: 300px;
 }
 
-.Muicard-root {
+.MuiPaper-root {
   position: relative;
   top: -186px;
   margin-bottom: 20px;
