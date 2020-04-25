@@ -91,6 +91,10 @@
 .showArticles {
   position: relative;
   top: 200px;
+}
+
+.grid-container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -392,13 +396,14 @@ hr {
   margin-bottom: 20px;
 }
 
+/* 
 .showArticles .MuiPaper-root:first-child {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
-}
+} */
 
 
 @media screen and (max-width: 500px) {
