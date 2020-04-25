@@ -91,6 +91,9 @@
 .showArticles {
   position: relative;
   top: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 }
 
 .image-article {
@@ -385,8 +388,16 @@ hr {
 
 .MuiPaper-root {
   position: relative;
-  top: -88px;
+  top: 88px;
   margin-bottom: 20px;
+}
+
+.showArticles .MuiPaper-root:first-child {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 
