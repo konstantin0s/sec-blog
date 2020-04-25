@@ -14,14 +14,18 @@ const useStyles = makeStyles((theme) => ({
   sidebarSection: {
     marginTop: theme.spacing(3),
   },
+  sidebarSection1: {
+    marginTop: theme.spacing(3),
+  },
 }));
+
 
 export default function Sidebar(props) {
   const classes = useStyles();
   const { archives, description, social, title } = props;
 
   return (
-    <Grid item xs={12} md={4}>
+    <Grid key={title} item xs={12} md={4}>
       <Paper elevation={0} className={classes.sidebarAboutBox}>
         <Typography variant="h6" gutterBottom>
           {title}
@@ -32,11 +36,11 @@ export default function Sidebar(props) {
         Archives
       </Typography>
       {archives.map((archive) => (
-        <Link display="block" variant="body1" href={archive.url} key={archive.title}>
+        <Link display="block" variant="body1" href={archive.url} key={archive.id}>
           {archive.title}
         </Link>
       ))}
-      <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
+      <Typography variant="h6" gutterBottom className={classes.sidebarSection1}>
         Social
       </Typography>
       {social.map((network) => (
@@ -58,4 +62,5 @@ Sidebar.propTypes = {
   description: PropTypes.string,
   social: PropTypes.array,
   title: PropTypes.string,
+  id: PropTypes.number
 };

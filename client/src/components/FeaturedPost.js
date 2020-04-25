@@ -28,7 +28,7 @@ export default function FeaturedPost(props) {
 
   return (
     <Grid item xs={12} md={6}>
-      <CardActionArea component="a" href="#">
+      <CardActionArea component="div">
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
             <CardContent>
@@ -42,10 +42,10 @@ export default function FeaturedPost(props) {
                 {post.description}
               </Typography>
               <Typography variant="subtitle1" color="primary">
+              </Typography>
               <Link variant="subtitle1" className="link-a" href="/login">
                 Continue reading...
               </Link>
-              </Typography>
             </CardContent>
           </div>
           <Hidden xsDown>

@@ -34,6 +34,7 @@ const mainFeaturedPost = {
 
 const featuredPosts = [
   {
+    id: 13,
     title: 'Featured post',
     date: 'Nov 12',
     description:
@@ -42,6 +43,7 @@ const featuredPosts = [
     imageText: 'Image Text',
   },
   {
+    id: 15,
     title: 'Post title',
     date: 'Nov 11',
     description:
@@ -55,27 +57,28 @@ const posts = [post1, post2, post3];
 
 const sidebar = {
   title: 'About',
+  id: Math.floor(Math.random() * 12 - 1),
   description:
     'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
   archives: [
-    { title: 'March 2020', url: '#' },
-    { title: 'February 2020', url: '#' },
-    { title: 'January 2020', url: '#' },
-    { title: 'November 1999', url: '#' },
-    { title: 'October 1999', url: '#' },
-    { title: 'September 1999', url: '#' },
-    { title: 'August 1999', url: '#' },
-    { title: 'July 1999', url: '#' },
-    { title: 'June 1999', url: '#' },
-    { title: 'May 1999', url: '#' },
-    { title: 'April 1999', url: '#' },
+    { title: 'March 2020', url: '#', id: 1 },
+    { title: 'February 2020', url: '#0',  id: 2 },
+    { title: 'January 2020', url: '#', id: 3 },
+    { title: 'November 1999', url: '#', id: 4 },
+    { title: 'October 1999', url: '#', id: 5 },
+    { title: 'September 1999', url: '#', id: 6 },
+    { title: 'August 1999', url: '#', id: 8 },
+    { title: 'July 1999', url: '#', id: 9 },
+    { title: 'June 1999', url: '#', id: 10 },
+    { title: 'May 1999', url: '#', id: 11 },
+    { title: 'April 1999', url: '#', id: 12 },
   ],
   social: [
     { name: 'GitHub', icon: GitHubIcon },
     { name: 'Twitter', icon: TwitterIcon },
     { name: 'Facebook', icon: FacebookIcon },
   ],
-};
+}
 
 
 function Landing() {
@@ -93,7 +96,7 @@ function Landing() {
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
             {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
+              <FeaturedPost key={post.id} post={post} />
             ))}
           </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>
@@ -103,6 +106,7 @@ function Landing() {
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}
+              id={sidebar.id}
             />
           </Grid>
         </main>

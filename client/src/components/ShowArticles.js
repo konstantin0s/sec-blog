@@ -5,6 +5,13 @@ import Footer from './Footer';
 import Loading from './Loading';
 import './css/ShowArticles.css';
 import Moment from "moment";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 class ShowArticles extends Component {
   constructor(props) {
@@ -73,9 +80,48 @@ class ShowArticles extends Component {
 
 filtered.filter(this.searchingFor(term)).map((article) =>    
 
- 
+<Card className="card-container" key={article._id}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          height="140"
+          image={article.imageUrl}
+          title="Article"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {article.title}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+          ou ought to be ashamed of yourself for asking such a simple question,' added the Gryphon; and then
+           they both sat silent and looked at poor Alice, who felt ready to sink into the earth. At last the Gryphon said 
+           to the Mock Turtle, 'Drive on, old fellow! Don't be all day about it!' and he went on in these words:
+    'Yes, we went to school in the sea, though you mayn't believe it—'
+     'I never said I didn't!' interrupted Alice.
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+        Posted: {Moment(article.date.dateFrom).format('YYYY-MM-DD')}
+        </Button>
+        <Button size="small" color="primary">
+        <Link className="btn btn-primary linkz" to={`/show/${article._id}`}>Read MORE...</Link>
+        </Button>
+        <div className="badges">
+        <span className="label label-default">alice</span>
+        <span className="label label-primary">story</span>
+        <span className="label label-success">blog</span> 
+        <span className="label label-info">personal</span> 
+        <span className="label label-warning">Warning</span>
+        <span className="label label-danger">Danger</span>
+  </div>
+      </CardActions>
+    </Card>
+ )}  
 
-<div className="card text-center" key={article._id}>
+{/* <div className="card text-center" key={article._id}>
   <div className="card-body">
     <img alt="Article" className="image-article" src={article.imageUrl} />
     <h2 className="card-title">{article.title}</h2>
@@ -90,12 +136,15 @@ filtered.filter(this.searchingFor(term)).map((article) =>
    <span> Posted: {Moment(article.date.dateFrom).format('YYYY-MM-DD')}</span>
   </div>
   <div className="badges">
-  <span className="label label-default">alice</span> <span className="label label-primary">story</span> <span className="label label-success">blog</span> <span className="label label-info">personal</span> <span className="label label-warning">Warning</span>
+  <span className="label label-default">alice</span>
+   <span className="label label-primary">story</span>
+    <span className="label label-success">blog</span> 
+    <span className="label label-info">personal</span> 
+    <span className="label label-warning">Warning</span>
    <span className="label label-danger">Danger</span>
   </div>
-</div>
+</div> */}
 
-)}  
 
 <Footer />
 
