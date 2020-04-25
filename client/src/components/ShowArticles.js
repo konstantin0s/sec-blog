@@ -58,7 +58,8 @@ class ShowArticles extends Component {
   render() {
     const { filtered, term, isLoading } = this.state;
     return ( 
-  <div className="container showArticles">
+  <React.Fragment>
+      <div className="container showArticles">
 
 <div className="form-containex">
 
@@ -121,35 +122,9 @@ filtered.filter(this.searchingFor(term)).map((article) =>
     </Card>
  )}  
 
-{/* <div className="card text-center" key={article._id}>
-  <div className="card-body">
-    <img alt="Article" className="image-article" src={article.imageUrl} />
-    <h2 className="card-title">{article.title}</h2>
-    <p className="card-text">You ought to be ashamed of yourself for asking such a simple question,' added the Gryphon; and then they both sat silent and looked at poor Alice, who felt ready to sink into the earth. At last the Gryphon said to the Mock Turtle, 'Drive on, old fellow! Don't be all day about it!' and he went on in these words:
-    'Yes, we went to school in the sea, though you mayn't believe it—'
-     'I never said I didn't!' interrupted Alice.
-     'You did,' said the Mock Turtle.</p>
-
-  </div>
-   <span className="artLink">  <Link className="btn btn-primary linkz" to={`/show/${article._id}`}>Read MORE...</Link></span>
-  <div className="card-footer text-muted">
-   <span> Posted: {Moment(article.date.dateFrom).format('YYYY-MM-DD')}</span>
-  </div>
-  <div className="badges">
-  <span className="label label-default">alice</span>
-   <span className="label label-primary">story</span>
-    <span className="label label-success">blog</span> 
-    <span className="label label-info">personal</span> 
-    <span className="label label-warning">Warning</span>
-   <span className="label label-danger">Danger</span>
-  </div>
-</div> */}
-
-
-<Footer />
-
 </div>
-
+<Footer />
+  </React.Fragment>
 
     );
   }
