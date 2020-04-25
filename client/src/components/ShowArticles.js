@@ -76,6 +76,7 @@ class ShowArticles extends Component {
 				
 
         
+<div className="grid-container">
 {          isLoading ? <Loading /> :
 
 
@@ -120,10 +121,11 @@ filtered.filter(this.searchingFor(term)).map((article) =>
   </div>
       </CardActions>
     </Card>
- )}  
+ )}
+  </div>  
 
+  <Footer />
 </div>
-<Footer />
   </React.Fragment>
 
     );
