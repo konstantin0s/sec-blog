@@ -66,6 +66,10 @@ html {
   font-weight: 900;
 }
 
+.addArticle .panel-body {
+  background-color: cornflowerblue;
+}
+
 .site-heading span {
   opacity: 1;
   color: #333;
@@ -530,11 +534,11 @@ html {
     margin-top: 10px;
   }
 
-  h3 {
+  /* h3 {
     font-size: 33px;
     position: relative;
     right: 459px;
-  }
+  } */
 
   .site-heading h1 {
     font-size: 33px;
@@ -542,29 +546,11 @@ html {
     right: 459px;
   }
 
-  /* 
-  .logIn {
-    display: flex;
-    flex-direction: row;
-    left: 260px;
-    position: absolute;
-    top: 0;
-  } */
-
   #navbar .logo {
     position: absolute;
     top: 0;
     left: 100px;
   }
-
-  /* .regIster {
-    display: flex;
-    flex-direction: row;
-    left: 190px;
-    top: -41px;
-    padding: 2px;
-    position: absolute;
-  } */
 
   .displayh1 {
     position: relative;

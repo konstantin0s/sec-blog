@@ -109,7 +109,7 @@ class Article extends Component {
                               <div className="center-on-page">
                <div className="label"></div>
                  <div className="form-group select">
-                 <select name="slct" className="btn btn-lg btn-primary" id="slct" 
+                 <select name="slct" className="btn btn-lg btn-secondary" id="slct" 
                  onChange={this.handleChange}>
                          {this.state.users.map((user)=> 
                         <option value={user._id}>{user.first_name}</option>
@@ -132,11 +132,12 @@ class Article extends Component {
 
              <label className="custom-file-upload">
              Image <FontAwesomeIcon icon={faUpload} />
-             <input type="file" className="btn btn-warning addPic" onChange={(e) => this.handleFileUpload(e)} /> 
+             <input type="file" className="btn btn-warning addPic"
+              onChange={(e) => this.handleFileUpload(e)} /> 
                   </label>
        
                      
-                           <button type="submit" className="btn btn-lg btn-primary btn-block">
+                           <button type="submit" className="btn btn-lg btn-secondary btn-block">
                               Post
                            </button>
                       </form> 

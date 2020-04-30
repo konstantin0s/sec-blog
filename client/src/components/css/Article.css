@@ -19,7 +19,7 @@ body {
 
 .addArticle {
   width: 100%;
-  background: url('https://images.pexels.com/photos/1561020/pexels-photo-1561020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background: url('https://images.pexels.com/photos/3812041/pexels-photo-3812041.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -73,28 +73,24 @@ input[type="file"] {
 
 .addArticle .panel-body {
   padding: 1em;
-  display: flex;
   width: 100%;
   position: relative;
-  left: 0em;
-  justify-content: center;
-  flex-direction: column;
+  /* left: 0em; */
+  position: relative;
+  display: inline-block;
 }
 
-
 .just-panels {
-
   background: aliceblue;
-  width: 60%;
-  display: flex;
+  width: 50%;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 17em;
-  left: 17em;
+  margin-bottom: 17em; */
   position: relative;
-  top: 100px;
-  background: aliceblue;
+  top: 135px;
   border-radius: 35%;
+  text-align: center;
 }
 
 .addArticle .panel-body form {
@@ -115,7 +111,7 @@ input[type="file"] {
 
 
 .addArticle footer {
-  bottom: -65px;
+  bottom: -54px;
   position: absolute;
 }
 
@@ -196,13 +192,13 @@ h1 {
   top: 31px;
   box-shadow: none;
   border: 0 !important;
-  background: #2c3e50;
+  color: #333;
   background-image: none;
   display: block;
   width: 20em;
   height: 3em;
   line-height: 3;
-  background: #2c3e50;
+  /* background: #2c3e50; */
   overflow: hidden;
   border-radius: .25em;
 }
@@ -221,9 +217,9 @@ h1 {
   height: 100%;
   margin: 0;
   padding: 0 0 0 .5em;
-  color: #fff;
+  color: #333;
   cursor: pointer;
-  width: 501px !important;
+  width: 35vw !important;
 }
 
 .select::-ms-expand {
