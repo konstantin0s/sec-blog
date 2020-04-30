@@ -105,6 +105,7 @@ class Register extends Component {
         const { error } = this.state;
         return (
 
+            <div className="login-container">
     <div className="center">
         <div className="left">
                     {/* left scree background color */}
@@ -183,7 +184,7 @@ class Register extends Component {
                     </div>
 
             </div>
-
+</div>
         )
     }
 }
