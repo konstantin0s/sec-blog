@@ -19,6 +19,7 @@
     "react": "^16.4.1",
     "react-animations": "^1.0.0",
     "react-dom": "^16.4.1",
+    "react-fancybox": "^0.2.5",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "react-sharingbuttons": "^1.0.0",

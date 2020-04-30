@@ -12,6 +12,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import ReactFancyBox from 'react-fancybox'
+import 'react-fancybox/lib/fancybox.css'
 
 class ShowArticles extends Component {
   constructor(props) {
@@ -84,13 +86,17 @@ filtered.filter(this.searchingFor(term)).map((article) =>
 
 <Card className="card-container" key={article._id}>
       <CardActionArea>
-        <CardMedia
+      <ReactFancyBox
+          thumbnail={article.imageUrl}
+          image={article.imageUrl}/>
+        {/* <CardMedia
           component="img"
           alt="Contemplative Reptile"
           height="140"
           image={article.imageUrl}
           title="Article"
-        />
+        /> */}
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {article.title}
