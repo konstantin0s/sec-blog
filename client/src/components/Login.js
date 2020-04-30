@@ -121,7 +121,7 @@ componentWillUnmount() {
     render() {
         const { error } = this.state;
         return (
-           <div>
+           <div className="login-container">
 
                 <div className="center">
 
