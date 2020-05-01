@@ -22,10 +22,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Sidebar(props) {
   const classes = useStyles();
-  const { archives, description, social, title } = props;
-
+  
+  const { archives, description, social, title, id } = props;
   return (
-    <Grid key={title} item xs={12} md={4}>
+    <Grid key={id} item xs={12} md={4}>
       <Paper elevation={0} className={classes.sidebarAboutBox}>
         <Typography variant="h6" gutterBottom>
           {title}
@@ -43,8 +43,8 @@ export default function Sidebar(props) {
       <Typography variant="h6" gutterBottom className={classes.sidebarSection1}>
         Social
       </Typography>
-      {social.map((network) => (
-        <Link display="block" variant="body1" href="#" key={network}>
+      {social.map((network, i) => (
+        <Link display="block" variant="body1" href="#" key={i}>
           <Grid container direction="row" spacing={1} alignItems="center">
             <Grid item>
               <network.icon />

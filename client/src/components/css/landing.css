@@ -66,6 +66,22 @@ html {
   font-weight: 900;
 }
 
+.MuiGrid-spacing-xs-5 a {
+  position: relative;
+  top: 55px;
+}
+
+.makeStyles-mainFeaturedPost-10 {
+  position: relative;
+  top: 10px !important;
+  height: 400px;
+}
+
+.makeStyles-sidebarSection1-201 {
+  position: relative;
+  top: 50px;
+}
+
 .addArticle .panel-body {
   background-color: cornflowerblue;
 }
