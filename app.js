@@ -70,7 +70,8 @@ mongoose
     // res.locals.session = req.session;
     if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
       next(); // ==> go to the next route ---
-    } else {                          //    |
+    } else {    
+         res.locals.session = req.session;                      //    |
       res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
     }                                 //    |
   }); 
