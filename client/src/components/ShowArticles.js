@@ -35,9 +35,6 @@ class ShowArticles extends Component {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-  
-
-
   searchHandler(event) {
     this.setState({term: 
     this.jsUcfirst(event.target.value)})
@@ -53,9 +50,7 @@ class ShowArticles extends Component {
       });
 
   }
-
-
-
+  
 
   render() {
     const { filtered, term, isLoading } = this.state;
@@ -89,13 +84,6 @@ filtered.filter(this.searchingFor(term)).map((article) =>
       <ReactFancyBox
           thumbnail={article.imageUrl}
           image={article.imageUrl}/>
-        {/* <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image={article.imageUrl}
-          title="Article"
-        /> */}
 
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
