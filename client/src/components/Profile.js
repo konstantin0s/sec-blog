@@ -38,7 +38,7 @@ componentDidMount () {
 
 render()  {
 	const {first_name, last_name, date, _id, email, comments, imageUrl} = this.state;
-	console.log(this.state);
+	// console.log(this.state);
    return (
     <div  className="profilePage">
     <div className="profile">

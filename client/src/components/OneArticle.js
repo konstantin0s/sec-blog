@@ -108,7 +108,7 @@ class OneArticle extends Component {
                                   <div className="col-md-11">
                                       <div className="media">
                                         <div className="media-body">
-                                          <h3 className="media-heading"> {c.owner.first_name}</h3>
+                                          <h3 className="media-heading"> {c.owner.first_name ? c.owner.first_name : 'Unknown'}</h3>
                                           <h5 className="anchor-time"> {c.date} </h5>
                                         </div>
                                       </div>
