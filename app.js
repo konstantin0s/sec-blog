@@ -6,9 +6,7 @@ const cors = require('cors');
 const session    = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const cookieParser = require('cookie-parser');
-const passport      = require('passport');
 const bodyParser = require('body-parser');
-const multer = require('multer');
 require("dotenv").config();
 
 
@@ -63,26 +61,11 @@ mongoose
   }));
 
 
-  const Users = require('./routes/Users');
-  app.use('/users', Users);
-
-  // app.use((req, res, next) => {
-  //   // res.locals.session = req.session;
-  //   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
-  //     next(); // ==> go to the next route ---
-  //   } else {    
-  //        res.locals.session = req.session;                      //    |
-  //     res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
-  //   }                                 //    |
-  // }); 
-
-
-
-  // const Articles = require('./routes/Articles');
+  app.use('/users',  require('./routes/Users'));
   app.use('/articles', require('./routes/Articles'));
   app.use('/', require('./routes/file-upload-routes'));
 
-  // Right before your app.listen(), add this:
+
 //production mode
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {

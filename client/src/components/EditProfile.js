@@ -94,8 +94,6 @@ class EditProfile extends Component {
                  value={this.state.user.email} onChange={this.onChange} placeholder="Email" />
               </div>
       
-
-              {/* <input type="file" onChange={(e) => this.handleFileUpload(e)} />  */}
               <button type="submit" className="btn btn-lg btn-primary btn-block submit">
                               Update
               </button>

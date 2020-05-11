@@ -20,12 +20,11 @@ class Navbar extends Component {
   componentDidMount() {
 
 if (typeof this.props.match.params.id === 'undefined') {
-///skip the error 
+///skips undefined
 } else {
   axios.get(`${process.env.REACT_APP_API_URL}/users/`+this.props.match.params.id)
   .then(res => {
     this.setState({ user: res.data.user });
-    // console.log(this.state.user);
   });
 }
   }
@@ -36,9 +35,8 @@ if (typeof this.props.match.params.id === 'undefined') {
        axios.get(`${process.env.REACT_APP_API_URL}/`);
        localStorage.removeItem('usertoken');
        store.remove('loggedIn');
-       console.log('you have been logged out. boo!');
+      //  console.log('you have been logged out. boo!');
        this.props.history.push('/');
-      //  store.set('loggedIn', false);
      }
 
      

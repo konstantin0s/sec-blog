@@ -8,17 +8,6 @@ require("dotenv").config();
 const User = require('../models/User');
 
 
-
-// const protect = (req, res, next)=> {
-//   debugger
-//   if(req.session.currentUser) {
-//     next()
-//   } else {
-//     res.status(403).json({message: "Unauthorized"})
-//   }
-// }
-
-
 users.post('/register', (req, res) => {
   const today = new Date();
   const userData = {
@@ -185,19 +174,6 @@ users.get('/:id', function(req, res, next) {
       res.json(error)
     })
 });
-
-// users.get('/one/:id', function(req, res, next) {
-//   User.findById(req.params.id)
-//     .then((user)=>{
-//       debugger
-//       res.json(user)
-//       debugger
-//     })
-//     .catch((error)=> {
-//       res.json(error)
-//     })
-// });
-
 
 
 users.get('/profile', (req, res) => {

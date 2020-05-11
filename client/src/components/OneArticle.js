@@ -38,8 +38,6 @@ class OneArticle extends Component {
         const {_id} = jwt_decode(userToken);
       
         this.setState({ article: res.data, userId:_id, first_name :res.data.owner.first_name, articleOwnerId: res.data.owner._id });
-          //  console.log(res.data.owner.first_name);
-          //  console.log(this.state.article);
       }).catch(err => {
     
         this.setState({errorMessage:err});
@@ -48,14 +46,9 @@ class OneArticle extends Component {
 
       axios.get(`${process.env.REACT_APP_API_URL}/users/one/:id`, {withCredentials:true})  
       .then((response)=> {
-        // let userToken = localStorage.usertoken;
-        // const {first_name} = jwt_decode(userToken);
+
         this.setState({owner: response.data.id});
-          // this.setState({owner: response.data.id, first_name:response.data.owner.first_name})
-          // console.log(this.state.owner);
-         
-          // console.log(response.data.id);
-   
+
       })
       .catch((error)=> {
           this.setState({error});
@@ -86,24 +79,6 @@ class OneArticle extends Component {
     })
   }
 
-  // saveComments = e => {
-  //   e.preventDefault();
-  //   const message = document.getElementById("comment").value;
-  // console.log(comment);
-  
-  // const { id } = this.state.article._id;
-  // const { owner } = this.state.article.owner;
-
-  //   axios.post(`/articles/savecomment`, {id: id, owner: owner, text: message}, {withCredentials: true })
-  //   .then((res) => {
-  // console.log(res);
-  //     this.setState({ article: res.data})
-  //       document.getElementById("comment").value = "";
-  //       console.log(this.state.article);
-  //   }).catch(err => {
-  //  console.log(err);
-  //   });
-  // }
 
   showCommentBox() {
     if (this.state.userId !== "") {

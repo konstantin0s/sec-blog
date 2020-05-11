@@ -36,9 +36,9 @@ componentDidMount () {
   })
 }
 
-render()
- {
-	//  console.log(this.state);
+render()  {
+	const {first_name, last_name, date, _id, email, comments, imageUrl} = this.state;
+	console.log(this.state);
    return (
     <div  className="profilePage">
     <div className="profile">
@@ -51,11 +51,11 @@ render()
 		
 				<div className="profile-usertitle">
 					<div className="profile-usertitle-name">
-          {this.state.first_name} {this.state.last_name}
-					{/* {this.state._id} */}
+          {first_name} {last_name}
+			
 					</div>
 					<div className="profile-usertitle-job">
-						Joined at: <p>{this.state.date}</p>
+						Joined at: <p>{date}</p>
 					</div>
 				</div>
 		
@@ -74,13 +74,13 @@ render()
 						<li>
 						
 							<i className="glyphicon glyphicon-user"></i>
-							Account Settings  <Link to={`/editProfile/${this.state._id}`} className="btn btn-danger">Edit</Link>&nbsp; 
+							Account Settings  <Link to={`/editProfile/${_id}`} className="btn btn-danger">Edit</Link>&nbsp; 
 						
 						</li>
 						<li>
 							<a href="/" target="_blank">
 							<i className="glyphicon glyphicon-ok"></i>
-							{this.state.email} </a>
+							{email} </a>
 						</li>
 					</ul>
 				</div>
@@ -96,7 +96,7 @@ render()
 		<div className="other-details">
             <div className="profile-content">
 	List of comments: 
-	{this.state.comments ? this.state.comments : 'No comments yet.'} 
+	{comments ? comments : '0 Comments.'} 
             </div>
 		</div>
 	</div>

@@ -5,7 +5,7 @@ import jwt_decode from 'jwt-decode';
 
 const checkAuth = () => {
   const token = localStorage.getItem('usertoken');
-  // const refreshToken = localStorage.getItem('refreshToken');
+
   if (!token) {
     return false;
   }

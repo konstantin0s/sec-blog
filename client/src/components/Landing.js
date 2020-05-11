@@ -1,6 +1,5 @@
 import React from 'react';
 import './css/landing.css';
-// import {Link} from 'react-router-dom';
 import Footer from './Footer';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';

@@ -67,7 +67,6 @@ componentWillUnmount() {
         e.preventDefault();
         const isValid = this.validate();
         if (isValid) {
-            // console.log(this.state); 
             this.props.history.push('/articles');
             //clear form
             if (this._isMounted) {
@@ -92,7 +91,6 @@ componentWillUnmount() {
         login(user).then(res => {
             if (res) {
                 if (isValid) {
-                    // console.log(this.state); 
                     this.props.history.push('/articles');
                     //clear form
                     if (this._isMounted) {
@@ -105,13 +103,8 @@ componentWillUnmount() {
                    });
                 }
                 }
-                //  console.log(user);
-
-                // this.props.history.push('/articles');
             }
-            //  else {
-            //     this.props.history.push('/login');
-            // }
+    
         })
         .catch((err)=> {
             this.props.history.push({ pathname: "/login", state: {message: "unauthorized"}});

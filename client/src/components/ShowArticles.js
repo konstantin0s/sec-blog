@@ -46,7 +46,6 @@ class ShowArticles extends Component {
         this.setState({ filtered: res.data,
           isLoading: false
          });
-        // console.log(this.state.filtered);
       });
 
   }

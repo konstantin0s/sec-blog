@@ -25,8 +25,6 @@ class EditArticle extends Component {
     axios.get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials:true})
       .then(res => {
         this.setState({ article: res.data });
-        // console.log(this.state.article);
-        // console.log(this.state.article.owner.first_name);
       })
       .catch(err => console.log(err));
   }
@@ -80,7 +78,6 @@ class EditArticle extends Component {
             </h3>
           </div>
           <div className="panel-body">
-            {/* <h4><Link to={`/show/${this.state.article._id}`}><span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Your Blog</Link></h4> */}
             <form onSubmit={this.onSubmit}>
       
               <div className="form-group">
