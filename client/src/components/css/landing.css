@@ -13,14 +13,12 @@ html {
   height: 100vh;
 }
 
-/* 
-.MuiPaper-rounded {
-  height: 400px;
-} */
-
-.MuiTypography-subtitle1 {
-  font-size: 1.5em;
-  text-decoration: none;
+.con-con {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  top: -20px;
 }
 
 .cover-title {
@@ -66,14 +64,36 @@ html {
   font-weight: 900;
 }
 
+.con-con main {
+  position: relative;
+  width: 100%;
+}
+
+.MuiTypography-subtitle1 {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.jss191,
+.makeStyles-markdown-191 {
+  visibility: hidden;
+}
+
+
 .MuiGrid-spacing-xs-5 a {
   position: relative;
   top: 55px;
 }
 
-.makeStyles-mainFeaturedPost-10 {
+.MuiGrid-spacing-xs-5>.MuiGrid-item>span:nth-of-type(1),
+.MuiGrid-spacing-xs-5>.MuiGrid-item>span:nth-of-type(2),
+.MuiGrid-spacing-xs-5>.MuiGrid-item>span:nth-of-type(3) {
+  visibility: hidden;
+}
+
+.con-con .makeStyles-mainFeaturedPost-2:nth-of-type(1) {
   position: relative;
-  top: 10px !important;
+  top: 0px !important;
   height: 400px;
 }
 
@@ -499,12 +519,6 @@ html {
     top: 5px;
   }
 
-  /* .navbar .logo {
-    position: relative;
-    top: -10px;
-    left: -220px;
-  } */
-
   .card .sec {
     position: relative;
     top: -60px;
@@ -520,22 +534,6 @@ html {
     font-size: 15px;
   }
 
-  /* 
-  .logIn {
-    display: flex;
-    flex-direction: row;
-    left: 280px;
-    top: -39px;
-    padding: 2px;
-  }
-
-  .regIster {
-    display: flex;
-    flex-direction: row;
-    left: 220px;
-    top: -39px;
-    padding: 2px;
-  } */
 }
 
 
@@ -549,12 +547,6 @@ html {
     margin-bottom: 40px;
     margin-top: 10px;
   }
-
-  /* h3 {
-    font-size: 33px;
-    position: relative;
-    right: 459px;
-  } */
 
   .site-heading h1 {
     font-size: 33px;

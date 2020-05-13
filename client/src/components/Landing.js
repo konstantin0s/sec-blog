@@ -4,7 +4,6 @@ import Footer from './Footer';
 import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -42,9 +41,9 @@ const featuredPosts = [
         imageText: 'Image Text'
     }, {
         id: 15,
-        title: 'Post title',
+        title: 'Sample blog post',
         date: 'Nov 11',
-        description: 'This is a wider card with supporting text below as a natural lead-in to addition' +
+        description: 'This blog post shows a few different types of content that are supported and styled with Material styles. Basic typography, images, and code are all supported.' +
                 'al content.',
         image: 'https://source.unsplash.com/random',
         imageText: 'Image Text'
@@ -52,6 +51,8 @@ const featuredPosts = [
 ];
 
 const posts = [post1, post2, post3];
+
+console.log(posts);
 
 const sidebar = {
     title: 'About',
@@ -128,8 +129,8 @@ function Landing() {
 
             <React.Fragment>
                 <CssBaseline/>
-                <Container maxWidth="lg">
-                    <main>
+                <div className="con-con">
+                    <main className="main">
                         <MainFeaturedPost className="main-post" post={mainFeaturedPost}/>
                         <Grid container spacing={4}>
                             {featuredPosts.map((post) => (<FeaturedPost key={post.id} post={post}/>))}
@@ -145,7 +146,7 @@ function Landing() {
                                 id={sidebar.id}/>
                         </Grid>
                     </main>
-                </Container>
+                </div>
 
             </React.Fragment>
             <Footer/>
