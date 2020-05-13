@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Article = require('./Article')
-
 const userSchema = new Schema({
   first_name: {
     type: String
@@ -24,7 +22,7 @@ const userSchema = new Schema({
     type: Date,
     default: Date.now
   }
-})
+});
 
 const User = mongoose.model('User', userSchema);
 

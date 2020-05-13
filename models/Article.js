@@ -1,18 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const User = require('./User');
-
 //Article schema
 const articleSchema = new Schema({
   title: {
     type: String,
     required: true
   },
-  // author: {
-  //   type: String,
-  //   required: true
-  // },
   body: {
     type: String,
     required: true
@@ -38,8 +32,8 @@ const articleSchema = new Schema({
   }
 });
 
+//adding comments
 articleSchema.methods.comment = function(c) {
-  debugger
   this.comments.push(c);
   return this.save();
 }

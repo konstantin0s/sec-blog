@@ -25,9 +25,6 @@ export const login = user => {
   .then(res => {
    let tokenix = JSON.stringify(res.data);
     localStorage.setItem('usertoken', tokenix)
-    // console.log(tokenix);
-    // console.log(res.data);
-    // localStorage.setItem('refreshToken', res.data)
     return res.data;
   })
   .catch(err => {

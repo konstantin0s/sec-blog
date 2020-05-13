@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {register} from './UserFunctions';
-import { Link} from 'react-router-dom';
-import { Message } from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
+import {Message} from 'semantic-ui-react';
 import './css/register.css';
 
 const initialState = {
@@ -11,14 +11,23 @@ const initialState = {
     password: ''
 }
 
-
 class Register extends Component {
     constructor() {
         super();
+        
         this.state = initialState;
-        this.onChange = this.onChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
-        this.validate = this.validate.bind(this);
+
+        this.onChange = this
+            .onChange
+            .bind(this);
+
+        this.onSubmit = this
+            .onSubmit
+            .bind(this);
+
+        this.validate = this
+            .validate
+            .bind(this);
     }
 
     onChange(e) {
@@ -30,11 +39,11 @@ class Register extends Component {
     validate() {
         let isError = false;
         const errors = {};
-       let firstnameError = '';
-       let  lastnameError = '';
-     
-        let  emailError =  '';
-        let  passwordError = '';
+        let firstnameError = '';
+        let lastnameError = '';
+
+        let emailError = '';
+        let passwordError = '';
 
         if (!this.state.first_name) {
             isError = true;
@@ -45,41 +54,42 @@ class Register extends Component {
             isError = true;
             lastnameError = 'First name cannot be blank';
         }
- 
+
         if (!this.state.email.includes('@')) {
             isError = true;
             emailError = 'Invalid email';
         }
- 
+
         if (!this.state.password) {
             isError = true;
-         passwordError = 'Password cannot be blank';
-     }
-          if (isError) {
-              this.setState({
+            passwordError = 'Password cannot be blank';
+        }
+        if (isError) {
+            this.setState({
                 ...this.state,
                 ...errors
-              });
-          }
- 
+            });
+        }
+
         if (firstnameError || lastnameError || emailError || passwordError) {
-            this.setState({firstnameError, lastnameError, emailError, passwordError });
+            this.setState({firstnameError, lastnameError, emailError, passwordError});
             return false;
         }
         // return isError;
         return true;
-     }
- 
+    }
 
-     onSubmit(e) {
+    onSubmit(e) {
         e.preventDefault();
         const isValid = this.validate();
         if (isValid) {
-            this.props.history.push('/');
+            this
+                .props
+                .history
+                .push('/');
             //clear form
-           this.setState({initialState});
+            this.setState({initialState});
         }
-
 
         const newUser = {
             first_name: this.state.first_name,
@@ -87,45 +97,54 @@ class Register extends Component {
             email: this.state.email,
             password: this.state.password
         }
-        this.setState({ error: false });
-         
+        this.setState({error: false});
+
         register(newUser).then(res => {
             if (res) {
- 
-                this.props.history.push('/login');
+
+                this
+                    .props
+                    .history
+                    .push('/login');
             }
-        })
-        .catch((err)=> {
-            this.props.history.push({ pathname: "/register", state: {message: "unauthorized"}});
+        }).catch((err) => {
+            this
+                .props
+                .history
+                .push({
+                    pathname: "/register",
+                    state: {
+                        message: "unauthorized"
+                    }
+                });
         })
     }
 
     render() {
-        const { error } = this.state;
+        const {error} = this.state;
         return (
 
             <div className="login-container">
-    <div className="center">
-        <div className="left">
-                    {/* left screen background color */}
-                    
-                </div>
-                <div className="right">
-                    
+                <div className="center">
+                    <div className="left">
+                        {/* left screen background color */}
+
+                    </div>
+                    <div className="right">
+
                         {/* right screen background color */}
-                </div>
+                    </div>
 
-                <div className="carding">
- 
-                </div>
+                    <div className="carding"></div>
 
-                <div className="col-md-10">
-                    <form noValidate onSubmit={this.onSubmit}>
-                           <h1 className="h3 mb-5 font-weight-normal">Please Sign In</h1>
-                            {error && <Message error={error} 
-                             content="That username/password is incorrect. Try again!"  />}
+                    <div className="col-md-10">
+                        <form noValidate onSubmit={this.onSubmit}>
+                            <h1 className="h3 mb-5 font-weight-normal">Please Sign In</h1>
+                            {error && <Message
+                                error={error}
+                                content="That username/password is incorrect. Try again!"/>}
                             <div className="form-group">
-                            
+
                                 <input
                                     type="text"
                                     className="form-control"
@@ -134,10 +153,14 @@ class Register extends Component {
                                     value={this.state.first_name}
                                     onChange={this.onChange}/>
                             </div>
-                            <div style={{ fontSize: 12, color: "red"}}>{this.state.firstnameError}</div>
-                        
+                            <div
+                                style={{
+                                fontSize: 12,
+                                color: "red"
+                            }}>{this.state.firstnameError}</div>
+
                             <div className="form-group">
-                              
+
                                 <input
                                     type="text"
                                     className="form-control"
@@ -146,10 +169,14 @@ class Register extends Component {
                                     value={this.state.last_name}
                                     onChange={this.onChange}/>
                             </div>
-                            <div style={{ fontSize: 12, color: "red"}}>{this.state.lastnameError}</div>
-                         
+                            <div
+                                style={{
+                                fontSize: 12,
+                                color: "red"
+                            }}>{this.state.lastnameError}</div>
+
                             <div className="form-group">
-                              
+
                                 <input
                                     type="email"
                                     className="form-control"
@@ -158,10 +185,14 @@ class Register extends Component {
                                     value={this.state.email}
                                     onChange={this.onChange}/>
                             </div>
-                            <div style={{ fontSize: 12, color: "red"}}>{this.state.emailError}</div>
-                    
+                            <div
+                                style={{
+                                fontSize: 12,
+                                color: "red"
+                            }}>{this.state.emailError}</div>
+
                             <div className="form-group">
-                            
+
                                 <input
                                     type="password"
                                     className="form-control"
@@ -170,20 +201,25 @@ class Register extends Component {
                                     value={this.state.password}
                                     onChange={this.onChange}/>
                             </div>
-                            <div style={{ fontSize: 12, color: "red"}}>{this.state.passwordError}</div>
-                          
+                            <div
+                                style={{
+                                fontSize: 12,
+                                color: "red"
+                            }}>{this.state.passwordError}</div>
+
                             <button type="submit" className="btn btn-lg btn-primary btn-block">
                                 Register
                             </button>
                         </form>
 
-                        <p className="linkTo">Already have account? 
-                       <Link className="linkie" to={"/login"}> Login</Link>
-      </p>
+                        <p className="linkTo">Already have account?
+                            <Link className="linkie" to={"/login"}>
+                                Login</Link>
+                        </p>
                     </div>
 
+                </div>
             </div>
-</div>
         )
     }
 }
