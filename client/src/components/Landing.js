@@ -131,7 +131,7 @@ function Landing() {
                 <CssBaseline/>
                 <div className="con-con">
                     <main className="main">
-                        <MainFeaturedPost className="main-post" post={mainFeaturedPost}/>
+                        <MainFeaturedPost id="main-post" className="main-post" post={mainFeaturedPost}/>
                         <Grid container spacing={4}>
                             {featuredPosts.map((post) => (<FeaturedPost key={post.id} post={post}/>))}
                         </Grid>

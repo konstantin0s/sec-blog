@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+.navlinks .regIster {
+    position: relative;
+    left: 15%;
+}
+
 .left {
     background-color: #084577;
     position: absolute;

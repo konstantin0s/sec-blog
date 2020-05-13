@@ -7,6 +7,7 @@
     font-size: 14px;
     top: 0px;
     position: absolute;
+    width: 100%;
 }
 
 #navbar .logo {
@@ -22,8 +23,8 @@
     cursor: pointer;
 }
 
-#navbar .logo a {
-    top: 4px;
+.nav .logo a {
+    top: -34px;
     height: 20px;
 }
 
@@ -61,12 +62,6 @@ li {
     background: var(--secondary-color);
     color: var(--secondary-color);
 }
-
-.logix {
-    position: relative;
-    left: 30%;
-}
-
 
 .nav-link:link {
     cursor: pointer;
@@ -160,6 +155,14 @@ li {
         flex-direction: row;
         -webkit-justify-content: center;
         justify-content: center;
+    }
+}
+
+@media (min-width: 401) and (max-width: 749px) {
+    #navbar .logo a {
+        position: relative;
+        top: 0px;
+        height: 20px;
     }
 }
 

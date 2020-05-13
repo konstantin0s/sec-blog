@@ -23,9 +23,9 @@
   cursor: pointer;
 }
 
-#navbar .logo a {
+/* #navbar .logo a {
   top: -32px;
-}
+} */
 
 .navbar-inverse {
   font-weight: 600;
