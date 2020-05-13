@@ -29,6 +29,7 @@ class OneArticle extends Component {
     }
 
     componentDidMount() {
+
         const {params} = this.props.match;
 
         axios
@@ -44,7 +45,9 @@ class OneArticle extends Component {
 
                 this.setState({errorMessage: err});
                 console.log(err);
-            })axios
+            });
+
+            axios
             .get(`${process.env.REACT_APP_API_URL}/users/one/:id`, {withCredentials: true})
             .then((response) => {
 
@@ -53,7 +56,7 @@ class OneArticle extends Component {
             })
             .catch((error) => {
                 this.setState({error});
-            })
+            });
     }
 
     delete(id) {
