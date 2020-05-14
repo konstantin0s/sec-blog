@@ -13,6 +13,16 @@ html {
   height: 100vh;
 }
 
+.navlinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  top: 0px;
+  position: absolute;
+}
+
 .con-con {
   padding: 0;
   margin: 0;
@@ -341,9 +351,14 @@ html {
     width: 100%;
   }
 
-  .logix li {
-    left: 10%;
-    top: -7px;
+  .logix .logIn {
+    left: 36%;
+    top: -9px;
+  }
+
+  .logix .regIster {
+    left: 23%;
+    top: -9px;
   }
 
 

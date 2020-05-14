@@ -5,10 +5,25 @@
     left: 15%;
 }
 
+.center {
+    text-align: center;
+    min-height: 750px;
+}
+
+
 .login-container {
     position: relative;
     height: 100%;
     top: -20px;
+}
+
+
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -7em;
 }
 
 
@@ -23,6 +38,7 @@
     flex-direction: column;
     z-index: 1;
     height: 100vh;
+    min-height: 750px;
 }
 
 .right {
@@ -35,6 +51,7 @@
     flex-direction: column;
     z-index: 1;
     height: 100vh;
+    min-height: 750px;
 }
 
 
@@ -169,8 +186,7 @@
 }
 
 @media screen and (min-width: 300px) and (max-width: 649px) {
-
-    #masthead .navlinks {
+    .navlinks {
         right: 35%;
     }
 
@@ -184,6 +200,7 @@
 
     .center {
         text-align: center;
+        min-height: 750px;
     }
 
     .test {
@@ -210,6 +227,40 @@
         position: absolute;
         width: 350px;
         top: 6em;
-        left: 2em;
+        left: 1.8em;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 999px) {
+
+    .navlinks {
+        right: 35%;
+    }
+
+    .test {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        top: -7em;
+    }
+
+    .test .log-form-con h1 {
+        font-size: 1.8em;
+    }
+
+    .carding {
+        position: relative;
+        left: 0em;
+        width: 400px;
+        display: inline-block;
+        top: 2em;
+    }
+
+    .log-form-con {
+        position: absolute;
+        width: 350px;
+        top: 4.3em;
+        left: 1.8em;
     }
 }

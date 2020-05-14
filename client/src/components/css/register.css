@@ -1,3 +1,16 @@
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: -7em;
+}
+
+.center {
+  text-align: center;
+  min-height: 750px;
+}
+
 .left {
   background-color: #084577;
   position: absolute;
@@ -9,6 +22,7 @@
   flex-direction: column;
   z-index: 1;
   height: 100vh;
+  min-height: 750px;
 }
 
 .h3 {
@@ -25,6 +39,7 @@
   flex-direction: column;
   z-index: 1;
   height: 100vh;
+  min-height: 750px;
 }
 
 .form-group {
@@ -85,10 +100,6 @@
 
 @media screen and (min-width: 300px) and (max-width: 649px) {
 
-  /* .nav .logo a {
-    top: 14px;
-    position: absolute;
-  } */
 
   .nav .logo {
     visibility: hidden;
@@ -104,6 +115,7 @@
 
   .center {
     text-align: center;
+    min-height: 750px;
   }
 
   .test {
@@ -138,4 +150,31 @@
 }
 
 
-@media screen and (min-width: 650px) and (max-width: 999px) {}
+@media screen and (min-width: 650px) and (max-width: 999px) {
+  .test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -7em;
+  }
+
+  .test .reg-con-form h1 {
+    font-size: 1.8em;
+  }
+
+  .carding {
+    position: relative;
+    left: 0em;
+    width: 400px;
+    display: inline-block;
+    top: 2em;
+  }
+
+  .reg-con-form {
+    position: absolute;
+    width: 350px;
+    top: 4.3em;
+    left: 1.8em;
+  }
+}
