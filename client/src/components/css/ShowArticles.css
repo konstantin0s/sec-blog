@@ -6,7 +6,7 @@
 	height: 2em;
 	top: 0px;
 	position: absolute;
-	right: 22%;
+	right: 31%;
 }
 
 #navbar {
@@ -503,7 +503,7 @@ hr {
 	}
 }
 
-@media screen and (min-width: 501px) and ((max-width: 698px)) {
+@media screen and (min-width: 501px) and (max-width: 698px) {
 	.nav .nav-link {
 		display: flex;
 		flex-direction: row;
@@ -609,6 +609,13 @@ hr {
 }
 
 @media screen and (min-width: 699px) and (max-width: 749px) {
+
+	.navlinks {
+		width: 105px;
+		top: 48px;
+	}
+
+
 	.nav .nav-link {
 		display: flex;
 		flex-direction: row;
@@ -715,6 +722,12 @@ hr {
 
 @media screen and (min-width: 750px) and (max-width: 950px) {
 
+	.navlinks {
+		top: 40px;
+		width: 105px;
+	}
+
+
 
 	.nav .nav-link {
 		display: flex;
@@ -736,7 +749,7 @@ hr {
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		left: 450px;
+		left: 70%;
 		font-size: 14px;
 		top: -50px;
 	}
@@ -745,7 +758,7 @@ hr {
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		left: 180px;
+		left: 31%;
 		font-size: 14px;
 		top: -50px;
 	}
@@ -764,14 +777,17 @@ hr {
 	}
 
 	.nav .logout {
-		position: relative;
+		position: absolute;
 		display: flex;
 		flex-direction: row;
-		left: 80px;
+		left: 100%;
 		font-size: 14px;
-
 		top: -50px;
 		width: 30px;
+	}
+
+	.nav .logout button {
+		left: 0px;
 	}
 
 	.logo {

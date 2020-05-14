@@ -175,6 +175,10 @@ li {
         position: relative;
         left: 45%;
     }
+
+    .link {
+        width: 150px !important;
+    }
 }
 
 @media (min-width: 750px) and (max-width: 950px) {
@@ -213,7 +217,7 @@ li {
         position: relative;
         left: 37%;
         margin-left: 100px;
-        width: 150px;
+        width: 150px !important;
         top: 0px;
         font-size: 14px;
         height: 40px;
