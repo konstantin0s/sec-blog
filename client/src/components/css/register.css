@@ -55,14 +55,8 @@
 }
 
 
-.carding {
-  left: 14.7em;
-  opacity: 0.3;
-}
-
 .reg-con-form {
   width: 400px;
-  top: 1em;
   opacity: 1;
   position: relative;
   display: flex;
@@ -74,14 +68,23 @@
   border-radius: 50%;
   padding: 6em;
   z-index: 205;
-  top: 0em;
-  right: 16em;
+  top: -16.7em;
+  left: 0em;
 }
 
 
+.test .reg-con-form h1 {
+  font-size: 2.2em;
+}
+
+.reg-con-form form {
+  top: -1em;
+  position: relative;
+}
+
 .linkTo {
   position: relative;
-  top: 10px;
+  top: 1px;
   text-decoration: none;
 }
 
