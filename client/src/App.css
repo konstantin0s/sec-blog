@@ -17,12 +17,14 @@ html {
 
 #root {
   height: 100%;
+  width: 100%;
 }
 
 .App {
   text-align: center;
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
 .container {
@@ -130,4 +132,11 @@ a:hover {
   color: var(--primary-color) !important;
   font-weight: bold;
   text-decoration: none;
+}
+
+@media screen and (min-width: 300px) {
+  .container {
+    width: 100% !important;
+  }
+
 }
