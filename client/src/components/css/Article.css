@@ -28,12 +28,6 @@ body {
   top: -20px;
 }
 
-.login-container {
-  position: relative;
-  height: 100%;
-  top: 287px;
-}
-
 .center {
   font-family: 'Raleway', sans-serif;
   background: rgb(248, 243, 243);

@@ -131,63 +131,65 @@ class Login extends Component {
                         {/* left scree background color */}
                     </div>
 
-                    <div className="carding"></div>
+                            <div className="test">
+                            <div className="carding"></div>
 
-                    <div className="col-md-10">
-                        <form
-                            noValidate
-                            error={error
-                            ? error
-                            : undefined}
-                            onSubmit={this.onSubmit}>
-                            <h1 className="h3 mb-3 font-weight-normal">Please Log In</h1>
-                            {error && <Message
-                                error={error
-                                ? error
-                                : undefined}
-                                content="That username/password is incorrect. Try again!"/>}
-                            <div className="form-group one">
+<div className="col-md-10 log-form-con">
+    <form
+        noValidate
+        error={error
+        ? error
+        : undefined}
+        onSubmit={this.onSubmit}>
+        <h1 className="h3 mb-3 font-weight-normal">Please Log In</h1>
+        {error && <Message
+            error={error
+            ? error
+            : undefined}
+            content="That username/password is incorrect. Try again!"/>}
+        <div className="form-group one">
 
-                                <input
-                                    type="email"
-                                    className="form-control"
-                                    name="email"
-                                    placeholder="Enter email"
-                                    value={this.state.email}
-                                    onChange={this.onChange}/>
+            <input
+                type="email"
+                className="form-control"
+                name="email"
+                placeholder="Enter email"
+                value={this.state.email}
+                onChange={this.onChange}/>
+        </div>
+        <div
+            className="emailError"
+            style={{
+            fontSize: 12,
+            color: "red"
+        }}>{this.state.emailError}</div><br/>
+        <div className="form-group two">
+
+            <input
+                type="password"
+                className="form-control"
+                name="password"
+                placeholder="Enter password"
+                value={this.state.password}
+                onChange={this.onChange}/>
+        </div>
+        <div
+            className="passwordError"
+            style={{
+            fontSize: 12,
+            color: "red"
+        }}>{this.state.passwordError}</div>
+        <button type="submit" className="btn btn-lg btn-primary btn-block three">
+            Sign In
+        </button>
+    </form>
+
+    <p className="linkTo">Don't have an account?
+        <Link className="linkie" to={"/register"}>
+            Register</Link>
+    </p>
+</div>
                             </div>
-                            <div
-                                className="emailError"
-                                style={{
-                                fontSize: 12,
-                                color: "red"
-                            }}>{this.state.emailError}</div><br/>
-                            <div className="form-group two">
-
-                                <input
-                                    type="password"
-                                    className="form-control"
-                                    name="password"
-                                    placeholder="Enter password"
-                                    value={this.state.password}
-                                    onChange={this.onChange}/>
-                            </div>
-                            <div
-                                className="passwordError"
-                                style={{
-                                fontSize: 12,
-                                color: "red"
-                            }}>{this.state.passwordError}</div>
-                            <button type="submit" className="btn btn-lg btn-primary btn-block three">
-                                Sign In
-                            </button>
-                        </form>
-
-                        <p className="linkTo">Don't have an account?
-                            <Link className="linkie" to={"/register"}>
-                                Register</Link>
-                        </p>
-                    </div>
 
                 </div>
             </div>

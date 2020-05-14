@@ -329,8 +329,7 @@ html {
   .navlinks .regIster {
     position: relative;
     left: 25%;
-    top: 10px;
-    top: -44px;
+    top: -10px;
     font-size: 15px;
   }
 }

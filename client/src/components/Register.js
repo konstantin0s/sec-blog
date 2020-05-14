@@ -135,87 +135,89 @@ class Register extends Component {
                         {/* right screen background color */}
                     </div>
 
+                    <div className="test">
                     <div className="carding"></div>
 
-                    <div className="col-md-10">
-                        <form noValidate onSubmit={this.onSubmit}>
-                            <h1 className="h3 mb-5 font-weight-normal">Please Sign In</h1>
-                            {error && <Message
-                                error={error}
-                                content="That username/password is incorrect. Try again!"/>}
-                            <div className="form-group">
+<div className="col-md-10 reg-con-form">
+    <form noValidate onSubmit={this.onSubmit}>
+        <h1 className="h3 mb-5 font-weight-normal">Please Sign In</h1>
+        {error && <Message
+            error={error}
+            content="That username/password is incorrect. Try again!"/>}
+        <div className="form-group">
 
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    name="first_name"
-                                    placeholder="First Name"
-                                    value={this.state.first_name}
-                                    onChange={this.onChange}/>
-                            </div>
-                            <div
-                                style={{
-                                fontSize: 12,
-                                color: "red"
-                            }}>{this.state.firstnameError}</div>
+            <input
+                type="text"
+                className="form-control"
+                name="first_name"
+                placeholder="First Name"
+                value={this.state.first_name}
+                onChange={this.onChange}/>
+        </div>
+        <div
+            style={{
+            fontSize: 12,
+            color: "red"
+        }}>{this.state.firstnameError}</div>
 
-                            <div className="form-group">
+        <div className="form-group">
 
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    name="last_name"
-                                    placeholder="Last Name"
-                                    value={this.state.last_name}
-                                    onChange={this.onChange}/>
-                            </div>
-                            <div
-                                style={{
-                                fontSize: 12,
-                                color: "red"
-                            }}>{this.state.lastnameError}</div>
+            <input
+                type="text"
+                className="form-control"
+                name="last_name"
+                placeholder="Last Name"
+                value={this.state.last_name}
+                onChange={this.onChange}/>
+        </div>
+        <div
+            style={{
+            fontSize: 12,
+            color: "red"
+        }}>{this.state.lastnameError}</div>
 
-                            <div className="form-group">
+        <div className="form-group">
 
-                                <input
-                                    type="email"
-                                    className="form-control"
-                                    name="email"
-                                    placeholder="Enter Email"
-                                    value={this.state.email}
-                                    onChange={this.onChange}/>
-                            </div>
-                            <div
-                                style={{
-                                fontSize: 12,
-                                color: "red"
-                            }}>{this.state.emailError}</div>
+            <input
+                type="email"
+                className="form-control"
+                name="email"
+                placeholder="Enter Email"
+                value={this.state.email}
+                onChange={this.onChange}/>
+        </div>
+        <div
+            style={{
+            fontSize: 12,
+            color: "red"
+        }}>{this.state.emailError}</div>
 
-                            <div className="form-group">
+        <div className="form-group">
 
-                                <input
-                                    type="password"
-                                    className="form-control"
-                                    name="password"
-                                    placeholder="Enter Password"
-                                    value={this.state.password}
-                                    onChange={this.onChange}/>
-                            </div>
-                            <div
-                                style={{
-                                fontSize: 12,
-                                color: "red"
-                            }}>{this.state.passwordError}</div>
+            <input
+                type="password"
+                className="form-control"
+                name="password"
+                placeholder="Enter Password"
+                value={this.state.password}
+                onChange={this.onChange}/>
+        </div>
+        <div
+            style={{
+            fontSize: 12,
+            color: "red"
+        }}>{this.state.passwordError}</div>
 
-                            <button type="submit" className="btn btn-lg btn-primary btn-block">
-                                Register
-                            </button>
-                        </form>
+        <button type="submit" className="btn btn-lg btn-primary btn-block">
+            Register
+        </button>
+    </form>
 
-                        <p className="linkTo">Already have account?
-                            <Link className="linkie" to={"/login"}>
-                                Login</Link>
-                        </p>
+    <p className="linkTo">Already have account?
+        <Link className="linkie" to={"/login"}>
+            Login</Link>
+    </p>
+</div>
                     </div>
 
                 </div>
