@@ -1,134 +1,129 @@
 .navlinks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 2em;
-  top: 0px;
-  position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 2em;
+	top: 0px;
+	position: absolute;
+	right: 22%;
 }
 
 #navbar {
-  height: 2em;
+	height: 2em;
 }
 
 #navbar .logo {
-  position: absolute;
-  left: -30px;
-  padding: 1.6em 2em;
-  width: 150px;
-  top: 0px;
-  color: white;
-  height: 1.5em;
-  cursor: pointer;
+	position: absolute;
+	left: -30px;
+	padding: 1.6em 2em;
+	width: 150px;
+	top: 0px;
+	color: white;
+	height: 1.5em;
+	cursor: pointer;
 }
 
-/* #navbar .logo a {
-  top: -32px;
-} */
-
 .navbar-inverse {
-  font-weight: 600;
-  position: relative;
-  top: 0px;
-  height: 2em;
+	font-weight: 600;
+	position: relative;
+	top: 0px;
+	height: 2em;
 }
 
 .logout {
-  position: absolute;
-  top: 120px;
-  left: 50px;
+	position: absolute;
+	top: 120px;
+	left: 50px;
 }
 
 .user a {
-  /* position: absolute;
+	/* position: absolute;
   top: 28px; */
-  left: -10px;
+	left: -10px;
 }
 
 .write {
-  position: absolute;
-  top: 0px;
-  left: 100px;
-  text-align: center;
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	text-align: center;
 }
 
 .read {
-  position: absolute;
-  top: 0px;
-  left: 100px;
+	position: absolute;
+	top: 0px;
+	left: 100px;
 }
 
 .link {
-  font-size: 1em;
-  border: 3px #fff solid;
-  padding: 1.6em 2.5em;
-  margin-bottom: 3rem;
-  transition: var(--ease);
-  /* position: absolute; */
-  margin-left: 50px;
-  width: 130px;
-  top: 0px;
-  height: 2em;
-  text-align: center;
-  align-self: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  left: 400px;
+	font-size: 1em;
+	border: 3px #fff solid;
+	padding: 1.6em 2.5em;
+	margin-bottom: 3rem;
+	transition: var(--ease);
+	/* position: absolute; */
+	margin-left: 50px;
+	width: 130px;
+	top: 0px;
+	height: 2em;
+	text-align: center;
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	left: 400px;
 }
 
 .nav .logout button {
-  background: transparent;
-  position: relative;
-  top: -20px;
-  width: 130px;
-  left: -37px;
-  border: none;
-  height: 3em;
+	background: transparent;
+	position: relative;
+	top: -20px;
+	width: 130px;
+	left: -37px;
+	border: none;
+	height: 3em;
 }
 
 .showArticles {
-  position: relative;
-  top: 200px;
+	position: relative;
+	top: 200px;
 }
 
 .grid-container {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
 }
 
 .image-article {
-  position: absolute;
-  float: left;
-  left: 0em;
-  width: 200px;
-  top: 13.5em;
-  height: 200px;
+	position: absolute;
+	float: left;
+	left: 0em;
+	width: 200px;
+	top: 13.5em;
+	height: 200px;
 }
 
 .react-fancybox .thumbnail img {
-  max-width: 600px;
-  width: 100%;
-  height: 300px;
+	max-width: 600px;
+	width: 100%;
+	height: 300px;
 }
-
 
 .faSearch {
-  position: absolute;
-  top: 238px;
-  left: 94%;
-  font-size: 1.8em;
-  z-index: 12;
-  cursor: pointer;
+	position: absolute;
+	top: 238px;
+	left: 94%;
+	font-size: 1.8em;
+	z-index: 12;
+	cursor: pointer;
 }
 
-
 .blTitle {
-  position: relative;
-  top: -15px;
+	position: relative;
+	top: -15px;
 }
 
 /* .badge {
@@ -139,268 +134,261 @@
 } */
 
 .col-md-12 p {
-  margin: 100px 0;
-  width: 300px;
+	margin: 100px 0;
+	width: 300px;
 }
 
 .linkz {
-  position: relative;
-  font-weight: 200;
-  font-size: 16px;
-  z-index: 240;
-  top: 22px;
-  left: 6em;
-  text-align: center;
-  align-self: center;
-  cursor: pointer;
+	position: relative;
+	font-weight: 200;
+	font-size: 16px;
+	z-index: 240;
+	top: 22px;
+	left: 6em;
+	text-align: center;
+	align-self: center;
+	cursor: pointer;
 }
 
 .MuiCardContent-root p {
-  font-size: 15px;
+	font-size: 15px;
 }
 
 .MuiButton-label {
-  font-size: 13px;
+	font-size: 13px;
 }
 
 .MuiCardContent-root h2 {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .linkz:link {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .form-containex {
-  height: 300px;
-  position: absolute;
-  top: -220px;
-  z-index: 0;
-  left: 0;
-  width: 100%;
-  background: url('https://images.pexels.com/photos/3888585/pexels-photo-3888585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 300px;
+	position: absolute;
+	top: -220px;
+	z-index: 0;
+	left: 0;
+	width: 100%;
+	background: url('https://images.pexels.com/photos/3888585/pexels-photo-3888585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
-
 
 /* seach bar style */
 .contain-form {
-  position: absolute;
-  margin: auto;
-  top: -100px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 500px;
-  height: 100px;
-
+	position: absolute;
+	margin: auto;
+	top: -100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 500px;
+	height: 100px;
 }
 
-
 .search {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 80px;
-  height: 80px;
-  background: crimson;
-  border-radius: 50%;
-  transition: all 1s;
-  z-index: 4;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	background: crimson;
+	border-radius: 50%;
+	transition: all 1s;
+	z-index: 4;
+	box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
 }
 
 .search:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
-
 
 .search::before {
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: 22px;
-  right: 0;
-  bottom: 0;
-  left: 22px;
-  width: 12px;
-  height: 2px;
-  background: white;
-  transform: rotate(45deg);
-  transition: all .5s;
+	content: "";
+	position: absolute;
+	margin: auto;
+	top: 22px;
+	right: 0;
+	bottom: 0;
+	left: 22px;
+	width: 12px;
+	height: 2px;
+	background: white;
+	transform: rotate(45deg);
+	transition: all .5s;
 }
-
 
 .search::after {
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: -5px;
-  right: 0;
-  bottom: 0;
-  left: -5px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 2px solid white;
-  transition: all .5s;
+	content: "";
+	position: absolute;
+	margin: auto;
+	top: -5px;
+	right: 0;
+	bottom: 0;
+	left: -5px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 2px solid white;
+	transition: all .5s;
 }
 
-
 .input {
-  font-family: 'Inconsolata', monospace;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  outline: none;
-  border: none;
-  background: crimson;
-  color: white;
-  text-shadow: 0 0 10px crimson;
-  padding: 0 80px 0 20px;
-  border-radius: 30px;
-  box-shadow: 0 0 25px 0 crimson,
-    0 20px 25px 0 rgba(0, 0, 0, 0.2);
-  transition: all 1s;
-  opacity: 0;
-  z-index: 5;
-  font-weight: bolder;
-  letter-spacing: 0.1em;
+	font-family: 'Inconsolata', monospace;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	outline: none;
+	border: none;
+	background: crimson;
+	color: white;
+	text-shadow: 0 0 10px crimson;
+	padding: 0 80px 0 20px;
+	border-radius: 30px;
+	box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+	transition: all 1s;
+	opacity: 0;
+	z-index: 5;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
 }
 
 .input:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
-
-
 
 .input:focus {
-  width: 500px;
-  opacity: 1;
-  cursor: text;
+	width: 500px;
+	opacity: 1;
+	cursor: text;
 }
 
-.input:focus~.search {
-  right: -530px;
-  background: #151515;
-  z-index: 3;
+.input:focus ~ .search {
+	right: -530px;
+	background: #151515;
+	z-index: 3;
 }
 
-.input:focus~.search::before {
-  top: 0;
-  left: 0;
-  width: 25px;
+.input:focus ~ .search::before {
+	top: 0;
+	left: 0;
+	width: 25px;
 }
 
-.input:focus~.search::after {
-  top: 0;
-  left: 0;
-  width: 25px;
-  height: 2px;
-  border: none;
-  background: white;
-  border-radius: 0%;
-  transform: rotate(-45deg);
+.input:focus ~ .search::after {
+	top: 0;
+	left: 0;
+	width: 25px;
+	height: 2px;
+	border: none;
+	background: white;
+	border-radius: 0%;
+	transform: rotate(-45deg);
 }
 
 .input::placeholder {
-  color: white;
-  opacity: 0.5;
-  z-index: 3;
-  font-weight: bolder;
+	color: white;
+	opacity: 0.5;
+	z-index: 3;
+	font-weight: bolder;
 }
 
 /* end of seach bar style */
 
 .card-body {
-  height: 45%;
-  width: 100%;
-  position: relative;
-  top: -100px;
+	height: 45%;
+	width: 100%;
+	position: relative;
+	top: -100px;
 }
 
 .text-center {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 40px 0;
-  height: 400px;
-  width: 90%;
-  padding: 1em;
-  border: 1px solid #333;
-  top: -100px;
-  position: relative;
-  transform: translate(5%, 50%);
-  margin-bottom: 100px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+		sans-serif;
+	margin: 40px 0;
+	height: 400px;
+	width: 90%;
+	padding: 1em;
+	border: 1px solid #333;
+	top: -100px;
+	position: relative;
+	transform: translate(5%, 50%);
+	margin-bottom: 100px;
 }
 
 .artLink {
-  position: absolute;
-  top: 34px;
+	position: absolute;
+	top: 34px;
 }
 
 .card-text {
-  position: relative;
-  font-size: 1.5em;
-  float: right;
-  width: 75%;
-  margin: 0em 1em;
-  margin-bottom: 20px;
-  top: -4px;
+	position: relative;
+	font-size: 1.5em;
+	float: right;
+	width: 75%;
+	margin: 0em 1em;
+	margin-bottom: 20px;
+	top: -4px;
 }
 
 .card-title {
-  position: relative;
-  top: 80px;
-  text-transform: capitalize;
-  margin: 20px 0;
-  margin-bottom: 140px;
-  width: 100%;
-  font-weight: 700;
+	position: relative;
+	top: 80px;
+	text-transform: capitalize;
+	margin: 20px 0;
+	margin-bottom: 140px;
+	width: 100%;
+	font-weight: 700;
 }
 
 .card-footer span {
-  position: relative;
-  top: -147px;
-  left: 200px;
-  font-size: 18px;
-  float: right;
-  font-family: italic;
+	position: relative;
+	top: -147px;
+	left: 200px;
+	font-size: 18px;
+	float: right;
+	font-family: italic;
 }
 
 .badges {
-  position: relative;
-  margin: 50px 0;
-  display: flex;
-  width: 100%;
-  top: -100px;
-  flex-direction: row;
-  justify-content: space-evenly;
+	position: relative;
+	margin: 50px 0;
+	display: flex;
+	width: 100%;
+	top: -100px;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 hr {
-  position: relative;
-  top: 130px;
-  border-bottom: 1px solid grey;
+	position: relative;
+	top: 130px;
+	border-bottom: 1px solid grey;
 }
 
 .MuiCardMedia-img {
-  height: 300px;
+	height: 300px;
 }
 
 .MuiPaper-root {
-  position: relative;
-  top: 88px;
-  margin-bottom: 20px;
+	position: relative;
+	top: 88px;
+	margin-bottom: 20px;
 }
 
 /* 
@@ -412,448 +400,440 @@ hr {
   width: 100%;
 } */
 
-
 @media screen and (max-width: 500px) {
+	.nav .nav-link {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		position: relative;
+		height: 50px;
+		width: 80px;
+	}
 
-  .nav .nav-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    height: 50px;
-    width: 80px;
-  }
+	.nav .logo {
+		position: relative;
+		top: -7px;
+		left: -122px;
+	}
 
+	.nav .user {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 290px;
+		font-size: 14px;
+		top: -77px;
+	}
 
-  .nav .logo {
-    position: relative;
-    top: -7px;
-    left: -122px;
-  }
+	.nav .write {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 100px;
+		font-size: 14px;
+		top: -125px;
+	}
 
-  .nav .user {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 290px;
-    font-size: 14px;
-    top: -77px;
-  }
+	.nav .nav-link {
+		font-size: 13px;
+	}
 
-  .nav .write {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 100px;
-    font-size: 14px;
-    top: -125px;
-  }
+	.read {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 190px;
+		font-size: 14px;
+		top: -179px;
+	}
 
-  .nav .nav-link {
-    font-size: 13px;
-  }
+	.nav .logout {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 380px;
+		font-size: 14px;
+		width: 23px;
+		top: -225px;
+		width: 30px;
+	}
 
-  .read {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 190px;
-    font-size: 14px;
-    top: -179px;
-  }
+	.container {
+		min-width: 100% !important;
+		width: 100% !important;
+	}
 
-  .nav .logout {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 380px;
-    font-size: 14px;
-    width: 23px;
-    top: -225px;
-    width: 30px;
-  }
+	.showArticles {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		left: -10%;
+	}
 
-  .container {
-    min-width: 100% !important;
-    width: 100% !important;
-  }
+	form {
+		width: 100%;
+		left: 10%;
+	}
 
+	hr {
+		position: relative;
+		top: 20px;
+	}
 
-  .showArticles {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    left: -10%;
-  }
+	.card-title {
+		font-size: 18px;
+	}
 
-  form {
-    width: 100%;
-    left: 10%;
-  }
+	.card-body {
+		position: relative;
+		top: -220px;
+	}
 
-  hr {
-    position: relative;
-    top: 20px;
-  }
+	.card-text {
+		font-size: 14px;
+		position: relative;
+		top: 10px;
+		margin-bottom: 20px;
+	}
 
-  .card-title {
-    font-size: 18px;
-  }
+	.artLink {
+		position: absolute;
+		top: 34px;
+	}
 
-  .card-body {
-    position: relative;
-    top: -220px;
-  }
+	.label {
+		padding: 0.5em 1em;
+	}
 
-  .card-text {
-    font-size: 14px;
-    position: relative;
-    top: 10px;
-    margin-bottom: 20px;
-  }
-
-  .artLink {
-    position: absolute;
-    top: 34px;
-  }
-
-  .label {
-    padding: 0.5em 1em;
-  }
-
-
-  .card-footer {
-    position: relative;
-    top: -120px;
-  }
+	.card-footer {
+		position: relative;
+		top: -120px;
+	}
 }
-
 
 @media screen and (min-width: 501px) and ((max-width: 698px)) {
-  .nav .nav-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    height: 50px;
-    width: 80px;
-  }
+	.nav .nav-link {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		position: relative;
+		height: 50px;
+		width: 80px;
+	}
 
-  .read {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 192px;
-    font-size: 14px;
-    top: -198px;
-  }
+	.read {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 192px;
+		font-size: 14px;
+		top: -198px;
+	}
 
-  .nav .user {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 295px;
-    font-size: 14px;
-    top: -98px;
-  }
+	.nav .user {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 295px;
+		font-size: 14px;
+		top: -98px;
+	}
 
-  .nav .write {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 110px;
-    font-size: 14px;
-    top: -148px;
-  }
+	.nav .write {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 110px;
+		font-size: 14px;
+		top: -148px;
+	}
 
-  .nav .logout {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 390px;
-    font-size: 14px;
-    top: -248px;
-    width: 80px;
-    height: 50px;
-  }
+	.nav .logout {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 390px;
+		font-size: 14px;
+		top: -248px;
+		width: 80px;
+		height: 50px;
+	}
 
-  .logo {
-    position: relative;
-    top: -9px;
-    left: -160px;
-  }
+	.logo {
+		position: relative;
+		top: -9px;
+		left: -160px;
+	}
 
-  .showArticles {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    left: -10%;
-  }
+	.showArticles {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		left: -10%;
+	}
 
-  form {
-    width: 100%;
-    left: 10%;
-  }
+	form {
+		width: 100%;
+		left: 10%;
+	}
 
-  hr {
-    position: relative;
-    top: -14px;
-  }
+	hr {
+		position: relative;
+		top: -14px;
+	}
 
-  .card-title {
-    font-size: 18px;
-  }
+	.card-title {
+		font-size: 18px;
+	}
 
-  .card-body {
-    position: relative;
-    top: -220px;
-  }
+	.card-body {
+		position: relative;
+		top: -220px;
+	}
 
-  .card-text {
-    font-size: 14px;
-    position: relative;
-    top: 10px;
-    margin-bottom: 20px;
-  }
+	.card-text {
+		font-size: 14px;
+		position: relative;
+		top: 10px;
+		margin-bottom: 20px;
+	}
 
-  artLink {
-    position: absolute;
-    top: 34px;
-  }
+	artLink {
+		position: absolute;
+		top: 34px;
+	}
 
-  .badges {
-    position: relative;
-    top: -80px;
-  }
+	.badges {
+		position: relative;
+		top: -80px;
+	}
 
-  .card-footer {
-    position: relative;
-    top: -120px;
-  }
+	.card-footer {
+		position: relative;
+		top: -120px;
+	}
 }
 
-
 @media screen and (min-width: 699px) (max-width: 749px) {
-  .nav .nav-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    height: 50px;
-    width: 80px;
-  }
+	.nav .nav-link {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		position: relative;
+		height: 50px;
+		width: 80px;
+	}
 
-  .read {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 202px;
-    font-size: 14px;
-    top: -178px;
-  }
+	.read {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 202px;
+		font-size: 14px;
+		top: -178px;
+	}
 
-  .user {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 464px;
-    font-size: 14px;
-    top: -77px;
-  }
+	.user {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 464px;
+		font-size: 14px;
+		top: -77px;
+	}
 
-  .write {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 322px;
-    font-size: 14px;
-    top: -129px;
-  }
+	.write {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 322px;
+		font-size: 14px;
+		top: -129px;
+	}
 
-  .logout {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 580px;
-    font-size: 14px;
-    top: -228px;
-    width: 80px;
-    height: 50px;
-  }
+	.logout {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 580px;
+		font-size: 14px;
+		top: -228px;
+		width: 80px;
+		height: 50px;
+	}
 
-  .logo {
-    position: relative;
-    top: -9px;
-    left: -220px;
-  }
+	.logo {
+		position: relative;
+		top: -9px;
+		left: -220px;
+	}
 
-  .showArticles {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    left: -10%;
-  }
+	.showArticles {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		left: -10%;
+	}
 
-  form {
-    width: 100%;
-    left: 10%;
-  }
+	form {
+		width: 100%;
+		left: 10%;
+	}
 
-  hr {
-    position: relative;
-    top: -14px;
-  }
+	hr {
+		position: relative;
+		top: -14px;
+	}
 
-  .card-title {
-    font-size: 18px;
-  }
+	.card-title {
+		font-size: 18px;
+	}
 
-  .card-body {
-    position: relative;
-    top: -220px;
-  }
+	.card-body {
+		position: relative;
+		top: -220px;
+	}
 
-  .card-text {
-    font-size: 14px;
-    position: relative;
-    top: 10px;
-    margin-bottom: 20px;
-  }
+	.card-text {
+		font-size: 14px;
+		position: relative;
+		top: 10px;
+		margin-bottom: 20px;
+	}
 
-  artLink {
-    position: absolute;
-    top: 34px;
-  }
+	artLink {
+		position: absolute;
+		top: 34px;
+	}
 
-  .badges {
-    position: relative;
-    top: -80px;
-  }
+	.badges {
+		position: relative;
+		top: -80px;
+	}
 
-  .card-footer {
-    position: relative;
-    top: -120px;
-  }
+	.card-footer {
+		position: relative;
+		top: -120px;
+	}
 }
 
 @media screen and (min-width: 750px) and (max-width: 950px) {
-  .nav .nav-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    height: 50px;
-    width: 80px;
-  }
+	.nav .nav-link {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		position: relative;
+		height: 50px;
+		width: 80px;
+	}
 
+	.nav .logo {
+		position: relative;
+		top: -7px;
+		left: -122px;
+	}
 
-  .nav .logo {
-    position: relative;
-    top: -7px;
-    left: -122px;
-  }
+	.nav .user {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 450px;
+		font-size: 14px;
+		top: -50px;
+	}
 
-  .nav .user {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 450px;
-    font-size: 14px;
-    top: -50px;
-  }
+	.nav .write {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 180px;
+		font-size: 14px;
+		top: -50px;
+	}
 
-  .nav .write {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 180px;
-    font-size: 14px;
-    top: -50px;
-  }
+	.nav .nav-link {
+		font-size: 13px;
+	}
 
-  .nav .nav-link {
-    font-size: 13px;
-  }
+	.read {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: -120px;
+		font-size: 14px;
+		top: -49px;
+	}
 
-  .read {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: -120px;
-    font-size: 14px;
-    top: -49px;
-  }
+	.nav .logout {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		left: 80px;
+		font-size: 14px;
 
-  .nav .logout {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 80px;
-    font-size: 14px;
+		top: -50px;
+		width: 30px;
+	}
 
-    top: -50px;
-    width: 30px;
-  }
+	.logo {
+		position: relative;
+		top: 0px;
+		left: 20px;
+	}
 
-  .logo {
-    position: relative;
-    top: 0px;
-    left: 20px;
-  }
+	.showArticles {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		left: -10%;
+	}
 
-  .showArticles {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    left: -10%;
-  }
+	form {
+		width: 100%;
+		left: 10%;
+	}
 
-  form {
-    width: 100%;
-    left: 10%;
-  }
+	hr {
+		position: relative;
+		top: -14px;
+	}
 
-  hr {
-    position: relative;
-    top: -14px;
-  }
+	.card-title {
+		font-size: 18px;
+	}
 
-  .card-title {
-    font-size: 18px;
-  }
+	.card-body {
+		position: relative;
+		top: -220px;
+	}
 
-  .card-body {
-    position: relative;
-    top: -220px;
-  }
+	.card-text {
+		font-size: 14px;
+		position: relative;
+		top: 10px;
+		margin-bottom: 20px;
+	}
 
-  .card-text {
-    font-size: 14px;
-    position: relative;
-    top: 10px;
-    margin-bottom: 20px;
-  }
+	artLink {
+		position: absolute;
+		top: 34px;
+	}
 
-  artLink {
-    position: absolute;
-    top: 34px;
-  }
+	.badges {
+		position: relative;
+		top: -80px;
+	}
 
-  .badges {
-    position: relative;
-    top: -80px;
-  }
-
-  .card-footer {
-    position: relative;
-    top: -120px;
-  }
+	.card-footer {
+		position: relative;
+		top: -120px;
+	}
 }
