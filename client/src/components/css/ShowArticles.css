@@ -38,8 +38,6 @@
 }
 
 .user a {
-	/* position: absolute;
-  top: 28px; */
 	left: -10px;
 }
 
@@ -126,13 +124,6 @@
 	top: -15px;
 }
 
-/* .badge {
-  position: relative;
-  top: -50px;
-  left: -150px;
-  margin-bottom: 40px;
-} */
-
 .col-md-12 p {
 	margin: 100px 0;
 	width: 300px;
@@ -173,8 +164,7 @@
 	z-index: 0;
 	left: 0;
 	width: 100%;
-	background: url('https://images.pexels.com/photos/3888585/pexels-photo-3888585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
-		no-repeat center center fixed;
+	background: url('https://images.pexels.com/photos/3888585/pexels-photo-3888585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -278,19 +268,19 @@
 	cursor: text;
 }
 
-.input:focus ~ .search {
+.input:focus~.search {
 	right: -530px;
 	background: #151515;
 	z-index: 3;
 }
 
-.input:focus ~ .search::before {
+.input:focus~.search::before {
 	top: 0;
 	left: 0;
 	width: 25px;
 }
 
-.input:focus ~ .search::after {
+.input:focus~.search::after {
 	top: 0;
 	left: 0;
 	width: 25px;
@@ -618,7 +608,7 @@ hr {
 	}
 }
 
-@media screen and (min-width: 699px) (max-width: 749px) {
+@media screen and (min-width: 699px) and (max-width: 749px) {
 	.nav .nav-link {
 		display: flex;
 		flex-direction: row;
@@ -707,7 +697,7 @@ hr {
 		margin-bottom: 20px;
 	}
 
-	artLink {
+	.artLink {
 		position: absolute;
 		top: 34px;
 	}
@@ -724,6 +714,8 @@ hr {
 }
 
 @media screen and (min-width: 750px) and (max-width: 950px) {
+
+
 	.nav .nav-link {
 		display: flex;
 		flex-direction: row;
@@ -822,7 +814,7 @@ hr {
 		margin-bottom: 20px;
 	}
 
-	artLink {
+	.artLink {
 		position: absolute;
 		top: 34px;
 	}
@@ -835,5 +827,11 @@ hr {
 	.card-footer {
 		position: relative;
 		top: -120px;
+	}
+}
+
+@media screen and (min-width: 950px) {
+	.navlinks {
+		top: 0px;
 	}
 }
