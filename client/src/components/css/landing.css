@@ -319,6 +319,7 @@ html {
     font-size: 15px;
   }
 
+  /* 
   .navlinks {
     display: flex;
     flex-wrap: wrap;
@@ -341,12 +342,12 @@ html {
     left: 25%;
     top: -10px;
     font-size: 15px;
-  }
+  } */
 }
 
 @media screen and (max-width: 749px) {
 
-  .logix {
+  /* .logix {
     position: relative;
     width: 100%;
   }
@@ -359,7 +360,7 @@ html {
   .logix .regIster {
     left: 23%;
     top: -9px;
-  }
+  } */
 
 
   .containerX {
@@ -595,11 +596,11 @@ html {
     right: 459px;
   }
 
-  #navbar .logo {
+  /* #navbar .logo {
     position: absolute;
     top: 0;
     left: 100px;
-  }
+  } */
 
   .displayh1 {
     position: relative;

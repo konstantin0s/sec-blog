@@ -33,7 +33,8 @@ class OneArticle extends Component {
         const {params} = this.props.match;
 
         axios
-            .get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials: true})
+            // .get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials: true})
+            .get(`/articles/one/${params.id}`, {withCredentials: true})
             .then(res => {
 
                 let userToken = localStorage.usertoken;
@@ -48,7 +49,8 @@ class OneArticle extends Component {
             });
 
             axios
-            .get(`${process.env.REACT_APP_API_URL}/users/one/:id`, {withCredentials: true})
+            // .get(`${process.env.REACT_APP_API_URL}/users/one/:id`, {withCredentials: true})
+            .get(`/users/one/:id`, {withCredentials: true})
             .then((response) => {
 
                 this.setState({owner: response.data.id});
@@ -62,7 +64,8 @@ class OneArticle extends Component {
     delete(id) {
         // console.log(id);
         axios
-            .delete(`${process.env.REACT_APP_API_URL}/articles/` + id, {withCredentials: true})
+            // .delete(`${process.env.REACT_APP_API_URL}/articles/` + id, {withCredentials: true})
+            .delete(`/articles/` + id, {withCredentials: true})
             .then((result) => {
                 this
                     .props
@@ -80,7 +83,8 @@ class OneArticle extends Component {
         // debugger axios.post(`${REACT_APP_API_URL}/articles/savecomment`, {id:
         // this.state.article._id, owner: this.state.article.owner, text: message},
         // {withCredentials:true})
-        axios.post(`${process.env.REACT_APP_API_URL}/articles/savecomment`, {
+        // axios.post(`${process.env.REACT_APP_API_URL}/articles/savecomment`, {
+            axios.post(`/articles/savecomment`, {
             id: this.state.article._id,
             owner: this.state.article.owner,
             text: message,

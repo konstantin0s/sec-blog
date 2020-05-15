@@ -48,7 +48,8 @@ class ShowArticles extends Component {
 
     componentDidMount() {
         axios
-            .get(`${process.env.REACT_APP_API_URL}/articles`, {withCredentials: true})
+            // .get(`${process.env.REACT_APP_API_URL}/articles`, {withCredentials: true})
+                    .get(`/articles`, {withCredentials: true})
             .then(res => {
                 this.setState({filtered: res.data, isLoading: false});
             });

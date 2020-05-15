@@ -23,7 +23,8 @@ class EditProfile extends Component {
 
     componentDidMount() {
         axios
-            .get(`${process.env.REACT_APP_API_URL}/users/` + this.props.match.params.id)
+            // .get(`${process.env.REACT_APP_API_URL}/users/` + this.props.match.params.id)
+            .get(`/users/` + this.props.match.params.id)
             .then(res => {
                 this.setState({user: res.data.user});
                 // console.log(this.state.user);
@@ -62,7 +63,10 @@ class EditProfile extends Component {
         const {first_name, last_name, email, password} = this.state.user;
 
         axios
-            .put(`${process.env.REACT_APP_API_URL}/users/` + this.props.match.params.id, {first_name, last_name, email, password})
+            // .put(`${process.env.REACT_APP_API_URL}/users/` +
+            //  this.props.match.params.id, {first_name, last_name, email, password})
+            .put(`/users/` +
+            this.props.match.params.id, {first_name, last_name, email, password})
             .then((result) => {
                 // console.log('result', result);
                 this

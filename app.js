@@ -21,7 +21,8 @@ app.use(express.static(path.join(__dirname, 'public/build')));
 app.use(express.json());
 app.use(cors({
   credentials: true,
-  origin: ['https://zumbazomblog.herokuapp.com']
+  origin: ['http://localhost:3001']
+  // origin: ['https://zumbazomblog.herokuapp.com']
 })
 );
 
@@ -64,6 +65,14 @@ mongoose
   app.use('/users',  require('./routes/Users'));
   app.use('/articles', require('./routes/Articles'));
   app.use('/', require('./routes/file-upload-routes'));
+
+  app.use((req, res, next) => {
+    if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
+      next(); // ==> go to the next route ---
+    } else {                          //    |
+      res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
+    }                                 //    |
+  }); 
 
 
 //production mode

@@ -21,7 +21,8 @@ class Navbar extends Component {
             ///skips undefined
         } else {
             axios
-                .get(`${process.env.REACT_APP_API_URL}/users/` + this.props.match.params.id)
+                // .get(`${process.env.REACT_APP_API_URL}/users/` + this.props.match.params.id)
+                .get(`/users/` + this.props.match.params.id)
                 .then(res => {
                     this.setState({user: res.data.user});
                 });
@@ -30,7 +31,8 @@ class Navbar extends Component {
 
     logOut(e) {
         e.preventDefault();
-        axios.get(`${process.env.REACT_APP_API_URL}/`);
+        // axios.get(`${process.env.REACT_APP_API_URL}/`);
+        axios.get(`/`);
         localStorage.removeItem('usertoken');
         store.remove('loggedIn');
         //  console.log('you have been logged out. boo!');

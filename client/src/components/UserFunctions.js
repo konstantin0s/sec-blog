@@ -2,7 +2,8 @@ import axios from 'axios';
 import store from 'store';
 
 export const register = newUser => {
-  return axios.post(`${process.env.REACT_APP_API_URL}/users/register`, {
+  // return axios.post(`${process.env.REACT_APP_API_URL}/users/register`, {
+    return axios.post('/users/register', {
     first_name: newUser.first_name,
     last_name: newUser.last_name,
     email: newUser.email,
@@ -18,7 +19,8 @@ export const register = newUser => {
 };
 
 export const login = user => {
-  return axios.post(`${process.env.REACT_APP_API_URL}/users/login`, {
+  // return axios.post(`${process.env.REACT_APP_API_URL}/users/login`, {
+    return axios.post(`/users/login`, {
     email: user.email,
     password: user.password
   },  {withCredentials: true})
@@ -33,7 +35,8 @@ export const login = user => {
 }
 
 export const articles = newArticle => {
-  return axios.post(`${process.env.REACT_APP_API_URL}/articles`, {
+  // return axios.post(`${process.env.REACT_APP_API_URL}/articles`, {
+    return axios.post(`/articles`, {
     title: newArticle.title,
     // author: newArticle.author,
     body: newArticle.body,
@@ -49,7 +52,8 @@ export const articles = newArticle => {
 export const handleUpload = theFile => {
 
     // console.log('file in service: ', theFile);
-  return  axios.post(`${process.env.REACT_APP_API_URL}/upload`, theFile,  {withCredentials: true})
+  // return  axios.post(`${process.env.REACT_APP_API_URL}/upload`, theFile,  {withCredentials: true})
+  return  axios.post(`/upload`, theFile,  {withCredentials: true})
       .then(res => res.data)
       .catch(err => {
         console.log(err);
@@ -58,7 +62,8 @@ export const handleUpload = theFile => {
 
 export const logOut = () => (e) => {
   e.preventDefault();
-  axios.post(`${process.env.REACT_APP_API_URL}/`,  {withCredentials: true});
+  // axios.post(`${process.env.REACT_APP_API_URL}/`,  {withCredentials: true});
+  axios.post(`/`,  {withCredentials: true});
   localStorage.removeItem('usertoken');
   store.remove('loggedIn');
   console.log('you have been logged out. boo!');

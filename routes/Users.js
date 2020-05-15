@@ -8,6 +8,14 @@ require("dotenv").config();
 const User = require('../models/User');
 
 
+users.get('/', (req, res, next) => {
+  return User.find()
+    .sort({ createdAt: 'descending' })
+    .then((users) => res.json({ users: users.map(user => user.toJSON()) }))
+    .catch(next);
+});
+
+
 users.post('/register', (req, res) => {
   const today = new Date();
   const userData = {
@@ -52,9 +60,9 @@ users.post('/login', (req, res) => {
       email: req.body.email
     })
     .then(user => {
-      // console.log('user', user);
-      // console.log('session.local', req.session)
-      //   console.log('session', req.session.currentUser);
+      console.log('user', user);
+      console.log('session.local', req.session)
+        console.log('session', req.session.currentUser);
       if (user) {
         if (bcrypt.compareSync(req.body.password, user.password)) {
           req.session.currentUser = user; // check this if you cannot go to profile page!

@@ -104,7 +104,7 @@
 @media screen and (min-width: 300px) and (max-width: 649px) {
 
 
-  .nav .logo {
+  /* .nav .logo {
     visibility: hidden;
   }
 
@@ -114,7 +114,7 @@
 
   .navlinks .regIster {
     top: -10px;
-  }
+  } */
 
   .center {
     text-align: center;
