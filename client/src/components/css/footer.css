@@ -26,6 +26,11 @@ html {
     }
 }
 
+.footer-con {
+    position: relative;
+    width: 100%;
+}
+
 .blog-footer {
     display: flex;
     justify-content: center;

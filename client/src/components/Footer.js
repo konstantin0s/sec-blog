@@ -4,7 +4,7 @@ import './css/footer.css'
 
 export default function Footer() {
     return (
-        <div>
+        <div className="footer-con">
             <footer className="blog-footer">
                 <p>
                     <a className="toTop" href="#masthead">

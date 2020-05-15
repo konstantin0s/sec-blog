@@ -8,6 +8,7 @@
     top: 0px;
     position: absolute;
     width: 100%;
+    right: 25%;
 }
 
 #navbar .logo {
@@ -126,6 +127,10 @@ li {
 
 @media screen and (max-width: 499px) {
 
+    .navlinks {
+        right: 110%;
+    }
+
     .nav-link:link {
         cursor: pointer;
         text-decoration: none;
@@ -150,21 +155,20 @@ li {
 
 @media (min-width: 501px) and (max-width: 749px) {
 
+    .navlinks {
+        right: 0%;
+    }
+
     #navbar .navlinks {
         position: relative;
         top: 0px;
+        justify-content: space-evenly;
     }
 
     #navbar .logo,
     #navbar .logo a {
         visibility: hidden;
     }
-
-    /* #navbar .nav .logo a {
-        position: relative;
-        top: 0px;
-        height: 20px;
-    } */
 
     .logix .logIn {
         position: relative;
@@ -182,14 +186,13 @@ li {
         width: 80px !important;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
     }
-
 
 
     .nav .read {
         position: relative;
-        left: -23%;
+        left: -16%;
         font-size: 14px;
         top: -8px;
     }
@@ -203,7 +206,7 @@ li {
 
     .nav .write {
         position: relative;
-        left: -23%;
+        left: -13%;
         font-size: 14px;
         top: -8px;
     }
@@ -225,16 +228,47 @@ li {
 }
 
 @media (min-width: 750px) and (max-width: 950px) {
-    #navbar .logo a {
+
+    #navbar .navlinks {
         position: relative;
         top: 0px;
-        height: 20px;
+        justify-content: space-evenly;
     }
+
+    .nav .read {
+        position: relative;
+        left: -12%;
+        font-size: 14px;
+        top: 0px;
+    }
+
+    .nav .user {
+        position: relative;
+        left: 68%;
+        font-size: 14px;
+        top: 0px;
+    }
+
+    .nav .write {
+        position: relative;
+        left: 30%;
+        font-size: 14px;
+        top: 0px;
+    }
+
+    .nav .logout {
+        position: absolute;
+        left: 106%;
+        font-size: 14px;
+        top: 0px;
+        height: 50px;
+    }
+
 }
 
 @media (min-width: 950px) and (max-width: 1100 px) {
     .navlinks {
-        right: 31%;
+        right: 34%;
     }
 
     .navlinks .logIn {
@@ -247,6 +281,34 @@ li {
         left: 65%;
     }
 
+    .nav .read {
+        position: relative;
+        left: -12%;
+        font-size: 14px;
+        top: 0px;
+    }
+
+    .nav .user {
+        position: relative;
+        left: 73%;
+        font-size: 14px;
+        top: 0px;
+    }
+
+    .nav .write {
+        position: relative;
+        left: 30%;
+        font-size: 14px;
+        top: 0px;
+    }
+
+    .nav .logout {
+        position: absolute;
+        left: 106%;
+        font-size: 14px;
+        top: 0px;
+        height: 50px;
+    }
 
 
 }
@@ -289,27 +351,16 @@ li {
         left: 0px;
     }
 
-    .link {
-        font-size: 1em;
-        border: 3px #fff solid;
-        padding: 1.6em 2.5em;
-        margin-bottom: 3rem;
-        transition: var(--ease);
-        position: relative;
-        left: 80%;
-        margin-left: 100px;
-        width: 150px;
-        top: 0px;
-        font-size: 14px;
-        height: 40px;
-        text-align: center;
-        -webkit-align-self: center;
-        align-self: center;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: row;
-        flex-direction: row;
-        -webkit-justify-content: center;
-        justify-content: center;
+    .navlinks {
+        right: 35%;
     }
+
+}
+
+@media (min-width: 1601px) {
+
+    .navlinks {
+        right: 0%;
+    }
+
 }
