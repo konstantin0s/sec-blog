@@ -150,11 +150,21 @@ li {
 
 @media (min-width: 501px) and (max-width: 749px) {
 
-    #navbar .nav .logo a {
+    #navbar .navlinks {
+        position: relative;
+        top: 0px;
+    }
+
+    #navbar .logo,
+    #navbar .logo a {
+        visibility: hidden;
+    }
+
+    /* #navbar .nav .logo a {
         position: relative;
         top: 0px;
         height: 20px;
-    }
+    } */
 
     .logix .logIn {
         position: relative;
@@ -168,9 +178,50 @@ li {
         top: -10px;
     }
 
-    .link {
-        width: 150px !important;
+    .nav .link {
+        width: 80px !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
+
+
+
+    .nav .read {
+        position: relative;
+        left: -23%;
+        font-size: 14px;
+        top: -8px;
+    }
+
+    .nav .user {
+        position: relative;
+        left: -105px;
+        font-size: 14px;
+        top: -8px;
+    }
+
+    .nav .write {
+        position: relative;
+        left: -23%;
+        font-size: 14px;
+        top: -8px;
+    }
+
+    .nav .logout {
+        position: absolute;
+        left: 67%;
+        font-size: 14px;
+        top: -8px;
+        height: 50px;
+    }
+
+    .logo {
+        position: relative;
+        top: -9px;
+        left: -160px;
+    }
+
 }
 
 @media (min-width: 750px) and (max-width: 950px) {
@@ -235,6 +286,7 @@ li {
         text-decoration: none;
         position: relative;
         top: -22px;
+        left: 0px;
     }
 
     .link {

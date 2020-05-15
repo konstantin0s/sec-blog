@@ -76,12 +76,12 @@ class Navbar extends Component {
                     </Link>
                 </li>
                 <li className="nav-item link logout">
-                    <button
+                    <Link  to="#" className="nav-link"
                         onClick={this
                         .logOut
                         .bind(this)}>
                         Logout
-                    </button>
+                    </Link>
 
                 </li>
             </ul>

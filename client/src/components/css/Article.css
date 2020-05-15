@@ -269,14 +269,14 @@ h1 {
     width: 80px;
   }
 
-
+  /* 
   .nav .logo {
     position: relative;
     top: -7px;
     left: -122px;
-  }
+  } */
 
-  .nav .user {
+  /* .nav .user {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -316,7 +316,7 @@ h1 {
     width: 23px;
     top: -225px;
     width: 30px;
-  }
+  } */
 
   .showArticles {
     display: flex;
