@@ -31,14 +31,18 @@ class OneArticle extends Component {
     componentDidMount() {
 
         const {params} = this.props.match;
-
+        console.log('params' , params);
         axios
             // .get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials: true})
             .get(`/articles/one/${params.id}`, {withCredentials: true})
             .then(res => {
-
+                    console.log(localStorage);
                 let userToken = localStorage.usertoken;
+                console.log('userToken', userToken);
+                console.log('res data', res.data);
+
                 const {_id} = jwt_decode(userToken);
+                console.log('_id', _id);
 
                 this.setState({article: res.data, userId: _id, first_name: res.data.owner.first_name, articleOwnerId: res.data.owner._id});
             })
@@ -50,9 +54,9 @@ class OneArticle extends Component {
 
             axios
             // .get(`${process.env.REACT_APP_API_URL}/users/one/:id`, {withCredentials: true})
-            .get(`/users/one/:id`, {withCredentials: true})
+            .get(`/one/:id`, {withCredentials: true})
             .then((response) => {
-
+                console.log(response);
                 this.setState({owner: response.data.id});
 
             })
@@ -211,7 +215,7 @@ class OneArticle extends Component {
     }
 
     render() {
-        // console.log(this.state)
+        console.log(this.state)
 
         let buttons = (this.state.userId && this.state.userId === this.state.articleOwnerId)
             ? <div className="button-container">

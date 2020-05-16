@@ -52,9 +52,9 @@ mongoose
     cookie: { 
       maxAge: 60000 },
     resave: false,
-    sameSite: true,
-    secure: IN_PROD,
-    saveUninitialized: false,
+    // sameSite: true,
+    // secure: IN_PROD,
+    saveUninitialized: true,
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
       ttl: 24 * 60 * 60 // 1 day
@@ -66,13 +66,13 @@ mongoose
   app.use('/articles', require('./routes/Articles'));
   app.use('/', require('./routes/file-upload-routes'));
 
-  app.use((req, res, next) => {
-    if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
-      next(); // ==> go to the next route ---
-    } else {                          //    |
-      res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
-    }                                 //    |
-  }); 
+  // app.use((req, res, next) => {
+  //   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
+  //     next(); // ==> go to the next route ---
+  //   } else {                          //    |
+  //     res.status(403).json({message: "Unauthorized, session problem.?"})        //    |
+  //   }                                 //    |
+  // }); 
 
 
 //production mode

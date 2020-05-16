@@ -78,6 +78,7 @@ class EditProfile extends Component {
     }
 
     render() {
+        const { first_name, last_name, email} = this.state.user;
         return (
             <div className="container editProfile">
                 <div className="just-panel">
@@ -97,7 +98,7 @@ class EditProfile extends Component {
                                     type="text"
                                     className="form-control"
                                     name="first_name"
-                                    value={this.state.user.first_name}
+                                    value={first_name ? first_name : ''}
                                     onChange={this.onChange}
                                     placeholder="First Name"/>
                             </div>
@@ -107,7 +108,7 @@ class EditProfile extends Component {
                                     type="text"
                                     className="form-control"
                                     name="last_name"
-                                    value={this.state.user.last_name}
+                                    value={last_name ? last_name : ''}
                                     onChange={this.onChange}
                                     placeholder="Last Name"/>
                             </div>
@@ -117,7 +118,7 @@ class EditProfile extends Component {
                                     type="text"
                                     className="form-control"
                                     name="email"
-                                    value={this.state.user.email}
+                                    value={email ? email : ''}
                                     onChange={this.onChange}
                                     placeholder="Email"/>
                             </div>

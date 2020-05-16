@@ -372,6 +372,27 @@ hr {
 		margin-bottom: 200px;
 	}
 
+	.contain-form {
+		width: 250px;
+	}
+
+	.contain-form form {
+		width: 70%;
+	}
+
+	.input:focus {
+		width: 250px;
+		opacity: 1;
+		cursor: text;
+	}
+
+	.input:focus~.search {
+		right: -260px;
+		background: #151515;
+		z-index: 3;
+		color: #fff;
+	}
+
 	.nav .nav-link {
 		display: flex;
 		flex-direction: row;
@@ -496,9 +517,10 @@ hr {
 	}
 
 	.input:focus~.search {
-		right: -330px;
+		right: -360px;
 		background: #151515;
 		z-index: 3;
+		color: #fff;
 	}
 
 

@@ -8,12 +8,12 @@ require("dotenv").config();
 const User = require('../models/User');
 
 
-users.get('/', (req, res, next) => {
-  return User.find()
-    .sort({ createdAt: 'descending' })
-    .then((users) => res.json({ users: users.map(user => user.toJSON()) }))
-    .catch(next);
-});
+// users.get('/', (req, res, next) => {
+//   return User.find()
+//     .sort({ createdAt: 'descending' })
+//     .then((users) => res.json({ users: users.map(user => user.toJSON()) }))
+//     .catch(next);
+// });
 
 
 users.post('/register', (req, res) => {
@@ -64,8 +64,10 @@ users.post('/login', (req, res) => {
       console.log('session.local', req.session)
         console.log('session', req.session.currentUser);
       if (user) {
+        console.log('user', user);
         if (bcrypt.compareSync(req.body.password, user.password)) {
           req.session.currentUser = user; // check this if you cannot go to profile page!
+          console.log('payload', user);
           const payload = {
             _id: user._id,
             first_name: user.first_name,
@@ -74,6 +76,8 @@ users.post('/login', (req, res) => {
             comments: user.comments,
             date: user.date.toLocaleDateString()
           }
+
+          console.log('payload', payload);
 
           let token = jwt.sign(payload, process.env.SECRET_KEY, {
             expiresIn: 90000
@@ -89,7 +93,7 @@ users.post('/login', (req, res) => {
       } else {
 
         res.json({
-          error: 'User does not exist'
+          error: 'User does not exist, but why?'
         })
       }
     })
@@ -113,7 +117,7 @@ users.get('/one/:id', (req, res, next) => {
     } else if (!user) {
       res.send(404);
     } else {
-      res.send(user);
+      res.status(200).json(user);
     }
     next();
   })

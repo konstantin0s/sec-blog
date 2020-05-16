@@ -128,7 +128,7 @@ class Article extends Component {
                                             {this
                                                 .state
                                                 .users
-                                                .map((user) => <option value={user._id}>{user.first_name}</option>)}
+                                                .map((user, i) => <option key={i} value={user._id}>{user.first_name}</option>)}
                                         </select>
                                     </div>
                                 </div>

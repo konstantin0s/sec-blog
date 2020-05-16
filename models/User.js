@@ -16,8 +16,7 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  comments: [{type: Schema.Types.ObjectId,
-   ref: "Article"}],
+  comments: [{type: Schema.Types.ObjectId, ref: 'Article'}],
   date: {
     type: Date,
     default: Date.now
