@@ -361,16 +361,17 @@ hr {
 	margin-bottom: 20px;
 }
 
-/* 
-.showArticles .MuiPaper-root:first-child {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-} */
 
 @media screen and (max-width: 500px) {
+
+	.grid-container {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 10px;
+		margin-bottom: 200px;
+	}
+
 	.nav .nav-link {
 		display: flex;
 		flex-direction: row;
@@ -380,30 +381,6 @@ hr {
 		height: 50px;
 		width: 80px;
 	}
-
-	/* .nav .logo {
-		position: relative;
-		top: -7px;
-		left: -122px;
-	}
-
-	.nav .user {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 290px;
-		font-size: 14px;
-		top: -77px;
-	}
-
-	.nav .write {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 100px;
-		font-size: 14px;
-		top: -125px;
-	} */
 
 	.nav .nav-link {
 		font-size: 13px;
@@ -439,11 +416,12 @@ hr {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		width: 100%;
 	}
 
 	form {
 		width: 100%;
-		left: 10%;
+		/* left: 10%; */
 	}
 
 	hr {
@@ -483,7 +461,6 @@ hr {
 }
 
 @media (max-width: 649px) {
-
 	#navbar .nav .logo {
 		visibility: hidden;
 	}
@@ -494,8 +471,38 @@ hr {
 	}
 }
 
-
 @media screen and (min-width: 501px) and (max-width: 698px) {
+
+	.grid-container {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 10px;
+		margin-bottom: 200px;
+	}
+
+	.contain-form {
+		width: 350px;
+	}
+
+	.contain-form form {
+		width: 70%;
+	}
+
+	.input:focus {
+		width: 350px;
+		opacity: 1;
+		cursor: text;
+	}
+
+	.input:focus~.search {
+		right: -330px;
+		background: #151515;
+		z-index: 3;
+	}
+
+
+
 	.nav .nav-link {
 		display: flex;
 		flex-direction: row;
@@ -505,50 +512,6 @@ hr {
 		height: 50px;
 		width: 80px;
 	}
-
-	/* .read {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 192px;
-		font-size: 14px;
-		top: -198px;
-	}
-
-	.nav .user {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 295px;
-		font-size: 14px;
-		top: -98px;
-	}
-
-	.nav .write {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 110px;
-		font-size: 14px;
-		top: -148px;
-	}
-
-	.nav .logout {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 390px;
-		font-size: 14px;
-		top: -248px;
-		width: 80px;
-		height: 50px;
-	}
-
-	.logo {
-		position: relative;
-		top: -9px;
-		left: -160px;
-	} */
 
 	.showArticles {
 		display: flex;
@@ -605,7 +568,6 @@ hr {
 		width: 105px;
 		top: 48px;
 	} */
-
 
 	.nav .nav-link {
 		display: flex;
@@ -716,7 +678,6 @@ hr {
 		top: 40px;
 		width: 105px;
 	} */
-
 
 	/* 
 	.nav .nav-link {

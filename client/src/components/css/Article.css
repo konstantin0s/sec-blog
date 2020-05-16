@@ -323,7 +323,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    left: -10%;
+    /* left: -10%; */
   }
 
   form {
