@@ -46,14 +46,15 @@ class Profile extends Component {
         } = this.state;
         // console.log(this.state);
         return (
-            <div className="profilePage">
+          <React.Fragment>
+                <div className="profilePage">
                 <div className="profile">
                     <div className="col-md-3">
                         <div className="profile-sidebar">
 
                             <div className="profile-userpic">
                                 <img
-                                    src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                    src="https://source.unsplash.com/random"
                                     className="img-responsive"
                                     alt=""/>
                             </div>
@@ -113,11 +114,9 @@ class Profile extends Component {
                         </div>
                     </div>
                 </div>
-
-                <Footer/>
-
             </div>
-
+            <Footer/>
+          </React.Fragment>
         )
     }
 }
