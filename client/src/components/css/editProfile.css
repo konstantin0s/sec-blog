@@ -1,12 +1,13 @@
 .editProfile {
-  position: relative;
-  height: 100vh;
-  top: -20px;
+  position: absolute;
+  height: 100%;
+  top: 0px;
   width: 100%;
-  background: url('https://images.pexels.com/photos/2487437/pexels-photo-2487437.png?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background: url('https://source.unsplash.com/random');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 
 .submit {
@@ -24,15 +25,12 @@
 
 .just-panel {
   width: 66%;
-  display: flex;
+  display: inline-block;
   align-self: center;
   position: relative;
-  justify-content: center;
   top: 150px;
-  flex-direction: column;
-  left: 13.4em;
+  margin-bottom: 132px;
 }
-
 
 .editProfile .panel-body form {
   align-self: center;
@@ -49,9 +47,8 @@
   width: 86%;
 }
 
-
-.editProfile footer {
+.footer-con {
   position: absolute;
-  bottom: -65px;
-  left: 0em;
+  width: 100%;
+  bottom: 0px;
 }

@@ -319,49 +319,9 @@ html {
     font-size: 15px;
   }
 
-  /* 
-  .navlinks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 2em;
-    top: 0px;
-    position: absolute;
-  }
-
-  .logIn {
-    position: relative;
-    left: 44%;
-    top: -44px;
-    font-size: 15px;
-  }
-
-  .navlinks .regIster {
-    position: relative;
-    left: 25%;
-    top: -10px;
-    font-size: 15px;
-  } */
 }
 
 @media screen and (max-width: 749px) {
-
-  /* .logix {
-    position: relative;
-    width: 100%;
-  }
-
-  .logix .logIn {
-    left: 36%;
-    top: -9px;
-  }
-
-  .logix .regIster {
-    left: 23%;
-    top: -9px;
-  } */
-
 
   .containerX {
     background-color: aliceblue;
@@ -595,12 +555,6 @@ html {
     position: relative;
     right: 459px;
   }
-
-  /* #navbar .logo {
-    position: absolute;
-    top: 0;
-    left: 100px;
-  } */
 
   .displayh1 {
     position: relative;

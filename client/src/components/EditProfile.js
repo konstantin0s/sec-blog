@@ -80,7 +80,8 @@ class EditProfile extends Component {
     render() {
         const { first_name, last_name, email} = this.state.user;
         return (
-            <div className="container editProfile">
+                <React.Fragment>
+                                <div className="container editProfile">
                 <div className="just-panel">
                     <div className="panel-heading">
                         <h3 className="panel-title">
@@ -130,8 +131,9 @@ class EditProfile extends Component {
                     </div>
                 </div>
 
-                <Footer/>
             </div>
+              <Footer/>
+                </React.Fragment>
         );
     }
 }
