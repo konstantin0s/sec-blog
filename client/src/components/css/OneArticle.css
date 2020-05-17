@@ -359,12 +359,12 @@ textarea {
   margin-bottom: 0.5em;
 }
 
-.post-body p {
+.post-body .comm {
   width: 100%;
   position: relative;
   height: 100%;
   left: 0em;
-  top: 0.4em;
+  top: 0.1em;
   font-size: 1.2em;
   background: #fff;
   padding: 0.5em;
@@ -430,12 +430,6 @@ textarea {
   margin: 0px;
 }
 
-/* .jumbotron p {
-  font-size: 18px;
-  display: inline;
-  font-weight: 200;
-} */
-
 .row {
   width: 100%;
   margin: 0;
@@ -455,7 +449,6 @@ ul>li {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  /* top: 1344px; */
   position: relative;
   bottom: 0;
   width: 100%;
@@ -467,4 +460,104 @@ ul>li {
 
 ul footer {
   width: 100%;
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+
+  .jumbotron {
+    text-align: center;
+    height: 100%;
+  }
+
+  .bodys {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .jumbo {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left: 0px;
+  }
+
+  .jumbo h1 {
+    left: 0px;
+  }
+
+  .bodys h4 {
+    left: 0px;
+  }
+
+  .author {
+    left: 105px;
+  }
+
+  .moment-on {
+    left: 0px;
+  }
+
+  .moment-on .clock {
+    left: 35px;
+  }
+
+  .jumbotron p {
+    font-size: 1.2em;
+    top: 200px;
+  }
+
+  .pull-right {
+    position: absolute;
+    left: 30px;
+    top: 430px;
+  }
+
+  .bodys .secondary {
+    display: inline-block;
+    left: 0em;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .secondary form {
+    left: 0px;
+  }
+
+  .secondary h5 {
+    left: 80%;
+  }
+
+  .showcomments {
+    margin-top: 10px;
+    top: 500px;
+    display: inline-block;
+    left: 0em;
+  }
+
+  .showComm {
+    left: 0px;
+    width: 92%;
+  }
+
+  .media-heading {
+    top: 0px;
+    left: 2.5em;
+    text-transform: capitalize;
+  }
+
+  .footer {
+    z-index: 200;
+
+  }
+
+  .footer .row {
+    z-index: 200;
+  }
+
+  .footer-con {
+    position: fixed;
+    bottom: 0px;
+  }
+
 }

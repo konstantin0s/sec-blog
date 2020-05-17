@@ -162,9 +162,9 @@ class OneArticle extends Component {
                                     </div>
                                 </section>
                                 <section className="post-body">
-                                    <p>
+                                    <h6 className="comm">
                                         {c.text}
-                                    </p>
+                                    </h6>
                                 </section>
                                 <section className="post-footer">
 
@@ -300,13 +300,13 @@ class OneArticle extends Component {
                                             </button>
                                         </li>
                                     </ul>
-                                    <Footer/>
                                 </div>
                             </div>
 
                         </footer>
-
+                    
                     </div>
+                    <Footer/>
                 </div>
 
                 <div className="pull-right">
@@ -318,7 +318,6 @@ class OneArticle extends Component {
                     <span className="label label-danger">Danger</span>
                     <hr/>
                 </div>
-
             </div>
 
         );
