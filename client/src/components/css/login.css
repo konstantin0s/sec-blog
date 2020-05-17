@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-/* .navlinks .regIster {
-    position: relative;
-    left: 15%;
-} */
-
 .center {
     text-align: center;
     min-height: 750px;
@@ -191,17 +186,6 @@
 }
 
 @media screen and (min-width: 300px) and (max-width: 649px) {
-    /* .navlinks {
-        right: 35%;
-    }
-
-    .navlinks .logIn {
-        left: 35%;
-    }
-
-    .navlinks .regIster {
-        top: -10px;
-    } */
 
     .center {
         text-align: center;
@@ -237,10 +221,6 @@
 }
 
 @media screen and (min-width: 650px) and (max-width: 999px) {
-
-    /* .navlinks {
-        right: 35%;
-    } */
 
     .test {
         display: flex;

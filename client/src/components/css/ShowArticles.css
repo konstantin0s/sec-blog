@@ -407,26 +407,6 @@ hr {
 		font-size: 13px;
 	}
 
-	/* .read {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 190px;
-		font-size: 14px;
-		top: -179px;
-	}
-
-	.nav .logout {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 380px;
-		font-size: 14px;
-		width: 23px;
-		top: -225px;
-		width: 30px;
-	} */
-
 	.container {
 		min-width: 100% !important;
 		width: 100% !important;
@@ -442,7 +422,6 @@ hr {
 
 	form {
 		width: 100%;
-		/* left: 10%; */
 	}
 
 	hr {
@@ -585,11 +564,6 @@ hr {
 }
 
 @media screen and (min-width: 699px) and (max-width: 749px) {
-	/* 
-	.navlinks {
-		width: 105px;
-		top: 48px;
-	} */
 
 	.nav .nav-link {
 		display: flex;
@@ -600,44 +574,6 @@ hr {
 		height: 50px;
 		width: 80px;
 	}
-
-	/* .read {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 202px;
-		font-size: 14px;
-		top: -178px;
-	}
-
-	.user {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 464px;
-		font-size: 14px;
-		top: -77px;
-	}
-
-	.write {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 322px;
-		font-size: 14px;
-		top: -129px;
-	}
-
-	.logout {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		left: 580px;
-		font-size: 14px;
-		top: -228px;
-		width: 80px;
-		height: 50px;
-	} */
 
 	.logo {
 		position: relative;

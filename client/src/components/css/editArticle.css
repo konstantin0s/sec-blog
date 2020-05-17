@@ -29,19 +29,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
 }
 
 
 .panel-just {
-
     background: aliceblue;
     width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 17em;
-    left: 17em;
     position: relative;
+    display: inline-block;
     top: 100px;
     background: aliceblue;
     border-radius: 35%;
@@ -68,6 +64,13 @@
 
 
 .editArticle footer {
-    bottom: -39px;
+    bottom: -0px;
+    height: 3.5em;
     position: absolute;
+}
+
+@media (min-width: 300px) and (max-width: 750px) {
+    .editArticle .panel-just {
+        width: 80%;
+    }
 }

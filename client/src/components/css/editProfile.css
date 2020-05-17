@@ -52,3 +52,9 @@
   width: 100%;
   bottom: 0px;
 }
+
+@media (min-width: 300px) and (max-width: 750px) {
+  .submit {
+    width: 50%;
+  }
+}

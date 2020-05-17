@@ -36,7 +36,7 @@ body {
   top: 995px;
   text-align: center;
   display: inline-block;
-  float: none;
+  float: none !important;
 }
 
 .author {
@@ -138,8 +138,6 @@ a {
   width: 100%;
   position: absolute;
   top: 0px;
-  /* left: 800px; */
-
 }
 
 .img-responsive {
@@ -247,7 +245,6 @@ a {
 
 .date {
   position: relative;
-  /* top: 93px; */
   right: -8%;
   color: rgb(43, 54, 68);
   font-size: 22px;
