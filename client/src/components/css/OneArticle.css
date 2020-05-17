@@ -32,14 +32,11 @@ body {
 }
 
 .pull-right {
-  align-items: center;
-  position: absolute;
-  top: 886px;
-  flex-direction: row;
+  position: relative;
+  top: 995px;
   text-align: center;
-  display: flex;
-  left: 40%;
-  justify-content: center;
+  display: inline-block;
+  float: none;
 }
 
 .author {
@@ -54,6 +51,10 @@ body {
   width: 30%;
   font-weight: 400;
   font-size: 20px;
+}
+
+.secondary form {
+  left: 0px;
 }
 
 /*author name */
@@ -157,8 +158,26 @@ a {
   width: 100%;
   top: 500px;
   height: 100vh;
+  text-align: center;
 }
 
+.showcomments .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  margin-top: 10em;
+  height: 30%;
+  left: 0px;
+}
+
+.showcomments .footer .list-inline {
+  position: relative;
+  top: -11em;
+  width: 100%;
+}
 
 .body-text {
   position: absolute;
@@ -191,7 +210,11 @@ a {
 }
 
 .showcomments {
-  color: black;
+  margin-top: 10px;
+  top: 500px;
+  display: inline-block;
+  left: 0em;
+  color: #000;
 }
 
 /* title of the article */
@@ -271,7 +294,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  left: 2em;
+  left: 0em;
   position: relative;
 }
 
@@ -296,7 +319,7 @@ a {
   width: 84%;
   height: 250px;
   padding: 5px;
-  left: 6em;
+  display: inline-block;
 }
 
 .comment-list {
@@ -420,7 +443,7 @@ textarea {
   margin-bottom: 40px;
   justify-content: center;
   height: 100%;
-  left: 10em;
+  left: 0em;
 }
 
 .jumbotron {
@@ -428,38 +451,33 @@ textarea {
   width: 100%;
   top: 50px;
   margin: 0px;
+  text-align: center;
 }
 
 .row {
-  width: 100%;
+  width: 88%;
   margin: 0;
-  z-index: -2;
+  z-index: 0;
   padding: 0;
   top: 402px;
-  margin-top: 5.5em;
+  margin: 5.5em 1em 0em 1em;
   position: relative;
+  display: inline-block;
 }
 
 ul>li {
   position: relative;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  margin-top: 10em;
-  height: 30%;
-  left: 0px;
-  ;
-}
 
 ul footer {
   width: 100%;
+}
+
+.jumbotron .footer-con {
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
 }
 
 @media screen and (min-width: 300px) and (max-width: 550px) {
@@ -533,11 +551,122 @@ ul footer {
     top: 500px;
     display: inline-block;
     left: 0em;
+    z-index: 0;
   }
 
   .showComm {
-    left: 0px;
+    left: 1em;
     width: 92%;
+    margin: 0 0.5em;
+  }
+
+  .media-heading {
+    top: 0px;
+    left: 2.5em;
+    text-transform: capitalize;
+  }
+
+  .footer {
+    z-index: 200;
+
+  }
+
+  .footer .row {
+    z-index: 0;
+  }
+
+  .footer-con {
+    position: fixed;
+    bottom: 0px;
+  }
+
+}
+
+@media screen and (min-width: 551px) and (max-width: 749px) {
+
+  .jumbotron {
+    text-align: center;
+    height: 100%;
+  }
+
+  .bodys {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .jumbo {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left: 0px;
+  }
+
+  .jumbo h1 {
+    left: 0px;
+  }
+
+  .pull-right {
+    margin-top: 1em;
+  }
+
+  .bodys h4 {
+    left: 0px;
+  }
+
+  .author {
+    left: 105px;
+  }
+
+  .moment-on {
+    left: 0px;
+  }
+
+  .moment-on .clock {
+    left: 35px;
+  }
+
+  .jumbotron p {
+    font-size: 1.5em;
+    top: 200px;
+  }
+
+  .pull-right {
+    position: absolute;
+    left: 30px;
+    top: 430px;
+  }
+
+  .bodys .secondary {
+    position: relative;
+    display: inline-block;
+    left: 0em;
+    text-align: center;
+    margin-top: 120px;
+  }
+
+  .secondary form {
+    left: 0px;
+  }
+
+  .secondary h5 {
+    left: 70%;
+    display: inline-block;
+    width: 105px;
+    top: 17px;
+  }
+
+  .showcomments {
+    margin-top: 10px;
+    top: 500px;
+    display: inline-block;
+    left: 0em;
+  }
+
+  .showComm {
+    left: 1em;
+    width: 92%;
+    margin: 0 0.5em;
   }
 
   .media-heading {
@@ -560,4 +689,10 @@ ul footer {
     bottom: 0px;
   }
 
+}
+
+@media (min-width: 750px) and (max-width: 950px) {
+  .pull-right {
+    margin: 1em 0em;
+  }
 }

@@ -140,7 +140,7 @@ class OneArticle extends Component {
             return comments.map(function (c, i) {
 
                 return <div key={i} className="showComm">
-                    <div className="col-md-8">
+                    <div className="col-md-12">
                         <div className="panel panel-default">
                             <div className="panel-body">
                                 <section className="post-heading">
@@ -287,7 +287,7 @@ class OneArticle extends Component {
                                         <li className="list-inline-item">
                                             <button className="btn btn-success">
                                                 <span className="fa-stack fa-lg">
-                                                    <i className="fas fa-circle fa-stack-2x"></i>
+                                                    <i className="fas fa-circle fa-stack-4x"></i>
                                                     <FontAwesomeIcon className="faFacebook" icon={faFacebook}/>
                                                 </span>
                                             </button>
