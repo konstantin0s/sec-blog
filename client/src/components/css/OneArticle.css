@@ -106,10 +106,10 @@ body {
 .secondary h5 {
   float: right;
   position: absolute;
-  top: 25em;
-  right: 12em;
+  top: 1em;
+  right: 8em;
   margin-right: 2em;
-  color: black;
+  color: #fff;
 }
 
 .media-body h4,

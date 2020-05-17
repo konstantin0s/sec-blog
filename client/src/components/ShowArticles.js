@@ -58,6 +58,7 @@ class ShowArticles extends Component {
 
     render() {
         const {filtered, term, isLoading} = this.state;
+        console.log(filtered);
         return (
             <React.Fragment>
                 <div className="container showArticles">
@@ -93,12 +94,12 @@ class ShowArticles extends Component {
                                                 {article.title}
                                             </Typography>
                                             <Typography variant="body2" color="textSecondary" component="p">
-                                                ou ought to be ashamed of yourself for asking such a simple question,' added the
-                                                Gryphon; and then they both sat silent and looked at poor Alice, who felt ready
-                                                to sink into the earth. At last the Gryphon said to the Mock Turtle, 'Drive on,
-                                                old fellow! Don't be all day about it!' and he went on in these words: 'Yes, we
-                                                went to school in the sea, though you mayn't believe it—' 'I never said I
-                                                didn't!' interrupted Alice.
+                                        { article.body.slice(0, 100) ? article.body.slice(0, 100) 
+                                        : 
+                                       'not only five centuries, but also the leap into electronic typesetting' +
+                                         ', remaining essentially unchanged. It was popularised in the 1960s w' +
+                                         'ith the release of Letraset sheets containing Lorem Ipsum passages, and m'
+                                        }
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>

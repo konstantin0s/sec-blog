@@ -3,6 +3,7 @@ import jwt_decode from 'jwt-decode';
 import {Link} from 'react-router-dom';
 import Footer from './Footer';
 import './css/Profile.css';
+import axios from 'axios';
 
 class Profile extends Component {
 
@@ -21,6 +22,18 @@ class Profile extends Component {
     }
 
     componentDidMount() {
+
+        axios
+        // .get(`${process.env.REACT_APP_API_URL}/users/`, {withCredentials: true})
+              .get(`/users/`, {withCredentials: true})
+        .then((response) => {
+            // this.setState({users: response.data, userId: response.data[0]._id});
+            console.log(response.data);
+        })
+        .catch((error) => {
+            this.setState({error});
+        })
+
         const token = localStorage.usertoken;
         const decoded = jwt_decode(token);
 
@@ -44,7 +57,7 @@ class Profile extends Component {
             email,
             comments
         } = this.state;
-        // console.log(this.state);
+        console.log(this.state);
         return (
           <React.Fragment>
                 <div className="profilePage">
@@ -62,6 +75,7 @@ class Profile extends Component {
                             <div className="profile-usertitle">
                                 <div className="profile-usertitle-name">
                                     {first_name}
+                                    {" "}
                                     {last_name}
 
                                 </div>
@@ -108,14 +122,16 @@ class Profile extends Component {
 
                     <div className="other-details">
                         <div className="profile-content">
-                            List of comments: {comments
+                     <p>
+                     List of comments: {comments
                                 ? comments
                                 : '0 Comments.'}
+                     </p>
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
-            <Footer/>
           </React.Fragment>
         )
     }

@@ -5,8 +5,8 @@ require("dotenv").config();
 
 cloudinary.config({
   cloud_name: process.env.cloudName,
-  api_key: process.env.cloudKey,
-  api_secret: process.env.cloudSecret
+  api_key: process.env.apiKey,
+  api_secret: process.env.apiSecret
 });
 
 var storage = cloudinaryStorage({

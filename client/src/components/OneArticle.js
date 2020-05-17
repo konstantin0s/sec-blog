@@ -125,7 +125,7 @@ class OneArticle extends Component {
                 </form>
 
                 <h5>{this.state.article.comments.length}
-                    Comments</h5>
+                   {" "} Comments</h5>
             </div>
         }
     }
@@ -195,7 +195,7 @@ class OneArticle extends Component {
                                                     <button>
                                                         <img
                                                             className="media-object photo-profile"
-                                                            src="http://0.gravatar.com/avatar/38d618563e55e6082adf4c8f8c13f3e4?s=40&d=mm&r=g"
+                                                            src="https://source.unsplash.com/random"
                                                             width="32"
                                                             height="32"
                                                             alt="..."/>
