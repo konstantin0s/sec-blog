@@ -43,9 +43,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  position: absolute;
-  top: 18.5px;
-  right: 40%;
+  position: relative;
+  top: 6px;
+  right: 43%;
   text-transform: uppercase;
   color: rgb(43, 54, 68);
   width: 30%;
@@ -506,11 +506,18 @@ ul footer {
   }
 
   .author {
-    left: 105px;
+    left: 22%;
+    top: -32px;
   }
 
   .moment-on {
     left: 0px;
+    font-size: 0.8em;
+  }
+
+  .faEnvelope,
+  .date {
+    font-size: 1.4em;
   }
 
   .moment-on .clock {
@@ -518,14 +525,15 @@ ul footer {
   }
 
   .jumbotron p {
-    font-size: 1.2em;
+    font-size: 100%;
     top: 200px;
   }
 
   .pull-right {
     position: absolute;
-    left: 30px;
-    top: 430px;
+    left: 12%;
+    top: 455px;
+    display: inline-block;
   }
 
   .bodys .secondary {
@@ -559,7 +567,7 @@ ul footer {
 
   .media-heading {
     top: 0px;
-    left: 2.5em;
+    left: 30%;
     text-transform: capitalize;
   }
 
@@ -575,6 +583,11 @@ ul footer {
   .footer-con {
     position: fixed;
     bottom: 0px;
+  }
+
+  .toTop img {
+    height: 4.5em;
+    top: -37px;
   }
 
 }
@@ -605,6 +618,10 @@ ul footer {
 
   .pull-right {
     margin-top: 1em;
+    position: absolute;
+    left: 21%;
+    top: 441px;
+    display: inline-block;
   }
 
   .bodys h4 {
@@ -612,26 +629,23 @@ ul footer {
   }
 
   .author {
-    left: 105px;
+    left: 18%;
+    top: -32px;
   }
 
   .moment-on {
     left: 0px;
+    font-size: 0.8em;
   }
+
 
   .moment-on .clock {
     left: 35px;
   }
 
   .jumbotron p {
-    font-size: 1.5em;
+    font-size: 100%;
     top: 200px;
-  }
-
-  .pull-right {
-    position: absolute;
-    left: 30px;
-    top: 430px;
   }
 
   .bodys .secondary {
@@ -686,10 +700,30 @@ ul footer {
     bottom: 0px;
   }
 
+  .toTop img {
+    height: 4.5em;
+    top: -37px;
+  }
+
 }
 
 @media (min-width: 750px) and (max-width: 950px) {
   .pull-right {
     margin: 1em 0em;
   }
+
+  .bodys h4 {
+    right: 65%;
+  }
+
+  .moment-on .clock {
+    left: 7%;
+    position: relative;
+  }
+
+  .toTop img {
+    height: 5em;
+  }
+
+
 }

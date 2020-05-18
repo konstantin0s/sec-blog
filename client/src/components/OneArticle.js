@@ -11,6 +11,10 @@ import {faClock} from '@fortawesome/free-solid-svg-icons';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import Footer from './Footer';
 import './css/OneArticle.css';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 class OneArticle extends Component {
 
@@ -77,6 +81,34 @@ class OneArticle extends Component {
                     .push("/profile");
             });
     }
+
+    //warning deleting
+    warningDelete = () => {
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return (
+              <div className="custom-ui">
+                <h1>Are you sure</h1>
+                <p>You want to delete this file?</p>
+                <Button variant="contained" color="primary" onClick={onClose}>
+                  No
+                </Button>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  onClick={() => {
+                    this.delete();
+                    onClose();
+                  }}
+                  startIcon={<DeleteIcon />}
+                >
+                  Yes, Delete!
+                </Button>
+              </div>
+            );
+          },
+        });
+      };
 
     saveComments = (e) => {
         e.preventDefault()
@@ -223,7 +255,7 @@ class OneArticle extends Component {
                     <Link to={`/edit/${this.state.article._id}`} className="btn btn-success">Edit</Link>&nbsp;
                     <button
                         onClick={this
-                        .delete
+                        .warningDelete
                         .bind(this, this.state.article._id)}
                         className="btn btn-danger">Delete</button>
 

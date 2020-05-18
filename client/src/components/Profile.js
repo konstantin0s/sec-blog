@@ -123,9 +123,7 @@ class Profile extends Component {
                     <div className="other-details">
                         <div className="profile-content">
                      <p>
-                     List of comments: {comments
-                                ? comments
-                                : '0 Comments.'}
+         
                      </p>
                         </div>
                     </div>
