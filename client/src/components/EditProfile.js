@@ -40,7 +40,7 @@ class EditProfile extends Component {
     }
 
     handleFileUpload(e) {
-        console.log("The file to be uploaded is: ", e.target.files[0]);
+        // console.log("The file to be uploaded is: ", e.target.files[0]);
 
         const uploadData = new FormData();
         // imageUrl => this name has to be the same as in the model since we pass
@@ -53,7 +53,7 @@ class EditProfile extends Component {
             // response carries 'secure_url' which we can use to update the state
             this.setState({imageUrl: response.secure_url});
         }).catch(err => {
-            console.log("Error while uploading the file: ", err);
+            // console.log("Error while uploading the file: ", err);
         });
     }
 

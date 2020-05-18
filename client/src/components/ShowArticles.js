@@ -58,7 +58,7 @@ class ShowArticles extends Component {
 
     render() {
         const {filtered, term, isLoading} = this.state;
-        console.log(filtered);
+        // console.log(filtered);
         return (
             <React.Fragment>
                 <div className="container showArticles">

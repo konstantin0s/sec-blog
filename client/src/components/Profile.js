@@ -28,7 +28,7 @@ class Profile extends Component {
             //   .get(`/users/`, {withCredentials: true})
         .then((response) => {
             // this.setState({users: response.data, userId: response.data[0]._id});
-            console.log(response.data);
+            // console.log(response.data);
         })
         .catch((error) => {
             this.setState({error});
@@ -57,7 +57,7 @@ class Profile extends Component {
             email,
             comments
         } = this.state;
-        console.log(this.state);
+        // console.log(this.state);
         return (
           <React.Fragment>
                 <div className="profilePage">
