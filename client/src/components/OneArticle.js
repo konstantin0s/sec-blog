@@ -15,6 +15,7 @@ import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
+import Sharing from './Sharing';
 
 class OneArticle extends Component {
 
@@ -37,8 +38,8 @@ class OneArticle extends Component {
         const {params} = this.props.match;
         console.log('params' , params);
         axios
-            // .get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials: true})
-            .get(`/articles/one/${params.id}`, {withCredentials: true})
+            .get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials: true})
+            // .get(`/articles/one/${params.id}`, {withCredentials: true})
             .then(res => {
                     console.log(localStorage);
                 let userToken = localStorage.usertoken;
@@ -57,8 +58,8 @@ class OneArticle extends Component {
             });
 
             axios
-            // .get(`${process.env.REACT_APP_API_URL}/users/one/:id`, {withCredentials: true})
-            .get(`/one/:id`, {withCredentials: true})
+            .get(`${process.env.REACT_APP_API_URL}/users/one/:id`, {withCredentials: true})
+            // .get(`/one/:id`, {withCredentials: true})
             .then((response) => {
                 console.log(response);
                 this.setState({owner: response.data.id});
@@ -72,8 +73,8 @@ class OneArticle extends Component {
     delete(id) {
         // console.log(id);
         axios
-            // .delete(`${process.env.REACT_APP_API_URL}/articles/` + id, {withCredentials: true})
-            .delete(`/articles/` + id, {withCredentials: true})
+            .delete(`${process.env.REACT_APP_API_URL}/articles/` + id, {withCredentials: true})
+            // .delete(`/articles/` + id, {withCredentials: true})
             .then((result) => {
                 this
                     .props
@@ -119,8 +120,8 @@ class OneArticle extends Component {
         // debugger axios.post(`${REACT_APP_API_URL}/articles/savecomment`, {id:
         // this.state.article._id, owner: this.state.article.owner, text: message},
         // {withCredentials:true})
-        // axios.post(`${process.env.REACT_APP_API_URL}/articles/savecomment`, {
-            axios.post(`/articles/savecomment`, {
+        axios.post(`${process.env.REACT_APP_API_URL}/articles/savecomment`, {
+            // axios.post(`/articles/savecomment`, {
             id: this.state.article._id,
             owner: this.state.article.owner,
             text: message,
@@ -278,6 +279,10 @@ class OneArticle extends Component {
                     <div className="jumbo">
                         <h1>{this.state.article.title}</h1>
                         <div className="moment-on">
+
+                        <div className="sharing">
+                <Sharing id={this.state.article._id} />
+              </div>
 
                             <FontAwesomeIcon className="fa-2x" icon={faEnvelope}/>
                             <a className="faEnvelope" href="#commentF">

@@ -117,6 +117,7 @@ users.get('/one/:id', (req, res, next) => {
     } else if (!user) {
       res.send(404);
     } else {
+      console.log('user one by id', user);
       res.status(200).json(user);
     }
     next();
@@ -182,7 +183,8 @@ users.get('/:id', function (req, res) {
   const userid = req.params.id;
   User.findById(userid)
     .then((user) => {
-      res.json(user)
+      res.json(user);
+      console.log('id user', user);
     })
     .catch((error) => {
       res.json(error)
@@ -193,7 +195,8 @@ users.get('/:id', function (req, res) {
   const userid = req.params.id;
   User.findById(userid)
     .then((user) => {
-      res.json(user)
+      res.json(user);
+      console.log('id user router', user);
     })
     .catch((error) => {
       res.json(error)
@@ -210,7 +213,7 @@ users.get('/profile', (req, res) => {
     .then(user => {
       if (user) {
         res.json(user);
-        // console.log(user);
+        console.log('User does tghis' , user);
       } else {
         res.send('User does not exist');
       }
@@ -227,6 +230,7 @@ users.post("/:id", (req, res) => {
     .populate("articles")
     .then((results) => {
       res.json(results);
+      console.log('results of user', results);
     })
     .catch((error) => {
       res.json(error);

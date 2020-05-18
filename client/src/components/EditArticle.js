@@ -28,8 +28,8 @@ class EditArticle extends Component {
         const {params} = this.props.match;
 
         axios
-            // .get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials: true})
-            .get(`/articles/one/${params.id}`, {withCredentials: true})
+            .get(`${process.env.REACT_APP_API_URL}/articles/one/${params.id}`, {withCredentials: true})
+            // .get(`/articles/one/${params.id}`, {withCredentials: true})
             .then(res => {
                 this.setState({article: res.data});
             })
@@ -66,8 +66,8 @@ class EditArticle extends Component {
         const {title, body, author, imageUrl} = this.state.article;
 
         axios
-            // .put(`${process.env.REACT_APP_API_URL}/articles/one/` + this.props.match.params.id, {title, body, author, imageUrl})
-            .put(`/articles/one/` + this.props.match.params.id, {title, body, author, imageUrl})
+            .put(`${process.env.REACT_APP_API_URL}/articles/one/` + this.props.match.params.id, {title, body, author, imageUrl})
+            // .put(`/articles/one/` + this.props.match.params.id, {title, body, author, imageUrl})
             .then((result) => {
                 this
                     .props

@@ -21,8 +21,7 @@ app.use(express.static(path.join(__dirname, 'public/build')));
 app.use(express.json());
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3001']
-  // origin: ['https://zumbazomblog.herokuapp.com']
+  origin: ['https://zumbazomblog.herokuapp.com']
 })
 );
 
@@ -52,8 +51,8 @@ mongoose
     cookie: { 
       maxAge: 60000 },
     resave: false,
-    // sameSite: true,
-    // secure: IN_PROD,
+    sameSite: true,
+    secure: IN_PROD,
     saveUninitialized: true,
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
