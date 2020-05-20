@@ -722,6 +722,33 @@ ul footer {
 
 }
 
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+  .pull-right {
+    margin: 1em 0em;
+    top: 1035px;
+  }
+
+  .body-text {
+    position: absolute;
+    top: 30%;
+    width: 80%;
+    height: auto;
+  }
+
+  .sharing {
+    position: relative;
+    top: 525px;
+  }
+
+  .moment-on .clock {
+    left: 7%;
+    position: relative;
+  }
+
+}
+
 @media (min-width: 750px) and (max-width: 950px) {
   .pull-right {
     margin: 1em 0em;
