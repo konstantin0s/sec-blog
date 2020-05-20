@@ -510,7 +510,7 @@ ul footer {
   }
 
   .author {
-    right: 58%;
+    right: 54%;
     top: 7px;
   }
 
@@ -644,8 +644,8 @@ ul footer {
   }
 
   .author {
-    left: 12%;
-    top: -33px;
+    left: 18%;
+    top: -32px;
   }
 
   .moment-on {
@@ -725,6 +725,7 @@ ul footer {
 @media (min-width: 750px) and (max-width: 950px) {
   .pull-right {
     margin: 1em 0em;
+    top: 1035px;
   }
 
   .bodys h4 {
@@ -734,6 +735,18 @@ ul footer {
   .moment-on .clock {
     left: 7%;
     position: relative;
+  }
+
+  .body-text {
+    position: absolute;
+    top: 23%;
+    width: 80%;
+    height: auto;
+  }
+
+  .sharing {
+    position: relative;
+    top: 550px;
   }
 
   .toTop img {
