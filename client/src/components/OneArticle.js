@@ -279,10 +279,6 @@ class OneArticle extends Component {
                         <h1>{this.state.article.title}</h1>
                         <div className="moment-on">
 
-                        <div className="sharing">
-                <Sharing id={this.state.article._id} />
-              </div>
-
                             <FontAwesomeIcon className="fa-2x" icon={faEnvelope}/>
                             <a className="faEnvelope" href="#commentF">
                                 Leave a comment
@@ -303,6 +299,11 @@ class OneArticle extends Component {
                                 ? this.state.article.owner.first_name
                                 : ""}</div>
                     </div>
+
+                    <div className="sharing">
+                        <Sharing id={this.state.article._id} />
+                    </div>
+
                     <p className="body-text">{this.state.article.body}</p>
                     {this.showCommentBox()}
                     <div className="row showcomments">

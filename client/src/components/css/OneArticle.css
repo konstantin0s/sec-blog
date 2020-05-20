@@ -495,6 +495,10 @@ ul footer {
     text-align: center;
     position: relative;
     left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
   }
 
   .jumbo h1 {
@@ -506,8 +510,8 @@ ul footer {
   }
 
   .author {
-    left: 22%;
-    top: -32px;
+    right: 58%;
+    top: -9px;
   }
 
   .moment-on {
@@ -527,6 +531,12 @@ ul footer {
   .jumbotron p {
     font-size: 100%;
     top: 200px;
+    margin-top: 1em;
+  }
+
+  .sharing {
+    position: relative;
+    top: 300px;
   }
 
   .pull-right {
