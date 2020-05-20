@@ -276,7 +276,7 @@ class OneArticle extends Component {
                     src={this.state.article.imageUrl}/>
                 <div className="bodys">
                     <div className="jumbo">
-                        <h1>{this.state.article.title}</h1>
+                        <h1 className="art-title">{this.state.article.title}</h1>
                         <div className="moment-on">
 
                             <FontAwesomeIcon className="fa-2x" icon={faEnvelope}/>

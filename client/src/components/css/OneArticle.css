@@ -511,7 +511,7 @@ ul footer {
 
   .author {
     right: 58%;
-    top: -9px;
+    top: 7px;
   }
 
   .moment-on {
@@ -525,7 +525,7 @@ ul footer {
   }
 
   .moment-on .clock {
-    left: 35px;
+    left: 6%;
   }
 
   .jumbotron p {
@@ -536,7 +536,7 @@ ul footer {
 
   .sharing {
     position: relative;
-    top: 300px;
+    top: 400px;
   }
 
   .pull-right {
@@ -622,8 +622,13 @@ ul footer {
     left: 0px;
   }
 
-  .jumbo h1 {
+  .jumbo .art-title {
     left: 0px;
+  }
+
+  .sharing {
+    position: relative;
+    top: 400px;
   }
 
   .pull-right {
@@ -639,8 +644,8 @@ ul footer {
   }
 
   .author {
-    left: 18%;
-    top: -32px;
+    left: 12%;
+    top: -33px;
   }
 
   .moment-on {
