@@ -162,21 +162,21 @@ li {
 
     .nav .read {
         position: relative;
-        left: -30%;
+        left: -21%;
         font-size: 14px;
-        top: -8px;
+        top: -88px;
     }
 
     .nav .user {
         position: relative;
-        left: -18%;
+        left: -31%;
         font-size: 14px;
         top: -8px;
     }
 
     .nav .write {
         position: relative;
-        left: -21%;
+        left: -14%;
         font-size: 14px;
         top: -8px;
     }

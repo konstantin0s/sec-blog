@@ -505,13 +505,14 @@ ul footer {
     left: 0px;
   }
 
-  .bodys h4 {
-    left: 0px;
+  .bodys .h4 {
+    left: 30%;
+    position: relative;
   }
 
   .author {
-    right: 54%;
-    top: 7px;
+    right: 44%;
+    top: 5px;
   }
 
   .moment-on {
@@ -536,12 +537,12 @@ ul footer {
 
   .sharing {
     position: relative;
-    top: 400px;
+    top: 470px;
   }
 
   .pull-right {
     position: absolute;
-    left: 12%;
+    left: 10%;
     top: 455px;
     display: inline-block;
   }
