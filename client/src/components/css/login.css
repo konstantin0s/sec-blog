@@ -96,8 +96,6 @@
 
 .col-md-10 form {
     top: 0px;
-    display: flex;
-    flex-direction: column;
 }
 
 .col-md-10 form .form-group {

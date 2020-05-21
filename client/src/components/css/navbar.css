@@ -148,15 +148,15 @@ li {
 
 
     .logix .logIn {
-        position: relative;
-        left: 0%;
-        top: -10px;
+        position: absolute;
+        left: 35%;
+        top: -9px;
     }
 
     .logix .regIster {
         position: absolute;
         left: -13%;
-        top: -10px;
+        top: -9px;
     }
 
 
