@@ -506,8 +506,9 @@ ul footer {
   }
 
   .bodys .h4 {
-    left: 30%;
+    right: 47%;
     position: relative;
+    top: 4px;
   }
 
   .author {
