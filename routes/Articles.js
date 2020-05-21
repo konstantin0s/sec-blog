@@ -33,9 +33,7 @@ router.get('/', (req, res, next) => {
         .find()
         .populate('owner')
         .sort({createdAt: 'descending'})
-        .then((articles) => res.send({
-            articles: articles.map(article => article.toJSON)
-        }))
+        .then((articles) => res.send(articles))
         // .then((articles) => res.json({
         //     articles: articles.map(article => article.toJSON())
         // }))
