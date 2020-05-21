@@ -195,6 +195,15 @@ html {
 }
 
 @media screen and (max-width: 600px) {
+
+
+  /*social title */
+  .makeStyles-sidebarSection1-193 {
+    margin-top: 24px;
+    position: relative;
+    top: 46px;
+  }
+
   .containerX {
     background-color: aliceblue;
   }
