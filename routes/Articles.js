@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
     Article
         .find()
         .sort({date: -1})
-        .then(articles => res.json(articles));
+        .then(articles => res.send(articles));
+        // .then(articles => res.json(articles));
 });
 
 router.get('/:userId/', (req, res) => {
@@ -18,7 +19,8 @@ router.get('/:userId/', (req, res) => {
     Article
         .find({user: req.query.userId})
         .then(articles => {
-            res.json(articles);
+            res.send(articles);
+            // res.json(articles);
         })
         .catch(err => {
             res.json(err);
@@ -31,9 +33,12 @@ router.get('/', (req, res, next) => {
         .find()
         .populate('owner')
         .sort({createdAt: 'descending'})
-        .then((articles) => res.json({
-            articles: articles.map(article => article.toJSON())
+        .then((articles) => res.send({
+            articles: articles.map(article => article.toJSON)
         }))
+        // .then((articles) => res.json({
+        //     articles: articles.map(article => article.toJSON())
+        // }))
         .catch(next);
 });
 
@@ -47,7 +52,8 @@ router.get("/one/:id", (req, res) => {
             // debugger
             res
                 .status(200)
-                .json(result);
+                res.send(result)
+                // .json(result);
         })
         .catch((error) => {
             res
@@ -65,7 +71,8 @@ router.post('/', (req, res) => {
       imageUrl: req.body.imageUrl, owner: req.body.userId, created: today});
     newArticle
         .save()
-        .then(article => res.json(article))
+        .then(article => res.send(article))
+        // .then(article => res.json(article))
         .catch(err => {
             res.json(err);
         });
@@ -96,7 +103,8 @@ router.post('/savecomment', (req, res) => {
                         .then(newArticle => {
                             res
                                 .status(200)
-                                .json(newArticle);
+                                .send(newArticle);
+                                // .json(newArticle);
                         })
                 })
                 .catch(err => {
@@ -113,7 +121,8 @@ router.put('/one/:id', function (req, res, next) {
         .findByIdAndUpdate(req.params.id, req.body, function (err, post) {
             if (err) 
                 return next(err);
-            res.json(post);
+                res.send(post);
+            // res.json(post);
         });
 });
 
