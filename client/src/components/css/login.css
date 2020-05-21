@@ -89,6 +89,10 @@
     font-size: 2.5em;
 }
 
+.log-form-con .linkTo {
+    position: relative;
+    top: -13px;
+}
 
 .col-md-10 form {
     top: 0px;
@@ -129,11 +133,6 @@
     top: 0;
     left: 0px;
     background-color: white;
-}
-
-.linkTo {
-    position: relative;
-    top: -13px;
 }
 
 .one {

@@ -59,9 +59,6 @@
   width: 400px;
   opacity: 1;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-self: center;
   height: 400px;
   background-color: #fff;
@@ -72,19 +69,20 @@
   left: 0em;
 }
 
+.reg-con-form form {
+  top: -6em;
+  position: relative;
+  left: 1px;
+}
+
 
 .test .reg-con-form h1 {
   font-size: 2.2em;
 }
 
-.reg-con-form form {
-  top: -1em;
+.reg-con-form .linkTo {
   position: relative;
-}
-
-.linkTo {
-  position: relative;
-  top: 1px;
+  top: -72px;
   text-decoration: none;
 }
 
