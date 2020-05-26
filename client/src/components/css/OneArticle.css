@@ -3,6 +3,10 @@ body {
   background-color: #fff;
 }
 
+.sharing {
+  z-index: 100;
+}
+
 .button-container {
   position: absolute;
   top: 30px;
@@ -551,6 +555,7 @@ ul footer {
   .sharing {
     position: relative;
     top: 470px;
+    z-index: 100;
   }
 
   .pull-right {

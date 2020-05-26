@@ -54,8 +54,7 @@ class Profile extends Component {
             last_name,
             date,
             _id,
-            email,
-            comments
+            email
         } = this.state;
         // console.log(this.state);
         return (
