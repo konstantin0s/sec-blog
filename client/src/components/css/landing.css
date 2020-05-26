@@ -347,27 +347,6 @@ html {
     left: 40%
   }
 
-  .MuiGrid-item h6 {
-    position: relative;
-    top: 48px;
-  }
-
-  .badges {
-    position: relative;
-    top: -13px;
-    left: -9em;
-  }
-
-  .linkz {
-    top: -9px;
-    left: 5em;
-  }
-
-  .MuiButton-textSizeSmall {
-    position: relative;
-    top: -27px;
-  }
-
 }
 
 /* Landscape tablet */
@@ -377,27 +356,7 @@ html {
     width: 115px;
   }
 
-  .MuiCardActions-spacing> :not(:first-child) {
-    position: relative;
-    top: -16px;
-  }
 
-  .MuiButton-textSizeSmall {
-    position: relative;
-    top: -27px;
-  }
-
-
-  .linkz {
-    top: -9px;
-    left: 10em;
-  }
-
-  .badges {
-    position: relative;
-    top: -13px;
-    left: -4em;
-  }
 
   .nav-link:link {
     left: -17px;
